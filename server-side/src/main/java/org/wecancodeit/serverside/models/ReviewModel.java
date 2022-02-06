@@ -1,9 +1,6 @@
 package org.wecancodeit.serverside.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 
 @Entity
 public class ReviewModel {
@@ -15,6 +12,8 @@ public class ReviewModel {
     @Lob
     private String reviewComment;
     private int reviewRating;
+    @ManyToOne
+    private UserModel userModel;
 
 
 
