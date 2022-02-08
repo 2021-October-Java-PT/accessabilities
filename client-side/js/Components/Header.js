@@ -5,6 +5,7 @@ export default function Header() {
           <li id='nav-list__activities'><button id="navbutton">insert Button Name</li>
           <li id='idNameHere'><button id="navbutton">insert Button Name</li>
           <li id='idNameHere'><button id="navbutton">insert Button Name</li>
+          <li id='idNameHere'><button id="navbutton">insert Button Name</li>
           <li id='idNameHere'><button id="navbutton">About Us</button></li>
           <li id='idNameHere'><button id="navbutton">Contact Us</button></li> 
           </ul>   
