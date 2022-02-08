@@ -1,3 +1,9 @@
+import About from './components/About';
+
+renderPage();
+function renderPage(){
+    about();
+}
 
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle('js-enabled');
@@ -16,3 +22,10 @@ document.addEventListener('DOMContentLoaded', function(event)
         }
     }
 });
+
+function about() {
+    const contactElem = document.querySelector('#about');
+    contactElem.addEventListener('click', () => {
+        PageContent.innerHTML = About();
+    });
+}
