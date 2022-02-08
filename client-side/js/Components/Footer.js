@@ -3,4 +3,4 @@ export default function Footer() {
         <p id='footer'>&copy accessABILITIES 2022</p>   
         
         `;
-  }
+}
