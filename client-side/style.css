@@ -220,3 +220,71 @@ div {
         --row-height: 200px;
     }
 }
+
+.aboutDisplay{
+    display: grid;  
+    grid-gap: 2rem; 
+    padding: 40px;
+    border: 3px solid black;
+    margin: 3%;
+}
+
+.bio{
+    max-width: 69%;
+    padding: 1%;
+    justify-self: center;
+}
+
+.headshot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+li{
+    list-style: none;
+}
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+#LyzzPic{
+    max-width: 300px;
+    justify-self: center;
+}
+
+#LandonPic{
+    max-width: 300px;
+    justify-self: center;
+}
+
+#CameronPic{
+    max-width: 300px;
+    justify-self: center;
+}
+
+#MartelPic{
+    max-width: 300px;
+    justify-self: center;
+}
+
+#TreyPic{
+    max-width: 300px;
+    justify-self: center;
+}
+#DiaPic{
+    max-width: 300px;
+    justify-self: center;
+}
