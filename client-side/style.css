@@ -1,0 +1,222 @@
+a {
+    text-decoration: none;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    font-family: 'Montserra', sans-serif;
+}
+
+.header {
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.content {
+    width: 960 px;
+    height: 20000px;
+    margin: 70 px auto;
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+* {
+    box-sizing: inherit;
+}
+
+
+
+div {
+    display: block;
+}
+
+.image-grid {
+    position: relative;
+    display: inline-block;
+}
+
+.image-grid .text {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 250%;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    width: 60%;
+}
+
+#primary-nav .container {
+    padding: 0 10px;
+}
+
+#primary-nav ul {
+    background-color: #f13223;
+    grid-template-columns: repeat(auto-fit, minmax(91px, 1fr));
+    display: grid;
+    align-content: center;
+    grid-column-gap: 9px;
+    grid-row-gap: 10px;
+}
+
+@media (min-width: 848px) {
+    #primary-nav ul {
+        display: grid;
+    }
+}
+
+#primary-nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: 0.4s ease-in;
+    font-family: 'Montserra', sans-serif;
+}
+
+#primary-nav ul li a:hover,
+#primary-nav ul li a:focus {
+    background: #090816;
+}
+
+#primary-nav ul li a:active {
+    border: 2px solid lime;
+}
+
+.logo {
+    max-width: 100px;
+    padding: 1em;
+}
+
+.main-nav {
+    background: #262262;
+    grid-column: 1 / span 2;
+}
+
+#hamburger {
+    margin: 1em;
+    justify-self: end;
+    display: block;
+    background: #fff;
+    border: none;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+#hamburger #expanded {
+    display: none;
+}
+
+#hamburger svg {
+    width: 3em;
+    height: 3em;
+    background: white;
+}
+
+#hamburger span {
+    display: block;
+    position: relative;
+    top: 15px;
+}
+
+@media (min-width: 848px) {
+    #hamburger {
+        display: none;
+    }
+}
+
+#hamburger[aria-expanded='true'] {
+    color: #000;
+}
+
+#hamburger[aria-expanded='true'] svg {
+    background: #262262;
+    fill: white;
+}
+
+#hamburger[aria-expanded='true'] span {
+    position: static;
+}
+
+#hamburger[aria-expanded='true'] #expanded {
+    display: block;
+}
+
+#hamburger[aria-expanded="true"]+.main-nav {
+    display: block;
+}
+
+.js-enabled .main-nav {
+    display: none;
+}
+
+@media (min-width: 848px) {
+    .js-enabled .main-nav {
+        display: block;
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserra', sans-serif;
+}
+
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+.image-grid-text {
+    font-family: 'Montserra', sans-serif;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
