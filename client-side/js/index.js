@@ -1,6 +1,10 @@
 
+
+
+
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle('js-enabled');
+
 
 document.addEventListener('DOMContentLoaded', function(event) 
 {
