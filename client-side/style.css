@@ -1,10 +1,66 @@
 a {
     text-decoration: none;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    font-family: 'Montserra', sans-serif;
+}
+
+.header {
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.content {
+    width: 960 px;
+    height: 20000px;
+    margin: 70 px auto;
+
+}
+
+* {
+    box-sizing: inherit;
 }
 
 .container {
     max-width: 1400px;
     margin: auto;
+}
+
+
+* {
+    box-sizing: inherit;
+}
+
+
+
+div {
+    display: block;
+}
+
+.image-grid {
+    position: relative;
+    display: inline-block;
+}
+
+.image-grid .text {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 250%;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    width: 60%;
 }
 
 #primary-nav .container {
@@ -46,7 +102,7 @@ a {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 100px;
     padding: 1em;
 }
 
@@ -122,6 +178,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserra', sans-serif;
 }
 
 .image-grid {
@@ -152,7 +209,11 @@ a {
     grid-row: span 2;
 }
 
-/* Anything udner 1024px */
+.image-grid-text {
+    font-family: 'Montserra', sans-serif;
+
+}
+
 @media screen and (max-width: 1024px) {
     .image-grid {
         --num-cols: 2;
