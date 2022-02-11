@@ -66,9 +66,16 @@ function account() {
 }
 
 function access() {
-    const contactElem = document.querySelector('#access');
-    contactElem.addEventListener('click', () => {
-        PageContent.innerHTML = Access();
+    const accessElem = document.querySelector('#access');
+    accessElem.addEventListener('click', () => {
+        apiHelpers.getRequest(
+            "http://localhost8080/api/business-resources",
+            (access) => {
+               app.innerHTML = Access(access);
+                console.log(Access); 
+            }
+        )
+        
     });
 }
 
