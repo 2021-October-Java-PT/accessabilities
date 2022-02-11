@@ -1,3 +1,6 @@
+
+import Login from "./components/Login";
+
 import About from './components/About';
 import Access from './components/Access';
 import Account from './components/Account';
@@ -15,6 +18,7 @@ function renderPage(){
     village();
 }
 
+
 import apiHelpers from "./apiHelpers";
 
 console.log("Client Side is wired up!");
@@ -22,7 +26,15 @@ console.log("Client Side is wired up!");
 buildPage();
 
 function buildPage() {
-  console.log("PAGE BUILT!");
+  login();
+}
+
+function login() {
+  const loginElem = document.querySelector(".login-button");
+  loginElem.addEventListener("click", () => {
+    const page = document.querySelector(".Page");
+    page.innerHTML = Login();
+  });
 }
 
 
