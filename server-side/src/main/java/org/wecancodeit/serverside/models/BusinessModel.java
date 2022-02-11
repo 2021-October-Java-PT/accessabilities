@@ -13,7 +13,8 @@ public class BusinessModel {
     @GeneratedValue
 
     private Long businessId;
-    private String businessName;
+    @Lob
+    private String name;
     @Lob
     private String businessDescription;
     private String businessStreetNumber;
@@ -21,15 +22,17 @@ public class BusinessModel {
     private String businessCity;
     private String businessState;
     private String businessZip;
+    @Lob
     private String businessUrl;
+    @Lob
     private String businessAccessibilityFeatures;
     private String businessContentPhoneNumber;
 
-    public BusinessModel(String businessName, String businessDescription,
+    public BusinessModel(String name, String businessDescription,
                          String businessStreetNumber, String businessStreetName,
                          String businessCity, String businessState, String businessZip, String businessUrl, String
                          businessAccessibilityFeatures, String businessContentPhoneNumber) {
-        this.businessName = businessName;
+        this.name = name;
         this.businessDescription = businessDescription;
         this.businessStreetNumber = businessStreetNumber;
         this.businessStreetName = businessStreetName;
@@ -49,8 +52,8 @@ public class BusinessModel {
         return businessId;
     }
 
-    public String getBusinessName() {
-        return businessName;
+    public String getName() {
+        return name;
     }
 
     public String getBusinessDescription() {
