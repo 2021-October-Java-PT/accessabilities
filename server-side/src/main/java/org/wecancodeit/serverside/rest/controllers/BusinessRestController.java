@@ -1,11 +1,10 @@
 package org.wecancodeit.serverside.rest.controllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-import org.wecancodeit.serverside.models.BusinessModel;
-import org.wecancodeit.serverside.repositories.BusinessRepository;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
+import org.wecancodeit.serverside.models.BusinessResource;
+import org.wecancodeit.serverside.repositories.BusinessResourceRepository;
 
 import javax.annotation.Resource;
 import java.util.Collection;
@@ -16,16 +15,46 @@ import java.util.Optional;
 public class BusinessRestController {
 
     @Resource
-    private BusinessRepository businessRepo;
+    private BusinessResourceRepository businessRepo;
 
-    @GetMapping("/api/businesses")
-    public Collection<BusinessModel> getBusinesses(){
-        return (Collection<BusinessModel>) businessRepo.findAll(); }
-
-
-    @GetMapping("/api/businesses/{businessId}")
-    public Optional<BusinessModel> getBusiness(@PathVariable Long id){
-        return businessRepo.findById(id);
+    @GetMapping("/api/business-resources")
+    public Collection<BusinessResource> getBusinessResources() {
+        return (Collection<BusinessResource>) businessRepo.findAll();
     }
+
+
+    @GetMapping("/api/business-resources/{id}")
+    public Optional<BusinessResource> getBusinessResources(@PathVariable Long id) {
+        return businessRepo.findById(id);
+
+    }
+    @PostMapping("/api/business-resources/add-resource")
+    public String addBusinessResource(@RequestBody String body) throws JSONException {
+        JSONObject newResource = new JSONObject(body);
+        String name = newResource.getString("name");
+        String businessDescription = newResource.getString("businessDescription");
+        String businessStreetNumber = newResource.getString("businessStreetNumber");
+        String businessStreetName = newResource.getString("businessStreetName");
+        String businessCity = newResource.getString("businessCity");
+        String businessState = newResource.getString("businessState");
+        String businessZip = newResource.getString("businessZip");
+        String businessUrl = newResource.getString("businessUrl");
+        String businessAccessibilityFeatures = newResource.getString("businessAccessibilityFeatures");
+        String businessContentPhoneNumber = newResource.getString("businessContentPhoneNumber");
+
+        Optional<BusinessResource> resourceToAddOpt = businessRepo.findByName(name);
+
+        if (resourceToAddOpt.isEmpty()) {
+            BusinessResource resourceToAdd = new BusinessResource(name, businessDescription,
+                    businessStreetNumber, businessStreetName,
+                    businessCity, businessState, businessZip, businessUrl,
+                    businessAccessibilityFeatures, businessContentPhoneNumber);
+            businessRepo.save(resourceToAdd);
+            return "redirect:/api/business-resources";
+        }
+
+        return "redirect:/api/business-resources";
+    }
+
 
 }

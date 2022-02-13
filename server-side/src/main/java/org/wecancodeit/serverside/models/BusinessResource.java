@@ -7,13 +7,14 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 
 @Entity
-public class BusinessModel {
+public class BusinessResource {
 
     @Id
     @GeneratedValue
 
-    private Long businessId;
-    private String businessName;
+    private Long id;
+    @Lob
+    private String name;
     @Lob
     private String businessDescription;
     private String businessStreetNumber;
@@ -21,15 +22,17 @@ public class BusinessModel {
     private String businessCity;
     private String businessState;
     private String businessZip;
+    @Lob
     private String businessUrl;
+    @Lob
     private String businessAccessibilityFeatures;
     private String businessContentPhoneNumber;
 
-    public BusinessModel(String businessName, String businessDescription,
-                         String businessStreetNumber, String businessStreetName,
-                         String businessCity, String businessState, String businessZip, String businessUrl, String
+    public BusinessResource(String name, String businessDescription,
+                            String businessStreetNumber, String businessStreetName,
+                            String businessCity, String businessState, String businessZip, String businessUrl, String
                          businessAccessibilityFeatures, String businessContentPhoneNumber) {
-        this.businessName = businessName;
+        this.name = name;
         this.businessDescription = businessDescription;
         this.businessStreetNumber = businessStreetNumber;
         this.businessStreetName = businessStreetName;
@@ -41,16 +44,16 @@ public class BusinessModel {
         this.businessContentPhoneNumber = businessContentPhoneNumber;
     }
 
-    public BusinessModel(){
+    public BusinessResource(){
 
     }
 
-    public Long getBusinessId() {
-        return businessId;
+    public Long getId() {
+        return id;
     }
 
-    public String getBusinessName() {
-        return businessName;
+    public String getName() {
+        return name;
     }
 
     public String getBusinessDescription() {
