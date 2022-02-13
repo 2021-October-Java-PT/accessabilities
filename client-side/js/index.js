@@ -21,7 +21,7 @@ function buildPage() {
     village();
 
     navAccess();
-    login();
+    
 
 
     mapsResources();
