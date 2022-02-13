@@ -18,6 +18,9 @@ public class UserModel {
     @JsonIgnore
     private Collection<ReviewModel> reviews;
 
+    public UserModel() {
+    }
+
     private Collection<ReviewModel> getReviews(){
         return reviews;
     }

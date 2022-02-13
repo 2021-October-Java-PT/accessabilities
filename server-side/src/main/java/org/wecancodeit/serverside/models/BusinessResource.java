@@ -7,12 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 
 @Entity
-public class BusinessModel {
+public class BusinessResource {
 
     @Id
     @GeneratedValue
 
-    private Long businessId;
+    private Long id;
     @Lob
     private String name;
     @Lob
@@ -28,9 +28,9 @@ public class BusinessModel {
     private String businessAccessibilityFeatures;
     private String businessContentPhoneNumber;
 
-    public BusinessModel(String name, String businessDescription,
-                         String businessStreetNumber, String businessStreetName,
-                         String businessCity, String businessState, String businessZip, String businessUrl, String
+    public BusinessResource(String name, String businessDescription,
+                            String businessStreetNumber, String businessStreetName,
+                            String businessCity, String businessState, String businessZip, String businessUrl, String
                          businessAccessibilityFeatures, String businessContentPhoneNumber) {
         this.name = name;
         this.businessDescription = businessDescription;
@@ -44,12 +44,12 @@ public class BusinessModel {
         this.businessContentPhoneNumber = businessContentPhoneNumber;
     }
 
-    public BusinessModel(){
+    public BusinessResource(){
 
     }
 
-    public Long getBusinessId() {
-        return businessId;
+    public Long getId() {
+        return id;
     }
 
     public String getName() {

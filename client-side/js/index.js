@@ -1,31 +1,30 @@
 import About from './components/About';
-import Access from './components/Access';
 import Account from './components/Account';
+import BusinessResources from './Components/BusinessResources';
 import Contact from './components/Contact';
 import Login from "./components/Login";
 import Resources from './components/Resources';
 import Village from './components/Village';
-import apiHelpers from "./apiHelpers";
+import apiHelpers from "./components/apiHelpers.js";
+import businessResource from './Components/BusinessResource';
 
-renderPage();
+buildPage();
 
-function renderPage() {
+function buildPage() {
     about();
-    access();
+    businessResource();
+    BusinessResources();
     account();
     contact();
     resources();
     village();
+    navAccess();
+    login();
 }
 
 
 console.log("Client Side is wired up!");
 
-buildPage();
-
-function buildPage() {
-    login();
-}
 
 function login() {
     const loginElem = document.querySelector(".login-button");
@@ -65,17 +64,30 @@ function account() {
     });
 }
 
-function access() {
+function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest(
-            "http://localhost8080/api/business-resources",
-            (access) => {
-               app.innerHTML = Access(access);
-                console.log(Access); 
+            "http://localhost:8080/api/business-resources",
+            (businessResources) => {
+                PageContent.innerHTML = BusinessResources(businessResources);
+                console.log('FIRE');
+                console.log(businessResources);
             }
         )
-        
+        renderBusinessResource();
+    });
+}
+
+function renderBusinessResource() {
+    PageContent.addEventListener('click', (event) => {
+        if (event.target.classList.contains("business-resource")) {
+            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${businessResource}`, (businessResource) => {
+                PageContent.innerHTML = BusinessResource(businessResource);
+                console.log(businessResource);
+
+            });
+        }
     });
 }
 
