@@ -21,7 +21,7 @@ function buildPage() {
     village();
 
     navAccess();
-    login();
+    
 
 
     mapsResources();
@@ -91,7 +91,7 @@ const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
     document.body.classList.toggle('dark');
-})
+});
 
 
 
