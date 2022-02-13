@@ -16,24 +16,26 @@ function renderPage() {
     contact();
     resources();
     village();
+    
 }
 
 
 console.log("Client Side is wired up!");
 
-buildPage();
+// buildPage();
 
-function buildPage() {
-    login();
-}
+// function buildPage() {
+//     login();
+// }
 
-function login() {
-    const loginElem = document.querySelector(".login-button");
-    loginElem.addEventListener("click", () => {
-        const page = document.querySelector(".Page");
-        page.innerHTML = Login();
-    });
-}
+// function login() {
+//     const loginElem = document.querySelector(".login-button");
+//     loginElem.addEventListener("click", () => {
+//         const page = document.querySelector(".Page");
+//         page.innerHTML = Login();
+//     });
+// }
+
 
 
 //Lyzz js to enable hamburger menu
@@ -50,6 +52,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 });
+
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+})
+
+
 
 function about() {
     const contactElem = document.querySelector('#about');
@@ -92,3 +102,4 @@ function village() {
         PageContent.innerHTML = Village();
     });
 }
+
