@@ -3,6 +3,7 @@ import Account from './components/Account';
 import BusinessResources from './Components/BusinessResources';
 import Contact from './components/Contact';
 import Login from "./components/Login";
+import Maps from './Components/Maps';
 import Resources from './components/Resources';
 import Village from './components/Village';
 import apiHelpers from "./components/apiHelpers.js";
@@ -18,19 +19,55 @@ function buildPage() {
     contact();
     resources();
     village();
+
     navAccess();
     login();
+
+
+    mapsResources();
+
+    
+
+
 }
 
 
 console.log("Client Side is wired up!");
 
 
-function login() {
-    const loginElem = document.querySelector(".login-button");
-    loginElem.addEventListener("click", () => {
-        const page = document.querySelector(".Page");
-        page.innerHTML = Login();
+
+// buildPage();
+
+// function buildPage() {
+//     login();
+// }
+
+// function login() {
+//     const loginElem = document.querySelector(".login-button");
+//     loginElem.addEventListener("click", () => {
+//         const page = document.querySelector(".Page");
+//         page.innerHTML = Login();
+//     });
+// }
+
+
+function mapsResources(){
+    const mapsElem = document.querySelector("#resources")
+    mapsElem.addEventListener('click',()=> {
+        PageContent.innerHTML = Resources();
+        clickMaps();
+    })
+}
+
+
+function clickMaps(){
+    PageContent.addEventListener("click", (event) => {
+        console.log("Is this thing on????")
+        PageContent.innerHTML = Maps();
+        if(event.target.classList.contains("returnToResources")){
+            PageContent.innerHTML= Resources();
+        }
+    
     });
 }
 
@@ -49,6 +86,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 });
+
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+})
+
+
 
 function about() {
     const contactElem = document.querySelector('#about');
@@ -111,3 +156,4 @@ function village() {
         PageContent.innerHTML = Village();
     });
 }
+
