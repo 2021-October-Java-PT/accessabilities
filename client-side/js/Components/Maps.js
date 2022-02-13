@@ -3,9 +3,9 @@ export default function Maps(){
     <div class="activities>
     <h1> MAPS!</h1>
     <div>
-    <h2> Parks Map </h2>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IhoQOgmPta6k-qc1GkUek3UphjgyCKa_&ehbc=2E312F" width="640" height="480"></iframe>
-   </div>
+//     <h2> Parks Map </h2>
+//     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IhoQOgmPta6k-qc1GkUek3UphjgyCKa_&ehbc=2E312F" width="640" height="480"></iframe>
+//    </div>
    
     <div>
     <h2> Parks Map </h2>
