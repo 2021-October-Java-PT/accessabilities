@@ -19,14 +19,11 @@ function buildPage() {
     contact();
     resources();
     village();
-
     navAccess();
-    login();
-
-
+    //login();
     mapsResources();
 
-    
+
 
 
 }
@@ -39,35 +36,36 @@ console.log("Client Side is wired up!");
 // buildPage();
 
 // function buildPage() {
-//     login();
+// login();
 // }
 
 // function login() {
-//     const loginElem = document.querySelector(".login-button");
-//     loginElem.addEventListener("click", () => {
-//         const page = document.querySelector(".Page");
-//         page.innerHTML = Login();
-//     });
-// }
+// const loginElem = document.querySelector(".login-button");
+// loginElem.addEventListener("click", () => {
+// const page = document.querySelector(".Page");
+// page.innerHTML = Login();
+// });
+
+//}
 
 
-function mapsResources(){
+function mapsResources() {
     const mapsElem = document.querySelector("#resources")
-    mapsElem.addEventListener('click',()=> {
+    mapsElem.addEventListener('click', () => {
         PageContent.innerHTML = Resources();
         clickMaps();
     })
 }
 
 
-function clickMaps(){
+function clickMaps() {
     PageContent.addEventListener("click", (event) => {
         console.log("Is this thing on????")
         PageContent.innerHTML = Maps();
-        if(event.target.classList.contains("returnToResources")){
-            PageContent.innerHTML= Resources();
+        if (event.target.classList.contains("returnToResources")) {
+            PageContent.innerHTML = Resources();
         }
-    
+
     });
 }
 
@@ -113,8 +111,7 @@ function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest(
-            "http://localhost:8080/api/business-resources",
-            (businessResources) => {
+            "http://localhost:8080/api/business-resources",(businessResources) => {
                 PageContent.innerHTML = BusinessResources(businessResources);
                 console.log('FIRE');
                 console.log(businessResources);
@@ -126,15 +123,17 @@ function navAccess() {
 
 function renderBusinessResource() {
     PageContent.addEventListener('click', (event) => {
-        if (event.target.classList.contains("business-resource")) {
-            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${businessResource}`, (businessResource) => {
+        if (event.target.classList.contains("business-resources__list")) {
+            const busId = event.target.querySelector("#busId").value;
+            console.log(value);
+            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${busId}`, businessResource => {
                 PageContent.innerHTML = BusinessResource(businessResource);
-                console.log(businessResource);
 
             });
         }
     });
 }
+
 
 function contact() {
     const contactElem = document.querySelector('#contact');
@@ -156,4 +155,3 @@ function village() {
         PageContent.innerHTML = Village();
     });
 }
-
