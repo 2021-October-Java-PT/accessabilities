@@ -9,7 +9,12 @@ import Village from './components/Village';
 import apiHelpers from "./components/apiHelpers.js";
 import businessResource from './Components/BusinessResource.js';
 
+// import {
+//     createTestScheduler
+// } from 'jest';
+
 buildPage();
+loadBusinesses();
 
 function buildPage() {
     about();
@@ -22,6 +27,8 @@ function buildPage() {
     navAccess();
     //login();
     mapsResources();
+    businessList();
+    loadBusinesses();
 
 
 
@@ -115,27 +122,56 @@ function navAccess() {
             (businessResources) => {
                 PageContent.innerHTML = BusinessResources(businessResources);
                 console.log('FIRE');
-                console.log(BusinessResources);
+    
             }
         );
-        renderBusinessResource();
+        businessList();
     });
 }
 
-function renderBusinessResource() {
-    PageContent.addEventListener('click', (event) => {
-        let keywordsCity = ['Cleveland', 'Akron', 'Toledo', 'Cincinnati'];
+// function renderBusinessResource() {
+//     PageContent.addEventListener('click', (event) => {
+//         let keywordsCity = ['Cleveland', 'Akron', 'Toledo', 'Cincinnati'];
         
-        if (event.target.classList.contains("city")) {
-            let value = keywordsCity;
-            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (businessResource) => {
-                console.log('BUS ID', busId);
-                PageContent.innerHTML = BusinessResource(businessResource);
-            });
-        }
-    });
-}
+//         if (event.target.classList.contains("city")) {
+//             let value = keywordsCity;
+//             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (businessResource) => {
+//                 console.log('BUS ID', busId);
+//                 PageContent.innerHTML = BusinessResource(businessResource);
+//                 });
+//         }
+//     });
+// }
+function businessList() {
+const businessList = document.getElementById('businessList');
+let accessBusinesses = [];
 
+const loadBusinesses = async () => {
+    try {
+        const res = await fetch('http://localhost:8080/api/business-resources');
+        accessBusinesses = await res.json();
+        displayBusinesses(accessBusinesses);
+    } catch (err) {
+        console.error(err);
+    }
+};
+}
+const displayBusinesses = (businessResources) => {
+    const htmlString = businessResources
+        .map((businessResources) => {
+            return `
+            <li class="business">
+                <h2>${businessResources.name}</h2>
+                <p>URL: ${businessResources.businessUrl}</p>
+                
+            </li>
+        `;
+        })
+        .join('');
+    businessList.innerHTML = htmlString;
+};
+
+loadBusinesses();
 
 function contact() {
     const contactElem = document.querySelector('#contact');
