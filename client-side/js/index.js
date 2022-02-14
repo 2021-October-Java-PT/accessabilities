@@ -111,12 +111,12 @@ function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest(
-            "http://localhost:8080/api/business-resources/",(businessResources) => {
+            "http://localhost:8080/api/business-resources",(businessResources) => {
                 PageContent.innerHTML = BusinessResources(businessResources);
                 console.log('FIRE');
                 console.log(businessResources);
             }
-        )
+        );
         renderBusinessResource();
     });
 }
@@ -130,7 +130,6 @@ function renderBusinessResource() {
             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (busId) => {
                 console.log('BUS ID', busId);
                 PageContent.innerHTML = BusinessResource(busId);
-
             });
         }
     });

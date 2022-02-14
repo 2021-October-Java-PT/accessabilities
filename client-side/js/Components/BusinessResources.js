@@ -9,8 +9,8 @@ export default function BusinessResources(businessResources) {
       <p>trips can be challenging and even sometimes cause anxiety for those who have special needs.</p>
       <h2>Business Directory</h2>
   
-        <li class="business-resources__list">Zoos
-        <input type="hidden" id="busId" value="${BusinessResources.id}">
+        <li class="business-resources">Zoos
+        <input type="hidden" id="busId" value="zoos"></li>
     </div>
       `;
   

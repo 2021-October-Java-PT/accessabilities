@@ -1,5 +1,7 @@
 export default function BusinessResource(businessResource) {
     return ` 
-    <h1>${BusinessResource.id}</h1>
+    <div class="biz-page-2">
+   
+    </div>
     `;
 }
