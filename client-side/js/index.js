@@ -1,13 +1,13 @@
 import About from './components/About';
 import Account from './components/Account';
-import BusinessResources from './Components/BusinessResources';
+import BusinessResources from './Components/BusinessResources.js';
 import Contact from './components/Contact';
 import Login from "./components/Login";
 import Maps from './Components/Maps';
 import Resources from './components/Resources';
 import Village from './components/Village';
 import apiHelpers from "./components/apiHelpers.js";
-import businessResource from './Components/BusinessResource';
+import businessResource from './Components/BusinessResource.js';
 
 buildPage();
 
@@ -111,10 +111,11 @@ function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest(
-            "http://localhost:8080/api/business-resources",(businessResources) => {
+            "http://localhost:8080/api/business-resources",
+            (businessResources) => {
                 PageContent.innerHTML = BusinessResources(businessResources);
                 console.log('FIRE');
-                console.log(businessResources);
+                console.log(BusinessResources);
             }
         );
         renderBusinessResource();
@@ -123,13 +124,13 @@ function navAccess() {
 
 function renderBusinessResource() {
     PageContent.addEventListener('click', (event) => {
-    
-        if (event.target.classList.contains("business-resources__list")) {
-            const busId = event.target.querySelector("#busId").value;
-            
-            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (busId) => {
+        let keywordsCity = ['Cleveland', 'Akron', 'Toledo', 'Cincinnati'];
+        
+        if (event.target.classList.contains("city")) {
+            let value = keywordsCity;
+            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (businessResource) => {
                 console.log('BUS ID', busId);
-                PageContent.innerHTML = BusinessResource(busId);
+                PageContent.innerHTML = BusinessResource(businessResource);
             });
         }
     });
