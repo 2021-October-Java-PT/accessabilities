@@ -111,7 +111,7 @@ function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest(
-            "http://localhost:8080/api/business-resources",(businessResources) => {
+            "http://localhost:8080/api/business-resources/",(businessResources) => {
                 PageContent.innerHTML = BusinessResources(businessResources);
                 console.log('FIRE');
                 console.log(businessResources);
@@ -123,11 +123,13 @@ function navAccess() {
 
 function renderBusinessResource() {
     PageContent.addEventListener('click', (event) => {
+    
         if (event.target.classList.contains("business-resources__list")) {
             const busId = event.target.querySelector("#busId").value;
-            console.log(value);
-            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${busId}`, businessResource => {
-                PageContent.innerHTML = BusinessResource(businessResource);
+            
+            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (busId) => {
+                console.log('BUS ID', busId);
+                PageContent.innerHTML = BusinessResource(busId);
 
             });
         }

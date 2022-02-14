@@ -1,9 +1,5 @@
-export default function BusinessResource() {
+export default function BusinessResource(businessResource) {
     return ` 
-    <div class="bus-pg-2">
-        <h1>${BusinessResource.id}</h1>
-        
-    </div>
-    
+    <h1>${BusinessResource.id}</h1>
     `;
 }
