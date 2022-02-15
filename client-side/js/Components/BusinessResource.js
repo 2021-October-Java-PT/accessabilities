@@ -1,5 +1,4 @@
-export default function BusinessResource(businessResource) {
-    console.log('BUSINESS RESOURCE', businessResource);
+export default function BusinessResource() {
     return ` 
     <div class="biz-page-2">
             <h1>Test</h1>

@@ -29,7 +29,7 @@ function buildPage() {
     mapsResources();
     businessList();
     loadBusinesses();
-
+    businessList();
 
 
 
@@ -125,7 +125,8 @@ function navAccess() {
     
             }
         );
-        businessList();
+        businessResource();
+        BusinessResources();
     });
 }
 
@@ -142,20 +143,37 @@ function navAccess() {
 //         }
 //     });
 // }
-function businessList() {
+
 const businessList = document.getElementById('businessList');
-let accessBusinesses = [];
+    
+const searchBar = document.getElementById('searchBar');
+let apiBusinesses = [];
+
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredBusinesses = apiBusinesses.filter((businessResource) => {
+        return (
+            businessResource.name.toLowerCase().includes(searchString)
+
+            ||
+
+            businessResource.businessCity.toLowerCase().includes(searchString)
+        );
+    });
+    displayBusinesses(filteredBusinesses);
+});
 
 const loadBusinesses = async () => {
     try {
         const res = await fetch('http://localhost:8080/api/business-resources');
-        accessBusinesses = await res.json();
-        displayBusinesses(accessBusinesses);
+        apiBusinesses = await res.json();
+        displayBusinesses(apiBusinesses);
     } catch (err) {
         console.error(err);
     }
 };
-}
+
 const displayBusinesses = (businessResources) => {
     const htmlString = businessResources
         .map((businessResources) => {
