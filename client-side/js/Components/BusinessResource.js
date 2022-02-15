@@ -5,7 +5,7 @@ export default function BusinessResource() {
     const loadBusiness = async () => {
         try {
         apiHelpers.getRequest('http://localhost:8080/api/business-resources');
-        (businessResources) =>
+        (businessResource) =>
         displayBusinesses(apiBusinesses);
     } catch (err) {
             console.error(err);

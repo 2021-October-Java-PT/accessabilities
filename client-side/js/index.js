@@ -118,11 +118,11 @@ function navAccess() {
                 console.log(businessResources);
             }
         );
-        renderBusinessResource();
+        displayBusinesses();
     });
 }
 
-function renderBusinessResource() {
+function displayBusinesses() {
     PageContent.addEventListener("click", (event) => {
 
         const searchBar = document.getElementById('searchBar');
@@ -137,6 +137,7 @@ function renderBusinessResource() {
                     businessResources.businessCity.toLowerCase().includes(searchString)
                 );
             });
+            console.log(filteredBusinesses);
             displayBusinesses(filteredBusinesses);
         });
 
