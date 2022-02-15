@@ -13,7 +13,7 @@ export default function BusinessResource() {
     };
     const displayBusinesses = (businessResources) => {
         const htmlString = businessResources
-            .map((character) => {
+            .map((businessResources) => {
                 return `
                 <li class="business">
                     <h2>${businessResources.name}</h2>
