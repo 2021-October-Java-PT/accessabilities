@@ -3,7 +3,7 @@ export default function BusinessResources(businessResources) {
   console.log('FIRE');
   return `
   <div class="container">
-  <h1>&#x2728;Business Directory &#x2728;</h1>
+  <h1>Business Directory</h1>
   <div id="searchWrapper">
       <input
           type="text"

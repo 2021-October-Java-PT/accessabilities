@@ -14,7 +14,6 @@ import businessResource from './Components/BusinessResource.js';
 // } from 'jest';
 
 buildPage();
-loadBusinesses();
 
 function buildPage() {
     about();
@@ -27,12 +26,6 @@ function buildPage() {
     navAccess();
     //login();
     mapsResources();
-    businessList();
-    loadBusinesses();
-    businessList();
-
-
-
 }
 
 
@@ -113,6 +106,7 @@ function account() {
         PageContent.innerHTML = Account();
     });
 }
+//Lyzz BusinessAPI
 
 function navAccess() {
     const accessElem = document.querySelector('#access');
@@ -121,75 +115,46 @@ function navAccess() {
             "http://localhost:8080/api/business-resources",
             (businessResources) => {
                 PageContent.innerHTML = BusinessResources(businessResources);
-                console.log('FIRE');
-    
+                console.log(businessResources);
             }
         );
-        businessResource();
-        BusinessResources();
+        renderBusinessResource();
     });
 }
 
-// function renderBusinessResource() {
-//     PageContent.addEventListener('click', (event) => {
-//         let keywordsCity = ['Cleveland', 'Akron', 'Toledo', 'Cincinnati'];
-        
-//         if (event.target.classList.contains("city")) {
-//             let value = keywordsCity;
-//             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (businessResource) => {
-//                 console.log('BUS ID', busId);
-//                 PageContent.innerHTML = BusinessResource(businessResource);
-//                 });
-//         }
-//     });
-// }
+function renderBusinessResource() {
+    PageContent.addEventListener("click", (event) => {
 
-const businessList = document.getElementById('businessList');
-    
-const searchBar = document.getElementById('searchBar');
-let apiBusinesses = [];
+        const searchBar = document.getElementById('searchBar');
+        let apiBusinesses = [];
 
-searchBar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
+        searchBar.addEventListener('keyup', (e) => {
+            const searchString = e.target.value.toLowerCase();
 
-    const filteredBusinesses = apiBusinesses.filter((businessResource) => {
-        return (
-            businessResource.name.toLowerCase().includes(searchString)
+            const filteredBusinesses = apiBusinesses.filter((businessResources) => {
+                return (
+                    businessResources.name.toLowerCase().includes(searchString) ||
+                    businessResources.businessCity.toLowerCase().includes(searchString)
+                );
+            });
+            displayBusinesses(filteredBusinesses);
+        });
 
-            ||
 
-            businessResource.businessCity.toLowerCase().includes(searchString)
-        );
+
+        // function renderBusinessResource() {
+        // PageContent.addEventListener('click', (event) => {
+        //         let keywordsCity = ['Cleveland', 'Akron', 'Toledo', 'Cincinnati'];
+
+        //         if (event.target.classList.contains("city")) {
+        //             let value = keywordsCity;
+        //             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (businessResource) => {
+        //                 console.log('BUS ID', busId);
+        //                 PageContent.innerHTML = BusinessResource(businessResource);
+        //                 });
+        //         }
     });
-    displayBusinesses(filteredBusinesses);
-});
-
-const loadBusinesses = async () => {
-    try {
-        const res = await fetch('http://localhost:8080/api/business-resources');
-        apiBusinesses = await res.json();
-        displayBusinesses(apiBusinesses);
-    } catch (err) {
-        console.error(err);
-    }
-};
-
-const displayBusinesses = (businessResources) => {
-    const htmlString = businessResources
-        .map((businessResources) => {
-            return `
-            <li class="business">
-                <h2>${businessResources.name}</h2>
-                <p>URL: ${businessResources.businessUrl}</p>
-                
-            </li>
-        `;
-        })
-        .join('');
-    businessList.innerHTML = htmlString;
-};
-
-loadBusinesses();
+}
 
 function contact() {
     const contactElem = document.querySelector('#contact');
