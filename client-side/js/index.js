@@ -1,5 +1,6 @@
 import About from './components/About';
 import Account from './components/Account';
+import BusinessResource from './Components/BusinessResource.js';
 import BusinessResources from './Components/BusinessResources.js';
 import Contact from './components/Contact';
 import Login from "./components/Login";
@@ -7,17 +8,16 @@ import Maps from './Components/Maps';
 import Resources from './components/Resources';
 import Village from './components/Village';
 import apiHelpers from "./components/apiHelpers.js";
-import businessResource from './Components/BusinessResource.js';
 
 // import {
 //     createTestScheduler
 // } from 'jest';
-
+// const PageContent = document.querySelector("#pageContent");
 buildPage();
 
 function buildPage() {
     about();
-    businessResource();
+    BusinessResource();
     BusinessResources();
     account();
     contact();
@@ -26,6 +26,8 @@ function buildPage() {
     navAccess();
     //login();
     mapsResources();
+    search();
+    filteredBusinesses();
 }
 
 
@@ -106,56 +108,57 @@ function account() {
         PageContent.innerHTML = Account();
     });
 }
-//Lyzz BusinessAPI
+//Lyzz BusinessAPI and search bar
 
 function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
-        apiHelpers.getRequest(
-            "http://localhost:8080/api/business-resources",
-            (businessResources) => {
-                PageContent.innerHTML = BusinessResources(businessResources);
-                console.log(businessResources);
-            }
-        );
-        displayBusinesses();
+        PageContent.innerHTML = BusinessResources();
+        // apiHelpers.getRequest(
+        //     "http://localhost:8080/api/business-resources",
+        //     (businessResources) => {
+        //         PageContent.innerHTML = BusinessResources(businessResources);
+        //         console.log(businessResources);
+        //     }
+        // );
+        search();
     });
+
+
 }
 
-function displayBusinesses() {
-    PageContent.addEventListener("click", (event) => {
+function search() {
+    const pageContent = document.querySelector('#PageContent');
 
+    pageContent.addEventListener('click', () => {
         const searchBar = document.getElementById('searchBar');
-        let apiBusinesses = [];
+        console.log('SearchBar', searchBar);
+        apiHelpers.getRequest('http://localhost:8080/api/business-resources', (resources) => {
+            console.log('Resources: ', resources);
+            searchBar.addEventListener('keyup', (e) => {
+                const searchString = e.target.value.toLowerCase();
+                console.log('Search String: ', searchString);
+                const filteredBusinesses = resources.filter(resource => resource.name.toLowerCase().includes(searchString));
+                console.log('Filtered Businesses: ', filteredBusinesses);
+                console.log();
 
-        searchBar.addEventListener('keyup', (e) => {
-            const searchString = e.target.value.toLowerCase();
-
-            const filteredBusinesses = apiBusinesses.filter((businessResources) => {
-                return (
-                    businessResources.name.toLowerCase().includes(searchString) ||
-                    businessResources.businessCity.toLowerCase().includes(searchString)
-                );
             });
-            console.log(filteredBusinesses);
-            displayBusinesses(filteredBusinesses);
+
+
         });
+        // PageContent.insertAdjacentHTML("beforeend",BusinessResource(filteredBusinesses));
+        pageContent.innerHTML = BusinessResource(filteredBusinesses);
+    })
 
+};
 
+// function filteredBusinesses() {
+//     const businessList = document.querySelector('#businessList')
+//     businessList.addEventListener('click', () => {
+//         PageContent.innerHTML = BusinessResource();
+//     });
 
-        // function renderBusinessResource() {
-        // PageContent.addEventListener('click', (event) => {
-        //         let keywordsCity = ['Cleveland', 'Akron', 'Toledo', 'Cincinnati'];
-
-        //         if (event.target.classList.contains("city")) {
-        //             let value = keywordsCity;
-        //             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/`, (businessResource) => {
-        //                 console.log('BUS ID', busId);
-        //                 PageContent.innerHTML = BusinessResource(businessResource);
-        //                 });
-        //         }
-    });
-}
+// }
 
 function contact() {
     const contactElem = document.querySelector('#contact');
