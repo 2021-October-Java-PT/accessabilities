@@ -2,8 +2,8 @@ export default function BusinessResources(businessResources) {
 
   console.log('FIRE');
   return `
-  <div class="container">
   <h1>Business Directory</h1>
+  <div class="container">
   <div id="searchWrapper">
       <input
           type="text"
@@ -12,7 +12,13 @@ export default function BusinessResources(businessResources) {
           placeholder="search for a business"
       />
   </div>
-  <ul id="businessList"></ul>
+  <h2>Name</h2>
+  <h2>${resources.name}</h2>
+  <input type="hidden" id="resources-id" value="Zoos"></li>
+<ul id="businessList">
+
+
+</ul>
 </div>
 
       `;

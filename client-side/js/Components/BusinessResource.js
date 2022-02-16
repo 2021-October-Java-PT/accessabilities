@@ -1,6 +1,7 @@
-export default function BusinessResource(filteredBusinesses) {
+export default function BusinessResource() {
     return `
-
-            <h2>this is driving me nuts</h2>
+    <div id="filteredBusinesses">
+<h1>Location: ${resources.name}</h1>
+</div>
     `;
 }

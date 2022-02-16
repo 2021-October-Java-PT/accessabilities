@@ -28,6 +28,7 @@ function buildPage() {
     mapsResources();
     search();
     filteredBusinesses();
+    renderBusinessResource();
 }
 
 
@@ -113,18 +114,26 @@ function account() {
 function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
-        PageContent.innerHTML = BusinessResources();
-        // apiHelpers.getRequest(
-        //     "http://localhost:8080/api/business-resources",
-        //     (businessResources) => {
-        //         PageContent.innerHTML = BusinessResources(businessResources);
-        //         console.log(businessResources);
-        //     }
-        // );
+        apiHelpers.getRequest("http://localhost:8080/api/business-resources", (businessResource) => {
+            PageContent.innerHTML = BusinessResources(businessResource);
+            console.log(businessResources);
+        });
         search();
+        renderBusinessResource()
     });
+}
 
+function renderBusinessResource() {
+    pageContent.addEventListener("click", (event) => {
+        const id = event.target.querySelector("#resources-id").value;
+        if (event.target.classList.contains("resource")) {
+            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${id}`, businessResource => {
+                pageContent.innerHTML = BusinessResource(businessResource);
 
+            });
+            search();
+        }
+    });
 }
 
 function search() {

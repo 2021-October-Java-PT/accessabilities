@@ -481,18 +481,13 @@ body.dark {
 }
 
 /* Lyzz Business Search */
-body {
-    font-family: sans-serif;
-    background-color: #111d4a;
-}
-
 * {
     box-sizing: border-box;
 }
-h1 {
+.container h1 {
     color: #eee;
     margin-bottom: 30px;
-    font-size: medium;
+ 
 }
 .container {
     padding: 40px;
@@ -502,14 +497,14 @@ h1 {
     
 }
 
-#businessList {
+#filteredBusinesses {
     padding-inline-start: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
 }
 
-.business {
+.filteredBusinesses {
     list-style-type: none;
     background-color: #eaeaea;
     border-radius: 3px;
