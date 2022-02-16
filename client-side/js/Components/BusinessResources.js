@@ -12,8 +12,8 @@ export default function BusinessResources(businessResources) {
           placeholder="search for a business"
       />
   </div>
-  <h2>Name</h2>
-  <h2>${resources.name}</h2>
+
+  <h2>WHYYYYYY</h2>
   <input type="hidden" id="resources-id" value="Zoos"></li>
 <ul id="businessList">
 
