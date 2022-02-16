@@ -1,51 +1,44 @@
 import apiHelpers from "./apiHelpers.js";
-export default function BusinessResources() {
-  function render(){
-    search();
-  }
-  render();
+export default function BusinessResources(businessResources) {
 
-  function search() {
-    const pageContent = document.querySelector('#PageContent');
 
-    pageContent.addEventListener('click', () => {
-        const searchBar = document.getElementById('searchBar');
-        console.log('SearchBar', searchBar);
-        apiHelpers.getRequest('http://localhost:8080/api/business-resources', (resources) => {
-            console.log('Resources: ', resources);
-            searchBar.addEventListener('keyup', (e) => {
-                const searchString = e.target.value.toLowerCase();
-                console.log('Search String: ', searchString);
-                const filteredBusinesses = resources.filter(resource => resource.name.toLowerCase().includes(searchString));
-                console.log('Filtered Businesses: ', filteredBusinesses);
-                console.log(filteredBusinesses[0]);
-                for (let i = 0; i < filteredBusinesses.length; i++) {
-                  element = filteredBusinesses[i];
-                  BizzName = element.name;
-                  Bizz.innerHTML = BizzName;
-                }
-            });
-        });
+  // function render() {
+  //   search();
+  // }
+  // render();
 
-    })
-};
-  
+  //   function search() {
+  //     const pageContent = document.querySelector("#pageContent");
+  //     const searchBar = document.getElementById("search-bar");
+  //     const searchSubmitBtn = document.getElementById("search-submit-btn");
 
-  console.log('FIRE');
+  //     searchSubmitBtn.addEventListener("click", () => {
+  //         const searchString = searchBar.value;
+  //         apiHelpers.getRequest(`http://localhost:8080/api/business-resources/city/${searchString}`, (businessResource) => {
+  //           pageContent.innerHTML = BusinessResources(businessResource);
+  //         });
+  //     });
+  // }
+
+
+  console.log('BUSINESS RESOURCES.JS FILE');
   return `
   <h1>Business Directory</h1>
   <div class="container">
   <div id="searchWrapper">
-      <input
-          type="text"
-          name="searchBar"
-          id="searchBar"
-          placeholder="search for a business"
-      />
+  <input type="search" id="searchBar" class="form-control" size="50" placeholder="Search for a business by City" required>
+
+      <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
 
   <h2>WHYYYYYY</h2>
   <h1>Because it CAAAAAAAAAN</h1>
+  ${businessResources.map(resource => {
+    return `
+    <li>${resource.name}
+    `;
+  }).join("")}</li>
+  
   <p id = "Bizz" ></p>
   <input type="hidden" id="resources-id" value="Zoos"></li>
 <ul id="businessList">
@@ -55,5 +48,5 @@ export default function BusinessResources() {
 </div>
 
       `;
-  
-    }
+
+}
