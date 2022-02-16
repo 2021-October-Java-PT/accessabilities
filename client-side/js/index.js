@@ -26,9 +26,9 @@ function buildPage() {
     navAccess();
     //login();
     mapsResources();
-    search();
-    filteredBusinesses();
-    renderBusinessResource();
+    //search();
+    //filteredBusinesses();
+    //renderBusinessResource();
 }
 
 
@@ -115,52 +115,51 @@ function navAccess() {
     const accessElem = document.querySelector('#access');
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest("http://localhost:8080/api/business-resources", (businessResource) => {
-            PageContent.innerHTML = BusinessResources(businessResource);
-            console.log(businessResources);
+            PageContent.innerHTML = BusinessResources();
         });
-        search();
-        renderBusinessResource()
+        //search();
+        //renderBusinessResource()
     });
 }
 
-function renderBusinessResource() {
-    pageContent.addEventListener("click", (event) => {
-        const id = event.target.querySelector("#resources-id").value;
-        if (event.target.classList.contains("resource")) {
-            apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${id}`, businessResource => {
-                pageContent.innerHTML = BusinessResource(businessResource);
+// function renderBusinessResource() {
+//     pageContent.addEventListener("click", (event) => {
+//         const id = event.target.querySelector("#resources-id").value;
+//         if (event.target.classList.contains("resource")) {
+//             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${id}`, businessResource => {
+//                 pageContent.innerHTML = BusinessResource(businessResource);
 
-            });
-            search();
-            addBusinessToAPI();
-        }
-    });
-}
+//             });
+//             search();
+//             addBusinessToAPI();
+//         }
+//     });
+// }
 
-function search() {
-    const pageContent = document.querySelector('#PageContent');
+// function search() {
+//     const pageContent = document.querySelector('#PageContent');
 
-    pageContent.addEventListener('click', () => {
-        const searchBar = document.getElementById('searchBar');
-        console.log('SearchBar', searchBar);
-        apiHelpers.getRequest('http://localhost:8080/api/business-resources', (resources) => {
-            console.log('Resources: ', resources);
-            searchBar.addEventListener('keyup', (e) => {
-                const searchString = e.target.value.toLowerCase();
-                console.log('Search String: ', searchString);
-                const filteredBusinesses = resources.filter(resource => resource.name.toLowerCase().includes(searchString));
-                console.log('Filtered Businesses: ', filteredBusinesses);
-                console.log();
+//     pageContent.addEventListener('click', () => {
+//         const searchBar = document.getElementById('searchBar');
+//         console.log('SearchBar', searchBar);
+//         apiHelpers.getRequest('http://localhost:8080/api/business-resources', (resources) => {
+//             console.log('Resources: ', resources);
+//             searchBar.addEventListener('keyup', (e) => {
+//                 const searchString = e.target.value.toLowerCase();
+//                 console.log('Search String: ', searchString);
+//                 const filteredBusinesses = resources.filter(resource => resource.name.toLowerCase().includes(searchString));
+//                 console.log('Filtered Businesses: ', filteredBusinesses);
+//                 console.log();
 
-            });
+//             });
 
 
-        });
-        // PageContent.insertAdjacentHTML("beforeend",BusinessResource(filteredBusinesses));
-        pageContent.innerHTML = BusinessResource(filteredBusinesses);
-    })
+//         });
+//         // PageContent.insertAdjacentHTML("beforeend",BusinessResource(filteredBusinesses));
+//         pageContent.innerHTML = BusinessResource(filteredBusinesses);
+//     })
 
-};
+// };
 
 // function filteredBusinesses() {
 //     const businessList = document.querySelector('#businessList')
