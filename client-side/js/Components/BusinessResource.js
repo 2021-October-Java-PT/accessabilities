@@ -1,5 +1,10 @@
-export default function BusinessResource(){
-    console.log('FIRE');
-    return` 
+export default function BusinessResource(businessResource) {
+
+console.log(businessResource);
+    
+    return `
+    <div id="filteredBusinesses">
+<h1>Location: ${businessResource.businessCity}</h1>
+</div>
     `;
 }

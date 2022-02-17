@@ -1,14 +1,51 @@
+import apiHelpers from "./apiHelpers.js";
+
 export default function BusinessResources(businessResources) {
-    console.log('FIRE');
-    return `
-    <h1>Know Before You Go!!</h1>
-    <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+
+
+  // function render() {
+  //   search();
+  // }
+  // render();
+
+  //   function search() {
+  //     const pageContent = document.querySelector("#pageContent");
+  //     const searchBar = document.getElementById("search-bar");
+  //     const searchSubmitBtn = document.getElementById("search-submit-btn");
+
+  //     searchSubmitBtn.addEventListener("click", () => {
+  //         const searchString = searchBar.value;
+  //         apiHelpers.getRequest(`http://localhost:8080/api/business-resources/city/${searchString}`, (businessResource) => {
+  //           pageContent.innerHTML = BusinessResources(businessResource);
+  //         });
+  //     });
+  // }
+
+
+  console.log('BUSINESS RESOURCES.JS FILE');
+  return `
+  <h1>Business Directory</h1>
+  <div class="container">
+  <div id="searchWrapper">
+  <input type="search" id="searchBar" class="form-control" size="50" placeholder="Search for a business by City" required>
+
+      <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
-</div>
+
+  ${businessResources.map(resource => {
+    return `
+    <li>${resource.name}
     `;
+  }).join("")}</li>
+  <h2>Test</h2>
+  <p id = "Bizz" ></p>
+  <input type="hidden" id="resources-id" value="Zoos"></li>
+<ul id="businessList">
+
+
+</ul>
+</div>
+
+      `;
+
 }

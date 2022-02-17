@@ -22,12 +22,18 @@ public class BusinessRestController {
         return (Collection<BusinessResource>) businessRepo.findAll();
     }
 
+    @GetMapping("/api/business-resources/city/{businessCity}")
+    public Collection<BusinessResource> getBusinessResourcesByCity(@PathVariable(value = "businessCity") String businessCity) {
+        return businessRepo.findByBusinessCityIgnoreCase(businessCity);
+    }
+
 
     @GetMapping("/api/business-resources/{id}")
     public Optional<BusinessResource> getBusinessResources(@PathVariable Long id) {
         return businessRepo.findById(id);
-
     }
+
+
     @PostMapping("/api/business-resources/add-resource")
     public String addBusinessResource(@RequestBody String body) throws JSONException {
         JSONObject newResource = new JSONObject(body);
