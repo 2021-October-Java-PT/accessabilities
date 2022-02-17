@@ -1,4 +1,5 @@
 import apiHelpers from "./apiHelpers.js";
+
 export default function BusinessResources(businessResources) {
 
 
@@ -31,8 +32,6 @@ export default function BusinessResources(businessResources) {
       <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
 
-  <h2>WHYYYYYY</h2>
-  <h1>Because it CAAAAAAAAAN</h1>
   ${businessResources.map(resource => {
     return `
     <li>${resource.name}
