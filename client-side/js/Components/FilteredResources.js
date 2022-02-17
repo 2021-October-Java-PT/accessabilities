@@ -1,55 +1,38 @@
 import apiHelpers from "./apiHelpers.js";
+
 export default function FilteredResources(filteredResources) {
   
-  
-  // function render() {
-  //   search();
-  // }
-  // render();
-  
-//   function search() {
-//     const pageContent = document.querySelector("#pageContent");
-//     const searchBar = document.getElementById("search-bar");
-//     const searchSubmitBtn = document.getElementById("search-submit-btn");
-
-//     searchSubmitBtn.addEventListener("click", () => {
-//         const searchString = searchBar.value;
-//         apiHelpers.getRequest(`http://localhost:8080/api/business-resources/city/${searchString}`, (businessResource) => {
-//           pageContent.innerHTML = BusinessResources(businessResource);
-//         });
-//     });
-// }
-
-
   console.log('FIRE');
   return `
-  <h1>Business Directory</h1>
-  <div class="container">
-  <div id="searchWrapper">
-      <input
-          type="text"
-          name="searchBar"
-          id="searchBar"
-          placeholder="search for a business"
-      />
-
-      <button id="search-submit-btn">SUBMIT</button>
+  <link rel=stylesheet" "href="/filteredResources.css" />
+    
+  <div id="searchBar" class="instant-search">
+  <div class="instant-search__input-container">
+  <input
+  type="text"
+  name="searchBar"
+  id="searchBusinesses"
+  placeholder="search for a business"
+/>
+    <button id="search-submit-btn">SUBMIT</button>
+    </div>
   </div>
+</div>
+<div class=instant-search__results-container">
 
-  <h2>WHYYYYYY</h2>
-  <h1>Because it CAAAAAAAAAN</h1>
-  ${filteredResources.map(resource => {
+ <h1>${filteredResources.map(resource => {
     return `
-    <li>${resource.name}
-    `;
-  }).join("")}</li>
+    <div class="instant-search__title">${resource.name}</div>
+    <a href="${resource.businessUrl}">${resource.businessUrl}</a> 
+    <div class="instant-search__description">${resource.businessDescription}</div>
+    <div class="instant-search__city">${resource.businessCity}</div>
+    <p class="instant-search__paragraph">${resource.businessAccessibilityFeatures}</div>
   
-  <p id = "Bizz" ></p>
-  <input type="hidden" id="resources-id" value="Zoos"></li>
-<ul id="businessList">
+    
+    `;
+  }).join("")}</h1>
 
 
-</ul>
 </div>
 
       `;

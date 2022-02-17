@@ -24,19 +24,25 @@ export default function BusinessResources(businessResources) {
 
   console.log('BUSINESS RESOURCES.JS FILE');
   return `
-  <h1>Business Directory</h1>
-  <div class="container">
-  <div id="searchWrapper">
-  <input type="search" id="searchBar" class="form-control" size="50" placeholder="Search for a business by City" required>
-
-      <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
+ 
+  <div id="searchBusinesses" class="instant-search">
+  <div class="instant-search__input-container">
+  <input
+  type="text"
+  name="searchBar"
+  id="searchBar"
+  placeholder="search for a business"
+/>
+    <button id="search-submit-btn">SUBMIT</button>
+    </div>
   </div>
+</div>
 
   ${businessResources.map(resource => {
     return `
-    <li>${resource.name}
+    <h1>${resource.name}
     `;
-  }).join("")}</li>
+  }).join("")}</h1>
   <h2>Test</h2>
   <p id = "Bizz" ></p>
   <input type="hidden" id="resources-id" value="Zoos"></li>
