@@ -37,7 +37,7 @@ export default function BusinessResources(businessResources) {
     <li>${resource.name}
     `;
   }).join("")}</li>
-  
+  <h2>Test</h2>
   <p id = "Bizz" ></p>
   <input type="hidden" id="resources-id" value="Zoos"></li>
 <ul id="businessList">
