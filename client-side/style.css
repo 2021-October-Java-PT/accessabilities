@@ -32,7 +32,7 @@ body {
     
 }
 
-.container {
+.maps-container {
     max-width: 1400px;
     margin: auto;
 }
@@ -428,4 +428,125 @@ body.dark {
 .checkbox:checked + .label .ball {
 	transform: translateX(24px);
 }
+/*Lyzz Search and Business API*/
+.instant-search {
+    position: relative;
+    max-width: 400px;
+}
 
+.instant-search,
+.instant-search__input {
+    font-family: 'Montserra', sans-serif;
+}
+
+.instant-search,
+.instant-search * {
+    transition: background 0.15s, box-shadow 0.15s;
+
+}
+
+.instant-search:focus-within {
+    box-shadow: 0 0 3px rgba(0, 0, 0. 0.2);
+}
+
+.instant-search,
+.instant-search__input-container {
+    border-radius: 5px;
+}
+
+.instant-search__input-container {
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 200%;
+    padding: 10px;
+    background: #eeeeee;
+}
+
+.instant-search__input-container:focus-within {
+    background: #ffff;
+}
+
+.instant-search__input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0 6px;
+    background: transparent;
+}
+
+.instant-search__results-container {
+    max-height: 250px;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s, opacity 0.1s;
+}
+
+.instant-search__results-container--visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.instant-search__result {
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 0.8em;
+    cursor: pointer;
+    font-family: 'Montserra', sans-serif;
+}
+
+.instant-search__result:hover {
+    background: #eeeeee;
+}
+
+.instant-search__result:not(:last-of-type) {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.instant-search__title {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserra', sans-serif;
+}
+
+.instant-search__description {
+    font-size: 1.1em;
+    
+}
+
+.instant-search__city {
+    font-size: 1.1em;
+    
+}
+
+.instant-search__paragraph {
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.api-page-container {
+    max-height: 250px;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s, opacity 0.1s;
+}
+.apiDisplay {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 40px;
+    border: 3px solid black;
+    margin: 3%;
+}
+.api-title h1 {
+    font-size: x-large;
+    text-align: center;
+}
+
+.api-businesses {
+    margin-top: 50px;
+    justify-content: center;
+}
