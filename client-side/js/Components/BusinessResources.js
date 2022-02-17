@@ -1,26 +1,5 @@
-import apiHelpers from "./apiHelpers.js";
 
 export default function BusinessResources(businessResources) {
-
-
-  // function render() {
-  //   search();
-  // }
-  // render();
-
-  //   function search() {
-  //     const pageContent = document.querySelector("#pageContent");
-  //     const searchBar = document.getElementById("search-bar");
-  //     const searchSubmitBtn = document.getElementById("search-submit-btn");
-
-  //     searchSubmitBtn.addEventListener("click", () => {
-  //         const searchString = searchBar.value;
-  //         apiHelpers.getRequest(`http://localhost:8080/api/business-resources/city/${searchString}`, (businessResource) => {
-  //           pageContent.innerHTML = BusinessResources(businessResource);
-  //         });
-  //     });
-  // }
-
 
   console.log('BUSINESS RESOURCES.JS FILE');
   return `

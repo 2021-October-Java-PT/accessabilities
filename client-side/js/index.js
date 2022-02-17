@@ -14,22 +14,38 @@ import apiHelpers from "./components/apiHelpers.js";
 //     createTestScheduler
 // } from 'jest';
 const pageContent = document.querySelector("#pageContent");
+
 buildPage();
 
 function buildPage() {
     about();
-    account();
+    // account();
     contact();
     resources();
     village();
     navAccess();
     // login();Z
     mapsResources();
-    // search();
-    // filteredBusinesses();
-    // renderBusinessResource();
 }
 
+function renderHome() {
+    pageContent.innerHTML = Home();
+}
+
+function navHome() {
+    const homeElem = document.querySelector("home");
+    homeElem.addEventListener("click", () => {
+        pageContent.innerHTML = Home();
+        about();
+        // account();
+        contact();
+        resources();
+        village();
+        navAccess();
+        // login();Z
+        mapsResources();
+    });
+}
 
 console.log("Client Side is wired up!");
 
@@ -52,7 +68,7 @@ console.log("Client Side is wired up!");
 
 
 function mapsResources() {
-    const mapsElem = document.querySelector("#resources")
+    const mapsElem = document.querySelector("resources")
     mapsElem.addEventListener('click', () => {
         pageContent.innerHTML = Resources();
         clickMaps();
@@ -96,14 +112,14 @@ chk.addEventListener('change', () => {
 
 
 function about() {
-    const contactElem = document.querySelector('#about');
+    const contactElem = document.querySelector('about');
     contactElem.addEventListener('click', () => {
         pageContent.innerHTML = About();
     });
 }
 
 function account() {
-    const contactElem = document.querySelector('#account');
+    const contactElem = document.querySelector('account');
     contactElem.addEventListener('click', () => {
         pageContent.innerHTML = Account();
     });
@@ -111,7 +127,7 @@ function account() {
 //Lyzz BusinessAPI and search bar
 
 function navAccess() {
-    const accessElem = document.querySelector('#access');
+    const accessElem = document.querySelector("access");
     accessElem.addEventListener('click', () => {
         apiHelpers.getRequest("http://localhost:8080/api/business-resources", (businessResources) => {
             console.log("RESOURCES: ", businessResources);
@@ -127,7 +143,7 @@ function search() {
     const searchSubmitBtn = document.getElementById("search-submit-btn");
     console.log(searchBar);
     console.log(searchSubmitBtn);
-    
+
 
     searchSubmitBtn.addEventListener("click", () => {
         const searchString = searchBar.value;
@@ -238,21 +254,21 @@ function addBusinessToAPI() {
 }
 
 function contact() {
-    const contactElem = document.querySelector('#contact');
+    const contactElem = document.querySelector('contact');
     contactElem.addEventListener('click', () => {
         pageContent.innerHTML = Contact();
     });
 }
 
 function resources() {
-    const contactElem = document.querySelector('#resources');
+    const contactElem = document.querySelector('resources');
     contactElem.addEventListener('click', () => {
         pageContent.innerHTML = Resources();
     });
 }
 
 function village() {
-    const contactElem = document.querySelector('#village');
+    const contactElem = document.querySelector('village');
     contactElem.addEventListener('click', () => {
         pageContent.innerHTML = Village();
     });
