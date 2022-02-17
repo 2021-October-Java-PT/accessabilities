@@ -23,7 +23,7 @@ function buildPage() {
     resources();
     village();
     navAccess();
-    // login();
+    // login();Z
     mapsResources();
     // search();
     // filteredBusinesses();
@@ -91,7 +91,7 @@ const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
     document.body.classList.toggle('dark');
-})
+});
 
 
 
