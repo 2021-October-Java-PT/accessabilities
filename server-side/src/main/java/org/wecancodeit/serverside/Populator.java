@@ -4,15 +4,21 @@ package org.wecancodeit.serverside;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.serverside.models.BusinessResource;
+import org.wecancodeit.serverside.models.LocationModel;
 import org.wecancodeit.serverside.repositories.BusinessResourceRepository;
+import org.wecancodeit.serverside.repositories.LocationRepository;
 
 import javax.annotation.Resource;
+import javax.xml.stream.Location;
 
 @Component
 public class Populator implements CommandLineRunner {
 
     @Resource
     private BusinessResourceRepository businessRepo;
+
+    @Resource
+    private LocationRepository locationRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -29,5 +35,11 @@ public class Populator implements CommandLineRunner {
         businessRepo.save(akronZoo);
         businessRepo.save(cincinnatiZooAndBotanicalGarden);
         businessRepo.save(GreaterClevelandAquarium);
+
+        LocationModel popeyes = new LocationModel("Popeyes","555-555-5555","123", "Chicken St", "Cleveland", "Ohio","12345",10.0);
+        LocationModel chickFilA = new LocationModel("Chick-Fil-A", "123-456-7890", "654","Church Blvd","Vatican City", "Ohio", "54321", 0.0);
+
+        locationRepo.save(popeyes);
+        locationRepo.save(chickFilA);
     }
 }
