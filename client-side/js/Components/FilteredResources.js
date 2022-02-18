@@ -23,12 +23,6 @@ export default function FilteredResources(filteredResources) {
     `;
   }).join("")}</li>
   
-  <p id = "Bizz" ></p>
-  <input type="hidden" id="resources-id" value="Zoos"></li>
-<ul id="businessList">
-
-
-</ul>
 </div>
 
       `;
