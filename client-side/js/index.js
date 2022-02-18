@@ -1,14 +1,24 @@
 import About from './components/About';
-import Account from './components/Account';
 import BusinessResource from './Components/BusinessResource.js';
 import BusinessResources from './Components/BusinessResources.js';
 import Contact from './components/Contact';
 import FilteredResources from './Components/FilteredResources.js';
 import Login from "./components/Login";
 import Maps from './Components/Maps';
-import Resources from './components/Resources';
 import Village from './components/Village';
 import apiHelpers from "./components/apiHelpers.js";
+
+// import Resources from './components/Resources';
+// import Account from './components/Account';
+
+
+
+
+
+
+
+
+
 
 // import {
 //     createTestScheduler
@@ -18,9 +28,9 @@ buildPage();
 
 function buildPage() {
     about();
-    account();
+    // account();
     contact();
-    resources();
+    // resources();
     village();
     navAccess();
     // login();Z
@@ -50,11 +60,11 @@ console.log("Client Side is wired up!");
 
 //}
 
-
+// Maps
 function mapsResources() {
-    const mapsElem = document.querySelector("#resources")
+    const mapsElem = document.querySelector("#village")
     mapsElem.addEventListener('click', () => {
-        pageContent.innerHTML = Resources();
+        pageContent.innerHTML = Village();
         clickMaps();
     })
 }
@@ -64,8 +74,8 @@ function clickMaps() {
     pageContent.addEventListener("click", (event) => {
         console.log("Is this thing on????")
         pageContent.innerHTML = Maps();
-        if (event.target.classList.contains("returnToResources")) {
-            pageContent.innerHTML = Resources();
+        if (event.target.classList.contains("returnToTheVillage")) {
+            pageContent.innerHTML = Village();
         }
 
     });
@@ -95,19 +105,14 @@ chk.addEventListener('change', () => {
 
 
 
-function about() {
-    const contactElem = document.querySelector('#about');
-    contactElem.addEventListener('click', () => {
-        pageContent.innerHTML = About();
-    });
-}
+// function account() {
+//     const contactElem = document.querySelector('#account');
+//     contactElem.addEventListener('click', () => {
+//         pageContent.innerHTML = Account();
+//     });
+// }
 
-function account() {
-    const contactElem = document.querySelector('#account');
-    contactElem.addEventListener('click', () => {
-        pageContent.innerHTML = Account();
-    });
-}
+
 //Lyzz BusinessAPI and search bar
 
 function navAccess() {
@@ -184,6 +189,7 @@ function search() {
 //     });
 
 // }
+
 function addBusinessToAPI() {
     pageContent.addEventListener("click", (event) => {
         if (event.target.classList.contains("add-business__submit")) {
@@ -237,6 +243,16 @@ function addBusinessToAPI() {
     })
 }
 
+// for the pages 
+
+function about() {
+    const contactElem = document.querySelector('#about');
+    contactElem.addEventListener('click', () => {
+        pageContent.innerHTML = About();
+    });
+}
+
+
 function contact() {
     const contactElem = document.querySelector('#contact');
     contactElem.addEventListener('click', () => {
@@ -244,12 +260,12 @@ function contact() {
     });
 }
 
-function resources() {
-    const contactElem = document.querySelector('#resources');
-    contactElem.addEventListener('click', () => {
-        pageContent.innerHTML = Resources();
-    });
-}
+// function resources() {
+//     const contactElem = document.querySelector('#resources');
+//     contactElem.addEventListener('click', () => {
+//         pageContent.innerHTML = Resources();
+//     });
+// }
 
 function village() {
     const contactElem = document.querySelector('#village');
