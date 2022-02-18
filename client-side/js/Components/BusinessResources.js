@@ -3,6 +3,25 @@ import apiHelpers from "./apiHelpers.js";
 export default function BusinessResources(businessResources) {
 
 
+  // function render() {
+  //   search();
+  // }
+  // render();
+
+  //   function search() {
+  //     const pageContent = document.querySelector("#pageContent");
+  //     const searchBar = document.getElementById("search-bar");
+  //     const searchSubmitBtn = document.getElementById("search-submit-btn");
+
+  //     searchSubmitBtn.addEventListener("click", () => {
+  //         const searchString = searchBar.value;
+  //         apiHelpers.getRequest(`http://localhost:8080/api/business-resources/city/${searchString}`, (businessResource) => {
+  //           pageContent.innerHTML = BusinessResources(businessResource);
+  //         });
+  //     });
+  // }
+
+
   console.log('BUSINESS RESOURCES.JS FILE');
   return `
   <h1>Business Directory</h1>
@@ -18,6 +37,12 @@ export default function BusinessResources(businessResources) {
     <li>${resource.name}
     `;
   }).join("")}</li>
+  <h2>Test</h2>
+  <p id = "Bizz" ></p>
+  <input type="hidden" id="resources-id" value="Zoos"></li>
+<ul id="businessList">
+
+
 </ul>
 </div>
 
