@@ -138,52 +138,7 @@ function search() {
     });
 }
 
-// function renderBusinessResource() {
-//     pageContent.addEventListener("click", (event) => {
-//         const id = event.target.querySelector("#resources-id").value;
-//         if (event.target.classList.contains("resource")) {
-//             apiHelpers.getRequest(`http://localhost:8080/api/business-resources/${id}`, businessResource => {
-//                 pageContent.innerHTML = BusinessResource(businessResource);
 
-//             });
-//             search();
-//             addBusinessToAPI();
-//         }
-//     });
-// }
-
-// function search() {
-//     const pageContent = document.querySelector('#pageContent');
-
-//     pageContent.addEventListener('click', () => {
-//         const searchBar = document.getElementById('searchBar');
-//         console.log('SearchBar', searchBar);
-//         apiHelpers.getRequest('http://localhost:8080/api/business-resources', (resources) => {
-//             console.log('Resources: ', resources);
-//             searchBar.addEventListener('keyup', (e) => {
-//                 const searchString = e.target.value.toLowerCase();
-//                 console.log('Search String: ', searchString);
-//                 const filteredBusinesses = resources.filter(resource => resource.name.toLowerCase().includes(searchString));
-//                 console.log('Filtered Businesses: ', filteredBusinesses);
-//                 console.log();
-
-//             });
-
-
-//         });
-//         // pageContent.insertAdjacentHTML("beforeend",BusinessResource(filteredBusinesses));
-//         pageContent.innerHTML = BusinessResource(filteredBusinesses);
-//     })
-
-// };
-
-// function filteredBusinesses() {
-//     const businessList = document.querySelector('#businessList')
-//     businessList.addEventListener('click', () => {
-//         pageContent.innerHTML = BusinessResource();
-//     });
-
-// }
 function addBusinessToAPI() {
     pageContent.addEventListener("click", (event) => {
         if (event.target.classList.contains("add-business__submit")) {
