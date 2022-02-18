@@ -7,6 +7,7 @@ export default function Maps(){
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CmVNvpg25yT-gTY2BMIj1LNw-p_X9JWp&ehbc=2E312F" width="640" height="480"></iframe>
        </div>
    
+       
     <div>
     <h2> Parks Map </h2>
         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IhoQOgmPta6k-qc1GkUek3UphjgyCKa_&ehbc=2E312F" width="640" height="480"></iframe>
