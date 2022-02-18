@@ -16,13 +16,15 @@ export default function FilteredResources(filteredResources) {
 
       <button id="search-submit-btn">SUBMIT</button>
   </div>
-
+  <div id="resource-list">
   ${filteredResources.map(resource => {
     return `
-    <li>${resource.name}
+    <a href="${resource.name}">${resource.businessUrl}</a>
+    <p>${resource.businessDescription}</p>
+    <p>${resource.businessAccessibilityFeatures}</p>
     `;
   }).join("")}</li>
-  
+  </div>
 </div>
 
       `;
