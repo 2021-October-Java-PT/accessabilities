@@ -62,6 +62,13 @@ input[type="checkbox"] {
 }
 
 /* APPLYING MEDIA QUERIES */
+
+@media (max-width: 1189px){
+  .logo img {
+  
+    width: 20%;
+  }
+}
 @media (max-width: 1600px) {
   .helpingCaring-Text {
     position: relative;
@@ -96,7 +103,7 @@ input[type="checkbox"] {
   .menu {
     display: none;
     position: absolute;
-    background-color: teal;
+    background-color: #565a5a;
     right: 0;
     left: 0;
     text-align: center;
@@ -105,7 +112,7 @@ input[type="checkbox"] {
 
   .menu li:hover {
     display: inline;
-    background-color: #4c9e9e;
+    background-color: #c6c9c9;
     transition: 0.3s ease;
   }
 
