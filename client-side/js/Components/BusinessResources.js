@@ -20,7 +20,7 @@ export default function BusinessResources(businessResources) {
 </div>
 </div>
 
-<div class="form_wrapper">
+<div class="add-business__submit">
 <form>
     <div id="Business_formBox1">
     <label class="businessFormLabel" for="bussinessName">Business name:</label><br>
@@ -68,7 +68,7 @@ export default function BusinessResources(businessResources) {
     </div>
 
     <div id="Business_formBox10">
-    <input id="businessForm_submit" type="submit" value="Submit">
+    <input class="businessForm_submit" type="submit" value="Submit">
     </div>
 
   </form>
