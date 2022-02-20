@@ -1,5 +1,3 @@
-import apiHelpers from "./apiHelpers.js";
-
 export default function FilteredResources(filteredResources) {
   
   console.log('FIRE');
