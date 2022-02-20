@@ -135,7 +135,7 @@ function search() {
 
 function addBusinessToAPI() {
     pageContent.addEventListener("click", (event) => {
-        if (event.target.classList.contains(".businessForm_submit")) {
+        if (event.target.classList.contains("businessForm_submit")) {
             console.log("FIRE");
             const addBusinessName = event.target.parentElement.querySelector(
                 "#businessName"
