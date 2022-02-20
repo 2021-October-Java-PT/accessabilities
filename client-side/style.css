@@ -485,6 +485,11 @@ h1 {
   justify-self: center;
 }
 
+.contact-image{
+  max-width: 300px;
+  justify-content: center;
+}
+
 .footer {
   display: flex;
   align-items: center;
