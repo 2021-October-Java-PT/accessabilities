@@ -1,25 +1,18 @@
-import apiHelpers from "./apiHelpers.js";
-
 export default function FilteredResources(filteredResources) {
   
   console.log('FIRE');
   return `
   <h1>Business Directory</h1>
   <div class="container">
-  <div id="searchWrapper">
-      <input
-          type="text"
-          name="searchBar"
-          id="searchBar"
-          placeholder="search for a business"
-      />
-
-      <button id="search-submit-btn">SUBMIT</button>
-  </div>
-  <div id="resource-list">
+  
+<div class="search-box">
+  <input class="search-input" type="text" placeholder="Search something..">
+  <button class="search-btn"><i class="fas fa-search"></i></button>
+</div>
+  <div id="content" class="content">
   ${filteredResources.map(resource => {
     return `
-    <a href="${resource.name}">${resource.businessUrl}</a>
+    <p class="title"><a href="${resource.businessUrl}">${resource.name}</a></p>
     <p>${resource.businessDescription}</p>
     <p>${resource.businessAccessibilityFeatures}</p>
     `;
