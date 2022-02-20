@@ -187,7 +187,7 @@ input[type="checkbox"] {
 
 .btnHover button:hover {
   background-color: rgb(238, 183, 110);
-
+}
 
 .btnHover a:hover {
   background-color: antiquewhite;

@@ -1,11 +1,9 @@
-import OnTheGo from '../../assets/images/OnTheGo.jpg';
-
 export default function Contact(){
     //add responsiveness to mobile,faq animations/content,styling,replace placeholder pics
-    return` 
+    return ` 
     <div class="wrapper">
     <h1>Contact</h1>
-    <img class="contact-image"src=${OnTheGo} ></img>
+    
     <p>Phone: 555-555-5555</p>
     <p>Email: customerservice@accessaccessability.com</p>
     <p>FAQ DropDown</p>
