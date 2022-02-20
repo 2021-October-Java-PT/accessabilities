@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Maps from './Components/Maps';
 import Village from './components/Village';
 import apiHelpers from "./components/apiHelpers.js";
+import Home from './Components/Home';
 
 // import Resources from './components/Resources';
 // import Account from './components/Account';
@@ -33,8 +34,9 @@ function buildPage() {
     // resources();
     village();
     navAccess();
+    home();
     // login();Z
-    // mapsResources();
+    mapsResources();
     // search();
     // filteredBusinesses();
     // renderBusinessResource();
@@ -225,6 +227,18 @@ function navAccess() {
             search();
         });
         //renderBusinessResource()
+    });
+}
+
+function home(){
+    const homeElem = document.querySelector('#home');
+    homeElem.addEventListener('click', () => {
+        pageContent.innerHTML = Home();
+    });
+
+    const logoElem = document.querySelector('#logoHome');
+    logoElem.addEventListener('click', () => {
+        pageContent.innerHTML = Home();
     });
 }
 
