@@ -161,20 +161,20 @@ input[type="checkbox"] {
   position: absolute;
   color: white;
   left: 100px;
-  bottom: -50px;
+  bottom: 1200px; 
   font-size: 800%;
-  font-weight: 150;
+  font-weight: 150; 
   font-family: serif;
 }
 
 /* second page of Home */
 
 .helpingCaring-Text {
-  position: relative;
+   position: relative;
   bottom: 10rem;
   font-size: 200%;
-  font-weight: 150;
-  font-family: serif;
+  font-weight: 150; 
+   font-family: serif; 
 }
 
 .partnerBtn {

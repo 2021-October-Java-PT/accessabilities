@@ -19,7 +19,7 @@ export default function Maps(){
     </div>
     
     <div>
-        <button class="returnToTheVillage"> Return to Resources</>
+        <button class="returnToTheVillage"> Return to The Village</>
     </div>
     `;
 }
