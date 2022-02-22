@@ -1,12 +1,13 @@
-import About from './components/About';
+// import About from './Components/About';
 import BusinessResource from './Components/BusinessResource.js';
 import BusinessResources from './Components/BusinessResources.js';
-import Contact from './components/Contact';
+import Contact from './Components/Contact';
 import FilteredResources from './Components/FilteredResources.js';
-import Login from "./components/Login";
+import Login from "./Components/Login";
 import Maps from './Components/Maps';
-import Village from './components/Village';
-import apiHelpers from "./components/apiHelpers.js";
+// import Village from './Components/Village';
+import apiHelpers from "./Components/apiHelpers.js";
+import Home from './Components/Home';
 
 // import Resources from './components/Resources';
 // import Account from './components/Account';
@@ -33,11 +34,13 @@ function buildPage() {
     // resources();
     village();
     navAccess();
+    home();
     // login();Z
-    // mapsResources();
+    mapsResources();
     // search();
     // filteredBusinesses();
     // renderBusinessResource();
+    addBusinessToAPI();
 }
 
 
@@ -134,41 +137,38 @@ function search() {
 
 function addBusinessToAPI() {
     pageContent.addEventListener("click", (event) => {
-        if (event.target.classList.contains("add-business__submit")) {
+        if (event.target.classList.contains(".businessForm_submit")) {
+            console.log("FIRE");
             const addBusinessName = event.target.parentElement.querySelector(
-                ".add-business-resource__name"
-            ).value;
-            const addBusinessDescription = event.target.parentElement.querySelector(
-                ".add-business-resource__description"
+                "#businessName"
             ).value;
             const addBusinessStreetNumber = event.target.parentElement.querySelector(
-                ".add-business-resource__street__number"
+                "#businessStreetNum"
             ).value;
             const addBusinessStreetName = event.target.parentElement.querySelector(
-                ".add-business-resource__street__name"
+                "#businessStreetName"
             ).value;
             const addBusinessCity = event.target.parentElement.querySelector(
-                ".add-business-resource__city"
+                "#businessCity"
             ).value;
             const addBusinessState = event.target.parentElement.querySelector(
-                ".add-business-resource__state"
+                "businessState"
             ).value;
             const addBusinessZip = event.target.parentElement.querySelector(
-                ".add-business-resource__zip"
+                "#businessZip"
             ).value;
             const addBusinessUrl = event.target.parentElement.querySelector(
-                ".add-business__Url"
+                "#businessUrl"
             ).value;
             const addBusinessAccessibilityFeatures = event.target.parentElement.querySelector(
-                ".add-business-resource__accessibility"
+                "#businessAccessFeatures"
             ).value;
             const addBusinessContentPhoneNumber = event.target.parentElement.querySelector(
-                ".add-business-resource__business__content__phone__number"
+                "#businessPhonesNum"
             ).value;
             apiHelpers.postRequest(
                 "http://localhost:8080/api/business-resources/add-resources", {
                     name: addBusinessName,
-                    businessDescription: addBusinessDescription,
                     businessStreetNumber: addBusinessStreetNumber,
                     businessStreetName: addBusinessStreetName,
                     businessCity: addBusinessCity,
@@ -225,6 +225,18 @@ function navAccess() {
             search();
         });
         //renderBusinessResource()
+    });
+}
+
+function home(){
+    const homeElem = document.querySelector('#home');
+    homeElem.addEventListener('click', () => {
+        pageContent.innerHTML = Home();
+    });
+
+    const logoElem = document.querySelector('#logoHome');
+    logoElem.addEventListener('click', () => {
+        pageContent.innerHTML = Home();
     });
 }
 
