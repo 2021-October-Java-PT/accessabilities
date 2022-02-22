@@ -5,7 +5,7 @@ import Contact from './Components/Contact';
 import FilteredResources from './Components/FilteredResources.js';
 import Login from "./Components/Login";
 import Maps from './Components/Maps';
-// import Village from './Components/Village';
+import Village from './Components/Village';
 import apiHelpers from "./Components/apiHelpers.js";
 import Home from './Components/Home';
 
@@ -65,24 +65,24 @@ console.log("Client Side is wired up!");
 
 // Maps
 function mapsResources() {
-    const mapsElem = document.querySelector("#village")
+    const mapsElem = document.querySelector("#access")
     mapsElem.addEventListener('click', () => {
-        pageContent.innerHTML = Village();
-        clickMaps();
+        pageContent.innerHTML = BusinessResources();
+        
     })
 }
 
 
-function clickMaps() {
-    pageContent.addEventListener("click", (event) => {
-        console.log("Is this thing on????")
-        pageContent.innerHTML = Maps();
-        if (event.target.classList.contains("returnToTheVillage")) {
-            pageContent.innerHTML = Village();
-        }
+// function clickMaps() {
+//     pageContent.addEventListener("click", (event) => {
+//         console.log("Is this thing on????")
+//         pageContent.innerHTML = Maps();
+//         if (event.target.classList.contains("returnToAccess)) {
+//             pageContent.innerHTML = Village();
+//         }
 
-    });
-}
+//     });
+// }
 
 
 //Lyzz js to enable hamburger menu

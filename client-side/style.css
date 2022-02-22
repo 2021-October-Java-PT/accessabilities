@@ -1,3 +1,47 @@
+/* Martel's Dark Mode */
+* {
+  box-sizing: border-box;
+}
+
+body.dark {
+  background: #292c35;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #b1b1b1;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(0.8);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+  transform: translateX(24px);
+}
+
 /* Home page image */
 .navBar {
   display: flex;
@@ -11,7 +55,7 @@
   padding: 0px;
   position: fixed;
   z-index: 12;
-  top: -1px;
+  /* top: -20px; */
   left: 0px;
   width: 1903px;
   height: 90px;
@@ -81,42 +125,11 @@ input[type="checkbox"] {
 
 @media (max-width: 1189px) {
   .logo img {
-
     width: 20%;
   }
 }
 
-@media (max-width: 1600px) {
-  .helpingCaring-Text {
-    position: relative;
-    bottom: 10rem;
-    font-size: 10%;
-    font-weight: 150;
-    font-family: serif;
-  }
 
-  .partnerBtn {
-    padding: 1rem;
-    border: none;
-    background-color: #dd9d4c;
-    font-size: 70%;
-    font-family: serif;
-  }
-
-  .btnHover a:hover {
-    background-color: antiquewhite;
-  }
-
-  .nested {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 9rem;
-     margin-right: 10rem; */
-    gap: 100px;
-  }
-}
 
 @media (max-width: 768px) {
   .menu {
@@ -147,7 +160,7 @@ input[type="checkbox"] {
     display: block;
   }
 }
-
+/* Homepage background*/
 .imageContainer {
   background-image: url("https://images.unsplash.com/photo-1505876104692-2f34b9d54303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
   max-width: 100%;
@@ -196,18 +209,17 @@ input[type="checkbox"] {
 
 .wrapper {
   background-color: antiquewhite;
-  /* display: flex;
-     flex-direction: row;
-     justify-content: center; */
+ 
 }
 
-.nested {
+.second_page_nest{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-left: 10rem;
   margin-right: 10rem;
+  padding: 20px;
   gap: 100px;
 }
 
@@ -268,51 +280,75 @@ input[type="checkbox"] {
   text-align: justify;
 }
 
-/* Martel's Dark Mode */
-* {
-  box-sizing: border-box;
+
+@media (max-width: 1662px) {
+  .imageContainer {
+    background-image: url("https://images.unsplash.com/photo-1505876104692-2f34b9d54303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
+    max-width: 100%;
+    height: 1300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .helpingCaring-Text {
+    position: relative;
+    bottom: 10rem;
+    font-size: 10%;
+    font-weight: 150;
+    font-family: serif;
+  }
+
+  /* .partnerBtn {
+    padding: 1rem;
+    border: none;
+    background-color: #dd9d4c;
+    font-size: 70%;
+    font-family: serif;
+  } */
+
+  .btnHover a:hover {
+    background-color: antiquewhite;
+  }
+
+  .second_page_nest{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .box img {
+    width: 200%;
+    height: auto;
+  }
+  .box1 img {
+    object-fit: cover;
+    width: 15rem;
+    align-items: center;
+    
+  }
+  
+  .box1 img:hover {
+    opacity: 50%;
+  }
+  
+  .box1 h3 {
+    text-align: justify;
+  }
+  
 }
 
-body.dark {
-  background: #292c35;
-}
-
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
-
-.label {
-  background-color: #b1b1b1;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  position: relative;
-  height: 26px;
-  width: 50px;
-  transform: scale(0.8);
-}
-
-.label .ball {
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 22px;
-  width: 22px;
-  transform: translateX(0px);
-  transition: transform 0.2s linear;
-}
-
-.checkbox:checked+.label .ball {
-  transform: translateX(24px);
-}
 
 @media screen and (max-width: 1280px) {
+
+  .imageContainer-text h1 {
+    position: absolute;
+    left: 100px;
+    bottom: 170rem; 
+  }
+  
   .helpingCaring-Text {
     bottom: 1rem;
     font-size: 200%;
@@ -332,7 +368,7 @@ body.dark {
     background-color: antiquewhite;
   }
 
-  .nested {
+  .second_page_nest {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -357,7 +393,7 @@ body.dark {
 
   .box1 img {
     object-fit: cover;
-    width: 50rem;
+    width: 15rem;
     align-items: center;
   }
 
@@ -387,6 +423,11 @@ body.dark {
 }
 
 @media screen and (max-width: 900px) {
+  .imageContainer-text h1 {
+    position: absolute;
+    left: 100px;
+    bottom: 190rem; 
+  }
   .nested {
     display: flex;
     flex-direction: column;
