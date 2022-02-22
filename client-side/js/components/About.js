@@ -1,7 +1,5 @@
-import OnTheGo from '../../assets/images/OnTheGo.jpg';
-
-export default function About(){
-    return`
+export default function About() {
+  return `
     <div class="page__container">
     <div class="aboutDisplay">
     <div class = "bio">

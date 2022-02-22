@@ -63,9 +63,8 @@ input[type="checkbox"] {
 
 /* APPLYING MEDIA QUERIES */
 
-@media (max-width: 1189px){
+@media (max-width: 1189px) {
   .logo img {
-  
     width: 20%;
   }
 }
@@ -480,6 +479,92 @@ h1 {
   align-items: center;
   justify-content: center;
   font-family: "Montserra", sans-serif;
+}
+
+/* Village Landing */
+
+blockquote {
+  text-align: center;
+  font-size: 230%;
+  color: rgb(20, 41, 82, 0.7);
+}
+
+.vilage-option-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5rem, 0px, 5rem;
+}
+
+.village-button {
+  width: 250px;
+  height: 200px;
+  border-width: 3px;
+  border-radius: 30px;
+  transition-duration: 0.6s;
+  font-size: 150%;
+  font-size: bold;
+  font-weight: bold;
+  margin-top: 4rem;
+  text-decoration-style: solid;
+  z-index: 2;
+  color: white;
+
+  clip-path: margin-box;
+  margin-right: 50px;
+}
+
+.village-button:hover {
+  transition: linear;
+  cursor: pointer;
+  color: black;
+  background-color: ivory;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  filter: contrast(1);
+}
+
+.village-button:active {
+  font-size: 50%;
+  cursor: pointer;
+}
+
+.places-button {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+  background-size: cover;
+}
+
+.places-button:hover {
+  background-image: url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+  filter: brightness(0.8);
+}
+
+/* .places-button span {
+  color: white;
+  z-index: 2;
+} */
+
+.resources-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+  background-size: cover;
+}
+
+.resources-button:hover {
+  background-image: url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+  filter: brightness(0.8);
+}
+
+.community-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+  background-size: cover;
+}
+
+.community-button:hover {
+  background-image: url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+  filter: brightness(0.8);
 }
 
 /* Home page image */
