@@ -75,7 +75,7 @@ body.dark {
   display: block;
   margin-left: auto;
   margin-right: 48%;
-  width: 12.5%;
+  max-width: 12.5%;
 }
 
 /* NAVBAR MENU */
@@ -144,7 +144,7 @@ input[type="checkbox"] {
   font-family: serif;
 }
 
-.partnerBtn {
+.partnerBtn_Text{
   padding: 1rem;
   border: none;
   background-color: #dd9d4c;
@@ -229,23 +229,28 @@ input[type="checkbox"] {
 
 @media (max-width: 1189px) {
   .logo img {
-    width: 20%;
+    max-width: 20%;
   }
 }
 
-@media (max-width: 1662px) {
+@media (max-width: 1669px) {
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: 48%;
+    max-width: 12.5%;
+  }
+  
   .helpingCaring-Text {
     position: relative;
     bottom: 10rem;
-    font-size: 10%;
     font-weight: 150;
     font-family: serif;
   }
 
-  .partnerBtn {
-    padding: 1rem;
-    font-size: 70%;
-    font-family: serif;
+  .partnerBtn_Text{
+   padding: 2rem;
+   font-size: 1.5rem;
   }
 
   .second_page_nested {
@@ -289,7 +294,34 @@ input[type="checkbox"] {
   }
 }
 
+@media (max-width: 1635px){
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: 48%;
+    max-width: 12.5%;
+  }
+  
+}
+
+@media (max-width: 1588px){
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: 48%;
+    max-width: 12.5%;
+  }
+  
+}
+
 @media (max-width: 1441px) {
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: 48%;
+    max-width: 12%;
+  }
+  
   .second_page_nested {
     gap: 20px;
   }
@@ -325,6 +357,13 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 768px) {
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: 48%;
+    max-width: 12.5%;
+  }
+  
   .menu {
     display: none;
     position: absolute;
@@ -362,14 +401,11 @@ input[type="checkbox"] {
     font-family: serif;
   }
 
-  .partnerBtn {
-    padding: 1rem;
-    border: none;
-    background-color: #dd9d4c;
-    font-size: 70%;
-    font-family: serif;
-  }
-
+  .partnerBtn_Text{
+    padding: 2rem;
+    font-size: 1.5rem;
+   }
+ 
   .btnHover a:hover {
     background-color: antiquewhite;
   }
@@ -446,6 +482,17 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 900px) {
+  .helpingCaring-Text {
+    bottom: 1rem;
+    font-size: 200%;
+    font-weight: 150;
+    font-family: serif;
+  }
+
+  .partnerBtn_Text{
+    padding: 2rem;
+    font-size: 1.5rem;
+   }
   .second_page_nested {
     display: flex;
     flex-direction: column;
@@ -480,11 +527,22 @@ input[type="checkbox"] {
   }
 }
 
+@media screen and (max-width: 914) {
+  .imageContainer-text h1 {
+    position: absolute;
+    left: 600rem;
+    bottom: 0px;
+    font-size: 6rem;
+  }
+}
+
+
 @media screen and (max-width: 883px) {
   .imageContainer-text h1 {
     position: absolute;
     left: 210px;
-    bottom: 3090px;
+    bottom: 3300px;
+    font-size: 7rem;
   }
 
   .second_page_nested {
@@ -528,14 +586,8 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (max-width: 914) {
-  .imageContainer-text h1 {
-    position: absolute;
-    left: 600rem;
-    bottom: 0px;
-    font-size: 6rem;
-  }
-}
+
+
 
 @media screen and (max-width: 599px) {
   .imageContainer-text h1 {
