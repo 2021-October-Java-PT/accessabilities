@@ -117,6 +117,118 @@
  }
  
  .imageContainer {
+  width: 12.5%;
+}
+
+/* NAVBAR MENU */
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 28px;
+}
+
+.menu li:hover {
+  background-color: #c7c2c2;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 10px;
+}
+
+
+.navBar a {
+  text-decoration: none;
+}
+
+.navBar li {
+  list-style: none;
+}
+
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 1189px) {
+  .logo img {
+    width: 20%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .helpingCaring-Text {
+    position: relative;
+    bottom: 10rem;
+    font-size: 10%;
+    font-weight: 150;
+    font-family: serif;
+  }
+
+  .partnerBtn {
+    padding: 1rem;
+    border: none;
+    background-color: #dd9d4c;
+    font-size: 70%;
+    font-family: serif;
+  }
+
+  .btnHover a:hover {
+    background-color: antiquewhite;
+  }
+
+  .nested {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 9rem;
+     margin-right: 10rem; */
+    gap: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #565a5a;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline;
+    background-color: #c6c9c9;
+    transition: 0.3s ease;
+  }
+
+  .menu li+li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked~.menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.imageContainer {
   background-image: url("https://images.unsplash.com/photo-1505876104692-2f34b9d54303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
   max-width: 100%;
   height: 1200px;
@@ -671,58 +783,144 @@ h1 {
 }
 
 .contact-image{
+
  max-width: 300px;
  justify-content: center;
+=======
+  max-width: 300px;
+  justify-content: center;
+  font-family: "Montserra", sans-serif;
 }
 
-.footer {
- display: flex;
- align-items: center;
- justify-content: center;
- font-family: "Montserra", sans-serif;
+/* Village Landing */
+
+blockquote {
+  text-align: center;
+  font-size: 230%;
+
+  color: rgb(0, 31, 77, 0.5);
 }
 
-* {
- box-sizing: border-box;
+.vilage-option-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5rem, 0px, 5rem;
 }
 
-body.dark {
- background: #292c35;
+.village-button {
+  width: 250px;
+  height: 200px;
+  border-width: 3px;
+  border-radius: 30px;
+  transition-duration: 0.6s;
+  font-size: 150%;
+  font-size: bold;
+  font-weight: bold;
+  margin-top: 4rem;
+  text-decoration-style: solid;
+  z-index: 2;
+  color: white;
+
+  clip-path: margin-box;
+  margin-right: 50px;
 }
 
-.checkbox {
- opacity: 0;
- position: absolute;
+.village-button:hover {
+  transition: linear;
+  cursor: pointer;
+  color: black;
+  background-color: ivory;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  filter: contrast(1);
 }
 
-.label {
- background-color: #111;
- border-radius: 50px;
- cursor: pointer;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 5px;
- position: relative;
- height: 26px;
- width: 50px;
- transform: scale(0.8);
+.village-button:active {
+  font-size: 50%;
+  cursor: pointer;
 }
 
-.label .ball {
- background-color: #fff;
- border-radius: 50%;
- position: absolute;
- top: 2px;
- left: 2px;
- height: 22px;
- width: 22px;
- transform: translateX(0px);
- transition: transform 0.2s linear;
+.places-button {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+  background-size: cover;
 }
 
-.checkbox:checked+.label .ball {
- transform: translateX(24px);
+.places-button:hover {
+  background-image: url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+  filter: brightness(0.8);
+}
+
+/* .places-button span {
+  color: white;
+  z-index: 2;
+} */
+
+.resources-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+  background-size: cover;
+}
+
+.resources-button:hover {
+  background-image: url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+  filter: brightness(0.8);
+}
+
+.community-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+  background-size: cover;
+}
+
+.community-button:hover {
+  background-image: url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+  filter: brightness(0.8);
+}
+
+
+/* Locations List Cam */
+
+.location-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [col] 100px [col] 100px [col] 100px [col] 100px;
+  grid-template-rows: [row] auto [row] auto [row];
+  background-color: #fff;
+  color: #444;
+  margin: 3em;
+}
+
+.location-box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.a {
+  grid-column: col / span 2;
+  grid-row: row;
+  text-align: center;
+}
+.b {
+  grid-column: col 3 / span 2;
+  grid-row: row;
+}
+.c {
+  grid-column: col;
+  grid-row: row 2;
+}
+.d {
+  grid-column: col 2 / span 3;
+  grid-row: row 2;
+}
+
+.e {
+  grid-column: col / span 4;
+  grid-row: row 3;
 }
 
 /* Lyzz Business Search */
