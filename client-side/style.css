@@ -1,3 +1,38 @@
+
+/* Home page image */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: white;
+  color: black;
+
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  z-index: 12;
+  top: -1px;
+  left: 0px;
+  width: 1903px;
+  height: 90px;
+  margin-bottom: 0px;
+
+  background-color: grey;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0.5px;
+}
+
+.nav-links a {
+  color: black;
+}
+
+/* LOGO */
+
+.logo img {
+
 /* Martel's Dark Mode */
 * {
   box-sizing: border-box;
@@ -73,6 +108,7 @@
  /* LOGO */
  
  .logo img {
+
   display: block;
  margin-left: auto;
   margin-right: 48%;
@@ -137,7 +173,6 @@
 .menu li {
   padding: 5px 10px;
 }
-
 
 .navBar a {
   text-decoration: none;
@@ -215,11 +250,11 @@ input[type="checkbox"] {
     transition: 0.3s ease;
   }
 
-  .menu li+li {
+  .menu li + li {
     margin-top: 12px;
   }
 
-  input[type="checkbox"]:checked~.menu {
+  input[type="checkbox"]:checked ~ .menu {
     display: block;
   }
 
@@ -271,9 +306,15 @@ input[type="checkbox"] {
  
  .btnHover a:hover {
   background-color: antiquewhite;
+
+}
+
+.wrapper {
+
  }
  
  .wrapper {
+
   background-color: antiquewhite;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -301,9 +342,15 @@ input[type="checkbox"] {
   object-fit: cover;
   width: 24rem;
   align-items: center;
+
+}
+
+.box1 img:hover {
+
  }
  
  .box1 img:hover {
+
   opacity: 50%;
  }
  
@@ -434,9 +481,15 @@ margin-right: 48%;
  margin-right: 48%;
   max-width: 12%;
 }
+
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+
   
 .second_page_nested {
   gap: 20px;
+
 }
  
  .box1 img {
@@ -782,11 +835,15 @@ h1 {
  justify-self: center;
 }
 
+
+.contact-image {
+
 .contact-image{
 
  max-width: 300px;
  justify-content: center;
-=======
+
+
   max-width: 300px;
   justify-content: center;
   font-family: "Montserra", sans-serif;
@@ -797,7 +854,7 @@ h1 {
 blockquote {
   text-align: center;
   font-size: 230%;
-
+  margin-top: 3em;
   color: rgb(0, 31, 77, 0.5);
 }
 
@@ -837,7 +894,7 @@ blockquote {
 }
 
 .village-button:active {
-  font-size: 50%;
+  font-size: 100%;
   cursor: pointer;
 }
 
@@ -879,17 +936,25 @@ blockquote {
   filter: brightness(0.8);
 }
 
-
 /* Locations List Cam */
+
+.review-card {
+  /* background-color: darkcyan; */
+}
 
 .location-wrapper {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: [col] 100px [col] 100px [col] 100px [col] 100px;
+  grid-template-columns: [col] 125px [col] 125px [col] 125px [col] 125px;
   grid-template-rows: [row] auto [row] auto [row];
-  background-color: #fff;
+
   color: #444;
-  margin: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: 6em;
+  align-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .location-box {
@@ -923,6 +988,106 @@ blockquote {
   grid-row: row 3;
 }
 
+y
+/* Home page image */
+
+/* .access img {
+  position: absolute;
+  max-width: 100px;
+  left: 7rem;
+  bottom: 54rem;
+
+}
+
+.imageContainer {
+  background-image: url("https://images.unsplash.com/photo-1505876104692-2f34b9d54303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
+  max-width: 100%;
+  height: 1200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imageContainer-text h1 {
+  position: absolute;
+  color: white;
+  left: 100px;
+  bottom: -50px;
+  font-size: 800%;
+  font-weight: 150;
+  font-family: serif;
+} */
+
+/* second page of Home */
+
+/* .helpingCaring-Text {
+  position: relative;
+
+  bottom: 10rem;
+  font-size: 200%;
+  font-weight: 150;
+  font-family: serif;
+}
+
+.partnerBtn {
+  padding: 1rem;
+  border: none;
+  background-color: #dd9d4c;
+  font-size: 70%;
+  font-family: serif;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserra", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.dark {
+  background: #292c35;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(0.8);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+  transform: translateX(24px);
+}
+
+
 /* Lyzz Business Search */
 .container {
  margin: 15rem auto;
@@ -937,6 +1102,54 @@ h1 {
  grid-template-columns: repeat(3, 1fr);
  line-height: 1.55rem;
 }
+
+
+.content {
+  background-color: #ccc;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
+}
+@media only screen and (max-width: 650px) {
+  .container {
+    width: 90%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 350px;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .search-input {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    padding: 15px 45px 15px 15px;
+    background-color: #eaeaeb;
+    color: #6c6c6c;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.4s;
+  }
+
+  .search-input:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 12px #b8c6db;
+    -moz-box-shadow: 0 1px 12px #b8c6db;
+    -webkit-box-shadow: 0 1px 12px #b8c6db;
+  }
 
 .content  {
  background-color: #ccc;
@@ -1006,7 +1219,80 @@ h1 {
  outline:none;
  color:black;
 
-}
+
+  .search-btn {
+    background-color: transparent;
+    font-size: 18px;
+    padding: 6px 9px;
+    margin-left: -45px;
+    border: none;
+    color: #6c6c6c;
+    transition: all 0.4s;
+    z-index: 10;
+  }
+
+
+  .search-btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: black;
+  }
+
+  .search-btn:focus {
+    outline: none;
+    color: black;
+  }
+
+  input {
+    margin: 0 20rem 0 20rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #e26d5c;
+    color: white;
+  }
+  div resource .resource {
+    margin: 20px 0px;
+    padding: 40px 0px 0px;
+    border: 0px none rgb(36, 30, 78);
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+      border-box;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  #resource-detail {
+    position: relative;
+    padding: 3em 0;
+  }
+
+  div {
+    display: block;
+  }
+
+  .resource-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 140px;
+    font-family: "Brandon-Grotesque", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #241e4e;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+  }
+
+  .resources-wrapper {
+    margin: 0 auto;
+  }
 
 input {
  margin: 0 20rem 0 20rem;
@@ -1057,5 +1343,5 @@ div {
 
 .resources-wrapper {
  margin: 0 auto;
-}
+
 }

@@ -4,11 +4,7 @@ export default function Village() {
 
     <ul class='vilage-option-list'>
 
-<<<<<<< HEAD
-        <li class='vilage-option-list__places'><button  class="village-button places-button">Places</button></li>
-=======
         <li class='vilage-option-list__places'><button class="village-button places-button"><span>Places</span></button></li>
->>>>>>> dev2-branch
         <li class='vilage-option-list__resources'><button class="village-button resources-button">Resources</button></li>
         <li class='vilage-option-list__community'><button class="village-button community-button">Community</button></li>
         

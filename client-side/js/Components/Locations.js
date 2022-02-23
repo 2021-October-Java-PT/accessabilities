@@ -5,15 +5,15 @@ export default function Locations(locations) {
     ${locations
       .map((location) => {
         return `
-        <li>
-        <div class="location-wrapper">
-        <div class="location-box a">${location.name}</div>
-        <div class="location-box b">Contact number: ${location.locationContactNumber}</div>
-        <div class="location-box c">Rating: ${location.accessibilityRating}</div>
-        <div class="location-box d">D</div>
-        <div class="location-box e">E</div>
-      </div>
-        </li>
+        <div class="review-card">
+          <div class="location-wrapper">
+          <div class="location-box a">${location.name}</div>
+          <div class="location-box b">Contact number: ${location.locationContactNumber}</div>
+          <div class="location-box c">Rating: ${location.accessibilityRating}</div>
+          <div class="location-box d">D</div>
+          <div class="location-box e">E</div>
+          </div>
+        </div>
         `;
       })
       .join("")}
