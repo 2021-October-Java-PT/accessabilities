@@ -1,5 +1,5 @@
-export default function Home(){
-    return `
+export default function Home() {
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,13 +19,13 @@ export default function Home(){
         </div>
         </head>
         <div class="wrapper">
-            <div class="nested">
+            <div class="second_page_nested">
 
                 <div class="helpingCaring-Text">
                     <h1>Helping<br> & Caring </h1>
     
                     <a id="partnerBtn" class="btnHover">
-                    <button class="partnerBtn">Become a Partner</button>
+                    <button class="partnerBtn_Text">Become a Partner</button>
                     </a>
     
                 </div>
