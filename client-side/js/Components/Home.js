@@ -1,4 +1,5 @@
-
+export default function Home(){
+    return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,50 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/41afc6896b.js" crossorigin="anonymous"></script>
     <title>AccessABILITIES</title>
 </head>
 <body>
-    <div class="navBar">
-
-        <div class="darkMode">
-            <input type="checkbox" class="checkbox" id="chk">
-            <label class="label" for="chk">
-                <div class="ball"></div>
-            </label>
-        </div>
-
-        <div id="google_translate_element"></div>
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-            }
-        </script>
-
-
-        <div>
-            <ul class="nav-links">
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-                <div class="menu">
-                    <li><a id="home">Home</a></li>
-                    <li><a id="access">Access</a></li>
-                    <li><a id="village">The Village</a></li>
-                    <li><a id="about">About</a></li>
-                    <li><a id="contact">Contact</a></li>
-                    
-                    
-                </div>
-            </ul>
-        </div>
-
-        <div class="logo">
-        <img id="logoHome"src="./assets/images/Access.png" alt="AccessABILITIES">
-        </div>
-
-    </div>
-
     <div id="pageContent" class="Page">
         <div class="imageContainer-text">
             <h1>It Takes a <br> Village</h1>
@@ -86,7 +46,7 @@
             </div>
 
             <div class="box box3"><img id="btnPartner"src="https://images.unsplash.com/photo-1569937756447-1d44f657dc69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGRpc2FiaWxpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="woman looks out at sceen with a friend">
-               
+
                 <section class="box1-text">
                     <h3>Partners</h3>
                     <p>Our partners that work to help us help you and your loved ones</p>
@@ -101,8 +61,9 @@
         </div>
     </footer>
     <script type="module" src="./js/index.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </div>
 </body>
 </html>
+
+    `;
+}

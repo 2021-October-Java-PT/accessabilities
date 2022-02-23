@@ -1,13 +1,16 @@
-import About from "./components/About";
+import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
-import Contact from "./components/Contact";
+import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
-import Locations from "./components/Locations";
-import Login from "./components/Login";
+import Home from "./Components/Home";
+import Locations from "./Components/Locations";
+import Login from "./Components/Login";
 import Maps from "./Components/Maps";
-import Village from "./components/Village";
-import apiHelpers from "./components/apiHelpers.js";
+import Village from "./Components/Village";
+import apiHelpers from "./Components/apiHelpers.js";
+// import About from './Components/About';
+
 
 // import Resources from './components/Resources';
 // import Account from './components/Account';
@@ -25,11 +28,13 @@ function buildPage() {
   // resources();
   village();
   navAccess();
+  home();
   // login();Z
-  // mapsResources();
+  mapsResources();
   // search();
   // filteredBusinesses();
   // renderBusinessResource();
+  addBusinessToAPI();
 }
 
 console.log("Client Side is wired up!");
@@ -222,6 +227,18 @@ function navAccess() {
       }
     );
     //renderBusinessResource()
+  });
+}
+
+function home() {
+  const homeElem = document.querySelector("#home");
+  homeElem.addEventListener("click", () => {
+    pageContent.innerHTML = Home();
+  });
+
+  const logoElem = document.querySelector("#logoHome");
+  logoElem.addEventListener("click", () => {
+    pageContent.innerHTML = Home();
   });
 }
 

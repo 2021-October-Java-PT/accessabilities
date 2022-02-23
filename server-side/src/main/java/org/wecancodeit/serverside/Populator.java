@@ -36,8 +36,12 @@ public class Populator implements CommandLineRunner {
         businessRepo.save(cincinnatiZooAndBotanicalGarden);
         businessRepo.save(GreaterClevelandAquarium);
 
-        LocationModel popeyes = new LocationModel("Popeyes","123-456-7890","3234","Willliams Blvd","Cleveland","Ohio","44134",10.0);
-        LocationModel chickFilA = new LocationModel("Chick-Fil-A","123-555-7890","25235","Crapp St","Canton","Ohio","44232",0.0);
+
+
+        LocationModel popeyes = new LocationModel("Popeyes", "123-456-7890","4242", "Great Food St", "Cleveland","Ohio","24344",10.0);
+
+        LocationModel chickFilA = new LocationModel("Chick-fil-a","208-420-9834","6969", "Crap Ave","Vatican City", "Ohio","393434",0.0);
+
 
         locationRepo.save(popeyes);
         locationRepo.save(chickFilA);

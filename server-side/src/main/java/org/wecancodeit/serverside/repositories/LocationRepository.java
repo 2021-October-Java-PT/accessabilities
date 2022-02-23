@@ -9,3 +9,5 @@ public interface LocationRepository extends CrudRepository<LocationModel,Long> {
 //    Optional<LocationModel> findByName(String locationName);
 }
 
+
+
