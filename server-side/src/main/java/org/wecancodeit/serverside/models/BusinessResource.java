@@ -15,8 +15,6 @@ public class BusinessResource {
     private Long id;
     @Lob
     private String name;
-    @Lob
-    private String businessDescription;
     private String businessStreetNumber;
     private String businessStreetName;
     private String businessCity;
@@ -28,9 +26,8 @@ public class BusinessResource {
     private String businessAccessibilityFeatures;
     private String businessContentPhoneNumber;
 
-    public BusinessResource(String name, String businessDescription, String businessStreetNumber, String businessStreetName, String businessCity, String businessState, String businessZip, String businessUrl, String businessAccessibilityFeatures, String businessContentPhoneNumber) {
+    public BusinessResource(String name, String businessStreetNumber, String businessStreetName, String businessCity, String businessState, String businessZip, String businessUrl, String businessAccessibilityFeatures, String businessContentPhoneNumber) {
         this.name = name;
-        this.businessDescription = businessDescription;
         this.businessStreetNumber = businessStreetNumber;
         this.businessStreetName = businessStreetName;
         this.businessCity = businessCity;
@@ -54,15 +51,7 @@ public class BusinessResource {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getBusinessDescription() {
-        return businessDescription;
-    }
-
-    public void setBusinessDescription(String businessDescription) {
-        this.businessDescription = businessDescription;
-    }
-
+    
     public String getBusinessStreetNumber() {
         return businessStreetNumber;
     }
