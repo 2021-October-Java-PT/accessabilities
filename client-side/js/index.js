@@ -12,15 +12,6 @@ import Home from './Components/Home';
 // import Resources from './components/Resources';
 // import Account from './components/Account';
 
-
-
-
-
-
-
-
-
-
 // import {
 //     createTestScheduler
 // } from 'jest';
@@ -40,7 +31,7 @@ function buildPage() {
     // search();
     // filteredBusinesses();
     // renderBusinessResource();
-    addBusinessToAPI();
+    // addBusinessToAPI();
 }
 
 
@@ -88,18 +79,6 @@ function clickMaps() {
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle('js-enabled');
 
-// document.addEventListener('DOMContentLoaded', function (event) {
-//     let hamburger = document.getElementById('hamburger');
-//     hamburger.setAttribute('aria-expanded', 'false');
-//     hamburger.onclick = function () {
-//         if (this.getAttribute('aria-expanded') == 'false') {
-//             this.setAttribute('aria-expanded', 'true');
-//         } else {
-//             this.setAttribute('aria-expanded', 'false');
-//         }
-//     }
-// });
-
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
@@ -134,41 +113,52 @@ function search() {
         });
     });
 }
-
+function navAccess() {
+    const accessElem = document.querySelector('#access');
+    const accessBtn = document.querySelector('#accessBtn');
+    accessElem.addEventListener('click', () => {
+        apiHelpers.getRequest("http://localhost:8080/api/business-resources", (businessResources) => {
+            console.log("RESOURCES: ", businessResources);
+            pageContent.innerHTML = BusinessResources(businessResources);
+            search();
+            addBusinessToAPI()
+        });
+    });
 function addBusinessToAPI() {
     pageContent.addEventListener("click", (event) => {
-        if (event.target.classList.contains(".businessForm_submit")) {
+        if (event.target.classList.contains("add-resource__submit")) {
             console.log("FIRE");
-            const addBusinessName = event.target.parentElement.querySelector(
-                "#businessName"
+            const addName = event.target.parentElement.querySelector(
+                ".add-resource__name"
             ).value;
             const addBusinessStreetNumber = event.target.parentElement.querySelector(
-                "#businessStreetNum"
+                ".add-resource__businessStreetNumber"
             ).value;
             const addBusinessStreetName = event.target.parentElement.querySelector(
-                "#businessStreetName"
+                ".add-resource__businessStreetName"
             ).value;
             const addBusinessCity = event.target.parentElement.querySelector(
-                "#businessCity"
+                ".add-resource__businessCity"
             ).value;
             const addBusinessState = event.target.parentElement.querySelector(
-                "businessState"
+                ".add-resource__businessState"
             ).value;
             const addBusinessZip = event.target.parentElement.querySelector(
-                "#businessZip"
+                ".add-resource__businessZip"
             ).value;
             const addBusinessUrl = event.target.parentElement.querySelector(
-                "#businessUrl"
+                ".add-resource__businessUrl"
             ).value;
             const addBusinessAccessibilityFeatures = event.target.parentElement.querySelector(
-                "#businessAccessFeatures"
+                ".add-resource-businessAccessFeatures"
             ).value;
             const addBusinessContentPhoneNumber = event.target.parentElement.querySelector(
-                "#businessPhonesNum"
+                ".add-resource__businessPhonesNum"
             ).value;
+
             apiHelpers.postRequest(
-                "http://localhost:8080/api/business-resources/add-resources", {
-                    name: addBusinessName,
+                "http://localhost:8080//api/business-resources/add-resource", {
+                    name: addName,
                     businessStreetNumber: addBusinessStreetNumber,
                     businessStreetName: addBusinessStreetName,
                     businessCity: addBusinessCity,
@@ -179,25 +169,13 @@ function addBusinessToAPI() {
                     businessContentPhoneNumber: addBusinessContentPhoneNumber,
                 },
                 (businessResources) =>
-                (app.innerHTML = businessResources(businessResources))
+                (pageContent.innerHTML = BusinessResources(businessResources))
             );
         }
     })
 }
 
-// for the pages 
-
-function navAccess() {
-    const accessElem = document.querySelector('#access');
-    const accessBtn = document.querySelector('#accessBtn');
-    accessElem.addEventListener('click', () => {
-        apiHelpers.getRequest("http://localhost:8080/api/business-resources", (businessResources) => {
-            console.log("RESOURCES: ", businessResources);
-            pageContent.innerHTML = BusinessResources(businessResources);
-            search();
-        });
-        //renderBusinessResource()
-    });
+// for the pages
 
     accessBtn.addEventListener('click', () => {
         apiHelpers.getRequest("http://localhost:8080/api/business-resources", (businessResources) => {
