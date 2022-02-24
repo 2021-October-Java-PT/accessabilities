@@ -1,3 +1,4 @@
+
 import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
@@ -8,9 +9,9 @@ import Locations from "./Components/Locations";
 import Login from "./Components/Login";
 import Maps from "./Components/Maps";
 import Village from "./Components/Village";
+
 import apiHelpers from "./Components/apiHelpers.js";
 // import About from './Components/About';
-
 
 // import Resources from './components/Resources';
 // import Account from './components/Account';
@@ -55,18 +56,21 @@ console.log("Client Side is wired up!");
 //}
 
 // Maps
-function mapsResources() {
-  const mapsElem = document.querySelector("#village");
-  mapsElem.addEventListener("click", () => {
-    pageContent.innerHTML = Village();
-    clickMaps();
-  });
-}
+// function mapsResources() {
+//   const mapsElem = document.querySelector(".places-button");
+//   mapsElem.addEventListener("click", () => {
+//     pageContent.innerHTML = Maps();
+//     clickMaps();
+//   });
+// }
 
 function clickMaps() {
   pageContent.addEventListener("click", (event) => {
     console.log("Is this thing on????");
-    pageContent.innerHTML = Maps();
+    if (event.target.classList.contains("places-button")) {
+      pageContent.innerHTML = Maps();
+    }
+
     if (event.target.classList.contains("returnToTheVillage")) {
       pageContent.innerHTML = Village();
     }
@@ -269,13 +273,14 @@ function village() {
     pageContent.innerHTML = Village();
   });
 
-  places();
+  clickMaps();
+  community();
 }
 
-function places() {
+function community() {
   // const app = document.querySelector('#app');
   pageContent.addEventListener("click", () => {
-    if (event.target.classList.contains("places-button")) {
+    if (event.target.classList.contains("community-button")) {
       apiHelpers.getRequest(
         "http://localhost:8080/api/locations",
         (locations) => {

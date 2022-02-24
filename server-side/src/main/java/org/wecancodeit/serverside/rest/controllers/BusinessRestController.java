@@ -38,7 +38,6 @@ public class BusinessRestController {
     public String addBusinessResource(@RequestBody String body) throws JSONException {
         JSONObject newResource = new JSONObject(body);
         String name = newResource.getString("name");
-        String businessDescription = newResource.getString("businessDescription");
         String businessStreetNumber = newResource.getString("businessStreetNumber");
         String businessStreetName = newResource.getString("businessStreetName");
         String businessCity = newResource.getString("businessCity");
@@ -51,7 +50,7 @@ public class BusinessRestController {
         Optional<BusinessResource> resourceToAddOpt = businessRepo.findByName(name);
 
         if (resourceToAddOpt.isEmpty()) {
-            BusinessResource resourceToAdd = new BusinessResource(name, businessDescription,
+            BusinessResource resourceToAdd = new BusinessResource(name,
                     businessStreetNumber, businessStreetName,
                     businessCity, businessState, businessZip, businessUrl,
                     businessAccessibilityFeatures, businessContentPhoneNumber);
