@@ -1,6 +1,7 @@
 import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
+import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
 import Home from "./Components/Home";
 import Locations from "./Components/Locations";
@@ -9,18 +10,6 @@ import Maps from "./Components/Maps";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
 
-// import Contact from "./Components/Contact";
-
-
-
-
-
-
-
-
-// import About from './Components/About';
-
-// import Resources from './components/Resources';
 // import Account from './components/Account';
 
 // import {
@@ -204,42 +193,24 @@ function navAccess() {
   });
 
   accessBtn.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
-      }
-    );
-    //renderBusinessResource()
+      const accessBtn = document.querySelector("#accessBtn")
+      accessBtn.addEventListener("click", () => {
+      pageContent.innerHTML = BusinessResources(businessResources);
   });
-  const btnPartner = document.querySelector("#btnPartner");
-  btnPartner.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
+      const btnPartner = document.querySelector("#btnPartner");
+      btnPartner.addEventListener("click", () => {
+      pageContent.innerHTML = BusinessResources(businessResources);
       }
     );
-    //renderBusinessResource()
   });
 
-  const partnerBtn = document.querySelector("#partnerBtn");
-  partnerBtn.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
+        const partnerBtn = document.querySelector("#partnerBtn");
+        partnerBtn.addEventListener("click", () => {
         pageContent.innerHTML = BusinessResources(businessResources);
-        search();
+
       }
     );
-    //renderBusinessResource()
-  });
-}
+  };
 
 function home() {
   const homeElem = document.querySelector("#home");
@@ -263,7 +234,6 @@ function about() {
 
 function contact() {
   const contactElem = document.querySelector("#contact");
-  // const accessBtn =
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Contact();
   });
