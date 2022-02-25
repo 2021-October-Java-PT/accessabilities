@@ -76,18 +76,6 @@ function clickMaps() {
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle("js-enabled");
 
-// document.addEventListener('DOMContentLoaded', function (event) {
-//     let hamburger = document.getElementById('hamburger');
-//     hamburger.setAttribute('aria-expanded', 'false');
-//     hamburger.onclick = function () {
-//         if (this.getAttribute('aria-expanded') == 'false') {
-//             this.setAttribute('aria-expanded', 'true');
-//         } else {
-//             this.setAttribute('aria-expanded', 'false');
-//         }
-//     }
-// });
-
 const chk = document.getElementById("chk");
 
 chk.addEventListener("change", () => {
@@ -102,6 +90,7 @@ chk.addEventListener("change", () => {
 // }
 
 //Lyzz BusinessAPI and search bar
+
 
 function search() {
   const searchBar = document.getElementById("searchBar");
@@ -119,98 +108,38 @@ function search() {
       }
     );
   });
-}
 
-function addBusinessToAPI() {
-  pageContent.addEventListener("click", (event) => {
-    if (event.target.classList.contains("add-business__submit")) {
-      const addBusinessName = event.target.parentElement.querySelector(
-        ".add-business-resource__name"
-      ).value;
-      const addBusinessDescription = event.target.parentElement.querySelector(
-        ".add-business-resource__description"
-      ).value;
-      const addBusinessStreetNumber = event.target.parentElement.querySelector(
-        ".add-business-resource__street__number"
-      ).value;
-      const addBusinessStreetName = event.target.parentElement.querySelector(
-        ".add-business-resource__street__name"
-      ).value;
-      const addBusinessCity = event.target.parentElement.querySelector(
-        ".add-business-resource__city"
-      ).value;
-      const addBusinessState = event.target.parentElement.querySelector(
-        ".add-business-resource__state"
-      ).value;
-      const addBusinessZip = event.target.parentElement.querySelector(
-        ".add-business-resource__zip"
-      ).value;
-      const addBusinessUrl = event.target.parentElement.querySelector(
-        ".add-business__Url"
-      ).value;
-      const addBusinessAccessibilityFeatures = event.target.parentElement.querySelector(
-        ".add-business-resource__accessibility"
-      ).value;
-      const addBusinessContentPhoneNumber = event.target.parentElement.querySelector(
-        ".add-business-resource__business__content__phone__number"
-      ).value;
-      apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resources",
-        {
-          name: addBusinessName,
-          businessDescription: addBusinessDescription,
-          businessStreetNumber: addBusinessStreetNumber,
-          businessStreetName: addBusinessStreetName,
-          businessCity: addBusinessCity,
-          businessState: addBusinessState,
-          businessZip: addBusinessZip,
-          businessUrl: addBusinessUrl,
-          businessAccessibilityFeatures: addBusinessAccessibilityFeatures,
-          businessContentPhoneNumber: addBusinessContentPhoneNumber,
-        },
-        (businessResources) =>
-          (app.innerHTML = businessResources(businessResources))
+
+  function navAccess() {
+    const accessElem = document.querySelector("#access");
+    accessElem.addEventListener("click", () => {
+      apiHelpers.getRequest(
+        "http://localhost:8080/api/business-resources",
+        (businessResources) => {
+          console.log("RESOURCES: ", businessResources);
+          pageContent.innerHTML = BusinessResources(businessResources);
+          search();
+        }
       );
-    }
-  });
-}
-
-// for the pages
-
-function navAccess() {
-  const accessElem = document.querySelector("#access");
-  const accessBtn = document.querySelector("#accessBtn");
-  accessElem.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
-      }
-    );
-    //renderBusinessResource()
-  });
-
+    });
+  
   accessBtn.addEventListener("click", () => {
-      const accessBtn = document.querySelector("#accessBtn")
-      accessBtn.addEventListener("click", () => {
+    const accessBtn = document.querySelector("#accessBtn")
+    accessBtn.addEventListener("click", () => {
       pageContent.innerHTML = BusinessResources(businessResources);
-  });
-      const btnPartner = document.querySelector("#btnPartner");
-      btnPartner.addEventListener("click", () => {
+    });
+    const btnPartner = document.querySelector("#btnPartner");
+    btnPartner.addEventListener("click", () => {
       pageContent.innerHTML = BusinessResources(businessResources);
-      }
-    );
+    });
   });
 
-        const partnerBtn = document.querySelector("#partnerBtn");
-        partnerBtn.addEventListener("click", () => {
-        pageContent.innerHTML = BusinessResources(businessResources);
-
-      }
-    );
-  };
+  const partnerBtn = document.querySelector("#partnerBtn");
+  partnerBtn.addEventListener("click", () => {
+    pageContent.innerHTML = BusinessResources(businessResources);
+  }
+  );
+};
 
 function home() {
   const homeElem = document.querySelector("#home");
@@ -222,7 +151,7 @@ function home() {
   logoElem.addEventListener("click", () => {
     pageContent.innerHTML = Home();
   });
-}
+};
 
 function about() {
   const contactElem = document.querySelector("#about");
@@ -230,14 +159,14 @@ function about() {
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = About();
   });
-}
+};
 
 function contact() {
   const contactElem = document.querySelector("#contact");
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Contact();
   });
-}
+};
 
 function village() {
   const contactElem = document.querySelector("#village");
@@ -253,6 +182,8 @@ function village() {
   clickMaps();
   community();
 }
+
+
 
 function community() {
   // const app = document.querySelector('#app');
@@ -279,6 +210,6 @@ function community() {
 //           console.log("LOCATIONS: ", locations);
 //           pageContent.innerHTML = Locations(locations);
 //         }
-//       );
-//     });
+//   );
+//   });
 // }
