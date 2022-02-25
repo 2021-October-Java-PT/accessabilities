@@ -108,6 +108,7 @@ function search() {
       }
     );
   });
+}
 
 
   function navAccess() {
@@ -212,4 +213,4 @@ function community() {
 //         }
 //   );
 //   });
-// }
+//}
