@@ -1,16 +1,23 @@
-
 import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
-import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
 import Home from "./Components/Home";
 import Locations from "./Components/Locations";
 import Login from "./Components/Login";
 import Maps from "./Components/Maps";
 import Village from "./Components/Village";
-
 import apiHelpers from "./Components/apiHelpers.js";
+
+// import Contact from "./Components/Contact";
+
+
+
+
+
+
+
+
 // import About from './Components/About';
 
 // import Resources from './components/Resources';

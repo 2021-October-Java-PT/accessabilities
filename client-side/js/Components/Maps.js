@@ -3,6 +3,19 @@ export default function Maps(){
     <div class="activities>
     <h1> MAPS!</h1>
     <div>
+
+    <div>
+    <h2> Around Greater Ohio </h2>
+         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xQAvXEfRFcxwTUEdwNZZzE5EFilIECA1&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+    
+      
+      <div>
+       <h2> Around Greater Ohio </h2>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xQAvXEfRFcxwTUEdwNZZzE5EFilIECA1&ehbc=2E312F" width="640" height="480"></iframe>
+       </div>
+       
+       </div>
        <h2> Resturants Map </h2>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CmVNvpg25yT-gTY2BMIj1LNw-p_X9JWp&ehbc=2E312F" width="640" height="480"></iframe>
        </div>
@@ -19,7 +32,7 @@ export default function Maps(){
     </div>
     
     <div>
-        <button class="returnToTheVillage"> Return to Resources</>
+        <button class="returnToTheVillage"> Return to The Village</>
     </div>
     `;
 }
