@@ -57,7 +57,7 @@ export default function Village() {
         <img id="app1"src='https://apps.apple.com/us/app/choiceworks/id486210964' alt="Choiceworks App"/>
         <a href="https://apps.apple.com/us/app/choiceworks/id486210964"> Apple: Choiceworks App</a>
         </div>
-        
+    
         </div>
         </div>
   
