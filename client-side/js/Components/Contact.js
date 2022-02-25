@@ -1,4 +1,4 @@
-export default function Contact(){
+export default function Contact(contact){
     //add responsiveness to mobile,faq animations/content,styling,replace placeholder pics
     return ` 
     <div class="wrapper">
