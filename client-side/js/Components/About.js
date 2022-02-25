@@ -46,11 +46,13 @@ export default function About(){
     </div>
     <div class = "bio">
     <h2>Dia Scruggs</h2>
+    <img src="https://media-exp1.licdn.com/dms/image/C5603AQFDZulzi-nJoQ/profile-displayphoto-shrink_200_200/0/1565072659484?e=1651104000&v=beta&t=tjI1vpxX_CeAe1Y_vdfjWBwiytD3NOmp7yBy9eOQwaE" alt="Dia Devine Scruggs">
    
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p> Hi! I have a love for art and design but never had the chance to learn how until i discovered web development. Now I want to better my desinging skills as well as my 
+    my coding skills to one day become a website designer/developer who can create beautiful designs that leave people in aw!</p>
     <h4>Contact</h4>
-    <li>Personal Site: </li>
-    <li>Email: </li>
+    <li>Personal Site: <a href="DiaS793.github.io">My Porfolio Web Site!</a> </li>
+    <li>Email: <a href="mailto:diascruggs793@outlook.com">My email! </li>
 </div>
   
 </div>
