@@ -1044,3 +1044,34 @@ blockquote {
   grid-row: row 3;
 }
 }
+
+/* App Section */
+.app_grid_wrapper{
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 10px;
+  align-content: center;
+  font-family: sans-serif;
+
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+#app{
+  align-content: center;
+  margin-left: 4rem;
+}
+
+#app_Description{
+  background-color: #ccc5c5;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+#appC{
+  max-width: 60%;
+  align-content: center;
+  margin-left: 4rem;
+
+}
