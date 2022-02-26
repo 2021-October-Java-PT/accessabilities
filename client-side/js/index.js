@@ -5,47 +5,23 @@ import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
 import Home from "./Components/Home";
 import Locations from "./Components/Locations";
-import Login from "./Components/Login";
 import Maps from "./Components/Maps";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
 
-// import Account from './components/Account';
-
-// import {
-//     createTestScheduler
-// } from 'jest';
 const pageContent = document.querySelector("#pageContent");
 buildPage();
 
 function buildPage() {
   about();
-  // account();
   contact();
-  // resources();
   village();
   navAccess();
   home();
-  // login();Z
   addBusinessToAPI();
 }
 
 console.log("Client Side is wired up!");
-
-// buildPage();
-
-// function buildPage() {
-// login();
-// }
-
-// function login() {
-// const loginElem = document.querySelector(".login-button");
-// loginElem.addEventListener("click", () => {
-// const page = document.querySelector(".Page");
-// page.innerHTML = Login();
-// });
-
-//}
 
 
 
@@ -71,12 +47,6 @@ chk.addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });
 
-// function account() {
-//     const contactElem = document.querySelector('#account');
-//     contactElem.addEventListener('click', () => {
-//         pageContent.innerHTML = Account();
-//     });
-// }
 
 //Lyzz BusinessAPI and search bar
 function addBusinessToAPI() {
@@ -218,19 +188,13 @@ function village() {
     pageContent.innerHTML = Village();
   });
 
-  // const villageBtn = document.querySelector("#villageBtn");
-  // villageBtn.addEventListener("click", () => {
-  //   pageContent.innerHTML = Village();
-  // });
-
-  // clickMaps();
   community();
 }
 
 
 
 function community() {
-  // const app = document.querySelector('#app');
+  
   pageContent.addEventListener("click", () => {
     if (event.target.classList.contains("community-button")) {
       apiHelpers.getRequest(
@@ -244,16 +208,3 @@ function community() {
   });
 }
 
-// function places() {
-//   const placesElem = document.querySelector(".village-option-list__places");
-//   console.log(placesElem);
-//     placesElem.addEventListener("click", () => {
-//       apiHelpers.getRequest(
-//         "http://localhost:8080/api/locations",
-//         (locations) => {
-//           console.log("LOCATIONS: ", locations);
-//           pageContent.innerHTML = Locations(locations);
-//         }
-//   );
-//   });
-//}
