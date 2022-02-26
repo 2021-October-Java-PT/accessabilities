@@ -47,14 +47,7 @@ console.log("Client Side is wired up!");
 
 //}
 
-// Maps
-// function mapsResources() {
-//   const mapsElem = document.querySelector(".places-button");
-//   mapsElem.addEventListener("click", () => {
-//     pageContent.innerHTML = Maps();
-//     clickMaps();
-//   });
-// }
+
 
 function clickMaps() {
   pageContent.addEventListener("click", (event) => {
@@ -225,12 +218,12 @@ function village() {
     pageContent.innerHTML = Village();
   });
 
-  const villageBtn = document.querySelector("#villageBtn");
-  villageBtn.addEventListener("click", () => {
-    pageContent.innerHTML = Village();
-  });
+  // const villageBtn = document.querySelector("#villageBtn");
+  // villageBtn.addEventListener("click", () => {
+  //   pageContent.innerHTML = Village();
+  // });
 
-  clickMaps();
+  // clickMaps();
   community();
 }
 
@@ -252,7 +245,7 @@ function community() {
 }
 
 // function places() {
-//   const placesElem = document.querySelector(".vilage-option-list__places");
+//   const placesElem = document.querySelector(".village-option-list__places");
 //   console.log(placesElem);
 //     placesElem.addEventListener("click", () => {
 //       apiHelpers.getRequest(
