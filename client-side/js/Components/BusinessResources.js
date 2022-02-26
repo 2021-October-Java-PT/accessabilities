@@ -1,6 +1,5 @@
 export default function BusinessResources(businessResources) {
-
-  console.log('BUSINESS RESOURCES.JS FILE');
+  console.log("BUSINESS RESOURCES.JS FILE");
   return `
   
  <div class="container">
@@ -10,75 +9,33 @@ export default function BusinessResources(businessResources) {
       <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
   <div id="content" class="content">
-  ${businessResources.map(resource => {
-    return `
+  ${businessResources
+    .map((resource) => {
+      return `
     <li class="partner">
       <p>${resource.name}</p>  
     `;
-    
-  }).join("")}</li>
-
+    })
+    .join("")}</li>
 </div>
 </div>
 
-<div>
 
 
-<div class="add-business__submit">
-<form>
-    <div id="Business_formBox1">
-    <label class="businessFormLabel" for="bussinessName">Business name:</label><br>
-    <input type="text" id="businessName" placeholder="Bussiness name"><br>
-    </div>
 
-    <div id="Business_formBox2">
-    <label class="businessFormLabel" for="bussinessStreetNum">Business Street Number:</label><br>
-    <input type="text" id="businessStreetNum" placeholder="Street Number"><br>
-    </div>
-
-    <div id="Business_formBox3">
-    <label class="businessFormLabel" for="bussinessStreetName">Business Street Name:</label><br>
-    <input type="text" id="businessStreetName" placeholder="Street Name"><br>
-    </div>
-
-    <div id="Business_formBox4">
-    <label class="businessFormLabel" for="bussinessCity">Business City:</label><br>
-    <input type="text" id="businessCity" placeholder="City"><br>
-    </div>
-
-    <div id="Business_formBox5">
-    <label class="businessFormLabel" for="bussinessState">Business State:</label><br>
-    <input type="text" id="businessState" placeholder="State"><br>
-    </div>
-
-    <div id="Business_formBox6">
-    <label class="businessFormLabel" for="bussinessZip">Business Zip Code:</label><br>
-    <input type="text" id="businessZip" placeholder="Zip"><br>
-    </div>
-
-    <div id="Business_formBox7">
-    <label class="businessFormLabel" for="bussinessUrl">Business Website:</label><br>
-    <input type="text" id="businessUrl" placeholder="URL"><br>
-    </div>
-
-    <div id="Business_formBox8">
-    <label class="businessFormLabel" for="bussinessAccessFeatures">Accessibility Features (separate by comma):</label><br>
-    <input type="text" id="businessAccessFeatures" placeholder="features"><br>
-    </div>
-    
-    <div id="Business_formBox9">
-    <label class="businessFormLabel" for="bussinessPhoneNum">Business phone number:</label><br>
-    <input maxlength="10" type="text" id="businessPhoneNum" placeholder="number"><br>
-    </div>
-
-    <div id="Business_formBox10">
-    <input class="businessForm_submit" type="submit" value="Submit">
-    </div>
-
-  </form>
-</div> 
-
-
+<form class="submit-business input container">
+    <label>Register your Business</label>
+    <input type="text" class="add-business-resource__name" placeholder="Enter your business name">
+    <input type="text" class="add-business-resource__description" placeholder="Enter a brief description">
+    <input type="text" class=" add-business-resource__street__number" placeholder="Enter a street number">
+    <input type="text" class=" add-business-resource__street__name" placeholder="Enter a street name">
+    <input type="text" class=" add-business-resource__city" placeholder="Enter city">
+    <input type="text" class=" add-business-resource__state" placeholder="Enter state">
+    <input type="text" class=" add-business-resource__zip" placeholder="Enter zip code">
+    <input type="text" class=" add-business__Url" placeholder="Enter url">
+    <input type="text" class=" add-business-resource__accessibility" placeholder="Enter accessibility features">
+    <input type="text" class=" add-business-resource__business__content__phone__number" placeholder="Enter phone number">
+    <button type="button" id="add-business__submit" class="add-business__submit">SUBMIT</button> 
+    </form>
       `;
-
 }

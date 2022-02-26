@@ -1,4 +1,3 @@
-
 import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
@@ -9,11 +8,8 @@ import Locations from "./Components/Locations";
 import Login from "./Components/Login";
 import Maps from "./Components/Maps";
 import Village from "./Components/Village";
-
 import apiHelpers from "./Components/apiHelpers.js";
-// import About from './Components/About';
 
-// import Resources from './components/Resources';
 // import Account from './components/Account';
 
 // import {
@@ -31,10 +27,6 @@ function buildPage() {
   navAccess();
   home();
   // login();Z
-  mapsResources();
-  // search();
-  // filteredBusinesses();
-  // renderBusinessResource();
   addBusinessToAPI();
 }
 
@@ -55,14 +47,7 @@ console.log("Client Side is wired up!");
 
 //}
 
-// Maps
-// function mapsResources() {
-//   const mapsElem = document.querySelector(".places-button");
-//   mapsElem.addEventListener("click", () => {
-//     pageContent.innerHTML = Maps();
-//     clickMaps();
-//   });
-// }
+
 
 function clickMaps() {
   pageContent.addEventListener("click", (event) => {
@@ -80,18 +65,6 @@ function clickMaps() {
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle("js-enabled");
 
-// document.addEventListener('DOMContentLoaded', function (event) {
-//     let hamburger = document.getElementById('hamburger');
-//     hamburger.setAttribute('aria-expanded', 'false');
-//     hamburger.onclick = function () {
-//         if (this.getAttribute('aria-expanded') == 'false') {
-//             this.setAttribute('aria-expanded', 'true');
-//         } else {
-//             this.setAttribute('aria-expanded', 'false');
-//         }
-//     }
-// });
-
 const chk = document.getElementById("chk");
 
 chk.addEventListener("change", () => {
@@ -106,29 +79,10 @@ chk.addEventListener("change", () => {
 // }
 
 //Lyzz BusinessAPI and search bar
-
-function search() {
-  const searchBar = document.getElementById("searchBar");
-  const searchSubmitBtn = document.getElementById("search-submit-btn");
-  console.log(searchBar);
-  console.log(searchSubmitBtn);
-
-  searchSubmitBtn.addEventListener("click", () => {
-    const searchString = searchBar.value;
-
-    apiHelpers.getRequest(
-      `http://localhost:8080/api/business-resources/city/${searchString}`,
-      (filteredResources) => {
-        pageContent.innerHTML = FilteredResources(filteredResources);
-      }
-    );
-  });
-}
-
 function addBusinessToAPI() {
   pageContent.addEventListener("click", (event) => {
     if (event.target.classList.contains("add-business__submit")) {
-      const addBusinessName = event.target.parentElement.querySelector(
+      const addName = event.target.parentElement.querySelector(
         ".add-business-resource__name"
       ).value;
       const addBusinessDescription = event.target.parentElement.querySelector(
@@ -158,10 +112,10 @@ function addBusinessToAPI() {
       const addBusinessContentPhoneNumber = event.target.parentElement.querySelector(
         ".add-business-resource__business__content__phone__number"
       ).value;
+      
       apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resources",
-        {
-          name: addBusinessName,
+        "http://localhost:8080/api/business-resources/add-resource",{
+          name: addName,
           businessDescription: addBusinessDescription,
           businessStreetNumber: addBusinessStreetNumber,
           businessStreetName: addBusinessStreetName,
@@ -179,60 +133,57 @@ function addBusinessToAPI() {
   });
 }
 
-// for the pages
 
-function navAccess() {
-  const accessElem = document.querySelector("#access");
-  const accessBtn = document.querySelector("#accessBtn");
-  accessElem.addEventListener("click", () => {
+function search() {
+  const searchBar = document.getElementById("searchBar");
+  const searchSubmitBtn = document.getElementById("search-submit-btn");
+  console.log(searchBar);
+  console.log(searchSubmitBtn);
+
+  searchSubmitBtn.addEventListener("click", () => {
+    const searchString = searchBar.value;
+
     apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
+      `http://localhost:8080/api/business-resources/city/${searchString}`,
+      (filteredResources) => {
+        pageContent.innerHTML = FilteredResources(filteredResources);
       }
     );
-    //renderBusinessResource()
   });
+}
 
+
+  function navAccess() {
+    const accessElem = document.querySelector("#access");
+    accessElem.addEventListener("click", () => {
+      apiHelpers.getRequest(
+        "http://localhost:8080/api/business-resources",
+        (businessResources) => {
+          console.log("RESOURCES: ", businessResources);
+          pageContent.innerHTML = BusinessResources(businessResources);
+          search();
+          addBusinessToAPI();
+        }
+      );
+    });
+  
   accessBtn.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
-      }
-    );
-    //renderBusinessResource()
-  });
-  const btnPartner = document.querySelector("#btnPartner");
-  btnPartner.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
-      }
-    );
-    //renderBusinessResource()
+    const accessBtn = document.querySelector("#accessBtn")
+    accessBtn.addEventListener("click", () => {
+      pageContent.innerHTML = BusinessResources(businessResources);
+    });
+    const btnPartner = document.querySelector("#btnPartner");
+    btnPartner.addEventListener("click", () => {
+      pageContent.innerHTML = BusinessResources(businessResources);
+    });
   });
 
   const partnerBtn = document.querySelector("#partnerBtn");
   partnerBtn.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
-      (businessResources) => {
-        console.log("RESOURCES: ", businessResources);
-        pageContent.innerHTML = BusinessResources(businessResources);
-        search();
-      }
-    );
-    //renderBusinessResource()
-  });
-}
+    pageContent.innerHTML = BusinessResources(businessResources);
+  }
+  );
+};
 
 function home() {
   const homeElem = document.querySelector("#home");
@@ -244,7 +195,7 @@ function home() {
   logoElem.addEventListener("click", () => {
     pageContent.innerHTML = Home();
   });
-}
+};
 
 function about() {
   const contactElem = document.querySelector("#about");
@@ -252,15 +203,14 @@ function about() {
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = About();
   });
-}
+};
 
 function contact() {
   const contactElem = document.querySelector("#contact");
-  // const accessBtn =
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Contact();
   });
-}
+};
 
 function village() {
   const contactElem = document.querySelector("#village");
@@ -268,14 +218,16 @@ function village() {
     pageContent.innerHTML = Village();
   });
 
-  const villageBtn = document.querySelector("#villageBtn");
-  villageBtn.addEventListener("click", () => {
-    pageContent.innerHTML = Village();
-  });
+  // const villageBtn = document.querySelector("#villageBtn");
+  // villageBtn.addEventListener("click", () => {
+  //   pageContent.innerHTML = Village();
+  // });
 
-  clickMaps();
+  // clickMaps();
   community();
 }
+
+
 
 function community() {
   // const app = document.querySelector('#app');
@@ -293,7 +245,7 @@ function community() {
 }
 
 // function places() {
-//   const placesElem = document.querySelector(".vilage-option-list__places");
+//   const placesElem = document.querySelector(".village-option-list__places");
 //   console.log(placesElem);
 //     placesElem.addEventListener("click", () => {
 //       apiHelpers.getRequest(
@@ -302,6 +254,6 @@ function community() {
 //           console.log("LOCATIONS: ", locations);
 //           pageContent.innerHTML = Locations(locations);
 //         }
-//       );
-//     });
-// }
+//   );
+//   });
+//}

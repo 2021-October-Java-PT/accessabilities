@@ -15,6 +15,7 @@ public class BusinessResource {
     private Long id;
     @Lob
     private String name;
+    @Lob
     private String businessDescription;
     private String businessStreetNumber;
     private String businessStreetName;

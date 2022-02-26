@@ -47,7 +47,7 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
   margin: 0px;
   padding: 0px;
@@ -58,7 +58,6 @@ body.dark {
   width: 1903px;
   height: 90px;
   margin-bottom: 0px;
-  background-color: grey;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -75,8 +74,7 @@ body.dark {
   display: block;
   margin-left: auto;
   margin-right: 48%;
-  width: 70px;
-  /* width: 12.5%; */
+  width: 12.5%;
 }
 
 /* NAVBAR MENU */
