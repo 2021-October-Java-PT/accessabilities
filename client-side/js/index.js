@@ -27,10 +27,6 @@ function buildPage() {
   navAccess();
   home();
   // login();Z
-  mapsResources();
-  // search();
-  // filteredBusinesses();
-  // renderBusinessResource();
   addBusinessToAPI();
 }
 
@@ -90,6 +86,59 @@ chk.addEventListener("change", () => {
 // }
 
 //Lyzz BusinessAPI and search bar
+function addBusinessToAPI() {
+  pageContent.addEventListener("click", (event) => {
+    if (event.target.classList.contains("add-business__submit")) {
+      const addName = event.target.parentElement.querySelector(
+        ".add-business-resource__name"
+      ).value;
+      const addBusinessDescription = event.target.parentElement.querySelector(
+        ".add-business-resource__description"
+      ).value;
+      const addBusinessStreetNumber = event.target.parentElement.querySelector(
+        ".add-business-resource__street__number"
+      ).value;
+      const addBusinessStreetName = event.target.parentElement.querySelector(
+        ".add-business-resource__street__name"
+      ).value;
+      const addBusinessCity = event.target.parentElement.querySelector(
+        ".add-business-resource__city"
+      ).value;
+      const addBusinessState = event.target.parentElement.querySelector(
+        ".add-business-resource__state"
+      ).value;
+      const addBusinessZip = event.target.parentElement.querySelector(
+        ".add-business-resource__zip"
+      ).value;
+      const addBusinessUrl = event.target.parentElement.querySelector(
+        ".add-business__Url"
+      ).value;
+      const addBusinessAccessibilityFeatures = event.target.parentElement.querySelector(
+        ".add-business-resource__accessibility"
+      ).value;
+      const addBusinessContentPhoneNumber = event.target.parentElement.querySelector(
+        ".add-business-resource__business__content__phone__number"
+      ).value;
+      
+      apiHelpers.postRequest(
+        "http://localhost:8080/api/business-resources/add-resource",{
+          name: addName,
+          businessDescription: addBusinessDescription,
+          businessStreetNumber: addBusinessStreetNumber,
+          businessStreetName: addBusinessStreetName,
+          businessCity: addBusinessCity,
+          businessState: addBusinessState,
+          businessZip: addBusinessZip,
+          businessUrl: addBusinessUrl,
+          businessAccessibilityFeatures: addBusinessAccessibilityFeatures,
+          businessContentPhoneNumber: addBusinessContentPhoneNumber,
+        },
+        (businessResources) =>
+          (app.innerHTML = businessResources(businessResources))
+      );
+    }
+  });
+}
 
 
 function search() {
@@ -120,6 +169,7 @@ function search() {
           console.log("RESOURCES: ", businessResources);
           pageContent.innerHTML = BusinessResources(businessResources);
           search();
+          addBusinessToAPI();
         }
       );
     });
