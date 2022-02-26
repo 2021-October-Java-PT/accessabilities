@@ -60,10 +60,17 @@ export default function Village() {
         </div>
   
         <div class="app 8">
-        <img id="app1"src='https://apps.apple.com/us/app/choiceworks/id486210964' alt="Choiceworks App" />
+        <img id="app1"src='https://learningworksforkids.com/wp-content/uploads/title136384713.png' alt="Choiceworks App" />
         <br>
         <a href="https://apps.apple.com/us/app/choiceworks/id486210964"> Apple: Choiceworks App </a>
         
+        </div>
+
+        <div class="app 9">
+        <img id="app1"src='https://play-lh.googleusercontent.com/_XEI1fTTVb2LhV4poSER32MSbQCQuwjaQISxUvuEHkNk6O3Uv8xNYwuS-piWSxBfiw=s180-rw' alt="CoughDrop AAC App"/>
+        <a href="https://play.google.com/store/apps/details?id=com.mycoughdrop.coughdrop"> Android: CoughDrop AAC </a>
+        <br>
+        <a href="https://apps.apple.com/us/app/coughdrop/id1021384570"> Apple: CoughDrop</a>
         </div>
     
         </div>
