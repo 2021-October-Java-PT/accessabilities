@@ -1,7 +1,7 @@
 export default function Locations(locations) {
   return `
     <h1 class="places-header">Places</h1>
-   
+
     ${locations
       .map((location) => {
         return `
@@ -17,6 +17,6 @@ export default function Locations(locations) {
         `;
       })
       .join("")}
-   
+
     `;
 }
