@@ -13,7 +13,7 @@ export default function BusinessResources(businessResources) {
     .map((resource) => {
       return `
     <li class="partner">
-      <p>${resource.name}</p>  
+      <p class="indPartner">${resource.name}</p>  
     `;
     })
     .join("")}</li>
@@ -21,10 +21,11 @@ export default function BusinessResources(businessResources) {
 </div>
 
 
-
-
-<form class="submit-business input container">
-    <label>Register your Business</label>
+<div class="formContainer">
+        <div class="submit-business input container">
+            <h2 class="formHeader">Sign Up To Be a Partner!</h2>
+            <div class="formContentContainer">
+            <form>
     <input type="text" class="add-business-resource__name" placeholder="Enter your business name">
     <input type="text" class="add-business-resource__description" placeholder="Enter a brief description">
     <input type="text" class=" add-business-resource__street__number" placeholder="Enter a street number">
@@ -36,6 +37,7 @@ export default function BusinessResources(businessResources) {
     <input type="text" class=" add-business-resource__accessibility" placeholder="Enter accessibility features">
     <input type="text" class=" add-business-resource__business__content__phone__number" placeholder="Enter phone number">
     <button type="button" id="add-business__submit" class="add-business__submit">SUBMIT</button> 
-    </form>
+    </form>      
+    </div>
       `;
 }

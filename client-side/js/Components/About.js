@@ -7,10 +7,10 @@ export default function About(){
     <div class = "bio">
         <h2>Lyzz Hans</h2>
         
-        <p>Lorem bacon doslor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Self motivated Software Developer  with a passion for improving the lives of individuals that experience barriers to upward mobility. Skilled in management, team building and working well under pressure. Diplomatic and highly organized when serving clients. Knowledge in agile development principles, Java, JavaScript, Spring, MVC,  HTML, CSS,  GitBash, TDD, and OOP.</p>
         <h4>Contact</h4>
-        <li>Personal Site: </li>
-        <li>Email: </li>
+        <a href="https://lyzzhans.com/"><li>Personal Site</li></a>
+        <a href = "mailto: lyzz.hans@gmail.com">Email</a>
     </div>
     <div class = "bio">
         <h2>Landon Sims</h2>

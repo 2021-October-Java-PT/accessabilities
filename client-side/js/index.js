@@ -133,6 +133,7 @@ function search() {
           pageContent.innerHTML = BusinessResources(businessResources);
           search();
           addBusinessToAPI();
+          pullBusinessCard();
         }
       );
     });
@@ -154,6 +155,14 @@ function search() {
   }
   );
 };
+
+function pullBusinessCard() {
+  pageContent.addEventListener("click", () => {
+    if(event.target.classList.contains("indPartner")) {
+      console.log("WERK IT");
+    }
+  })
+}
 
 function home() {
   const homeElem = document.querySelector("#home");
