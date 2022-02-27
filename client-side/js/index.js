@@ -6,9 +6,9 @@ import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
 import Home from "./Components/Home";
 import Locations from "./Components/Card";
-import Maps from "./Components/Maps";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
+import mMaps from "./Components/Maps";
 
 const pageContent = document.querySelector("#pageContent");
 buildPage();
@@ -20,6 +20,9 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
+  
+  
+  
 }
 
 console.log("Client Side is wired up!");
@@ -209,6 +212,7 @@ function village() {
   });
 
   community();
+  resources();
 }
 
 function community() {
@@ -219,6 +223,20 @@ function community() {
         (locations) => {
           console.log("Locations: ", locations);
           pageContent.innerHTML = Locations(locations);
+        }
+      );
+    }
+  });
+}
+
+function resources() {
+  pageContent.addEventListener("click", () => {
+    if (event.target.classList.contains("resources-button")) {
+      apiHelpers.getRequest(
+        "http://localhost:8080/api/resources",
+        (resources) => {
+          console.log("Resources: ", resources);
+          pageContent.innerHTML = Resources(resources);
         }
       );
     }
