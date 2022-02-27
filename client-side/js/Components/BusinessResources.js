@@ -14,6 +14,7 @@ export default function BusinessResources(businessResources) {
       return `
     <li class="partner">
       <p class="indPartner">${resource.name}</p>  
+      <input type="hidden" id="businessId" value="${resource.id}">
     `;
     })
     .join("")}</li>

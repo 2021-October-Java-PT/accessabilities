@@ -1,3 +1,8 @@
+#pageContent {
+  margin-top: 5em;
+  padding: 25px;
+}
+
 /* Martel's Dark Mode */
 * {
   box-sizing: border-box;
@@ -739,7 +744,7 @@ h1 {
   padding: 5px;
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 900px) {
   .container {
     width: 90%;
   }
@@ -852,140 +857,141 @@ h1 {
     margin: 0 auto;
   }
 
-.formContainer {
-  position: relative;
-  margin: 8% auto;
-  min-height: 60%;
-  width: 50%;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
-  background: white;
-  padding: 0px 0px 5px 15px;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-.formHeader {
-  text-align: center;
-}
-.formContentContainer {
-  margin-top: 15%;
-}
-.formInput {
-  display: block;
-  margin: 0px 0px 15px 20px;
-  padding: 4px;
-  width: 80%;
-  height: 5%;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #aaa;
-  font-size: 12px;
-}
-.submitButton {
-  background: dodgerblue;
-  color: white;
-  margin: 10px 20px;
-  width: 80%;
-  height: 8%;
-  border: none;
-  border-radius: 4px;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 500;
-}
+  .formContainer {
+    position: relative;
+    margin: 8% auto;
+    min-height: 60%;
+    width: 50%;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+    background: white;
+    padding: 0px 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  .formHeader {
+    text-align: center;
+  }
+  .formContentContainer {
+    margin-top: 15%;
+  }
+  .formInput {
+    display: block;
+    margin: 0px 0px 15px 20px;
+    padding: 4px;
+    width: 80%;
+    height: 5%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-size: 12px;
+  }
+  .submitButton {
+    background: dodgerblue;
+    color: white;
+    margin: 10px 20px;
+    width: 80%;
+    height: 8%;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 500;
+  }
 
-.submit-business input container  {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  box-sizing: border-box;
-}
+  .submit-business input container {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+  }
 
-/* Village Landing */
+  /* Village Landing */
 
-blockquote {
-  text-align: center;
-  font-size: 230%;
-  color: rgb(0, 31, 77, 0.5);
-}
+  blockquote {
+    text-align: center;
+    font-size: 230%;
+    color: rgb(0, 31, 77, 0.5);
+  }
 
-.village-option-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 5rem, 0px, 5rem;
-}
+  .village-option-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 5rem, 0px, 5rem;
+  }
 
-.village-button {
-  width: 250px;
-  height: 200px;
-  border-width: 3px;
-  border-radius: 30px;
-  transition-duration: 0.6s;
-  font-size: 150%;
-  font-size: bold;
-  font-weight: bold;
-  margin-top: 4rem;
-  text-decoration-style: solid;
-  z-index: 2;
-  color: white;
+  .village-button {
+    width: 250px;
+    height: 200px;
+    border-width: 3px;
+    border-radius: 30px;
+    transition-duration: 0.6s;
+    font-size: 150%;
+    font-size: bold;
+    font-weight: bold;
+    margin-top: 4rem;
+    text-decoration-style: solid;
+    z-index: 2;
+    color: white;
 
-  clip-path: margin-box;
-  margin-right: 50px;
-}
+    clip-path: margin-box;
+    margin-right: 50px;
+  }
 
-.village-button:hover {
-  transition: linear;
-  cursor: pointer;
-  color: black;
-  background-color: ivory;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-  transform: scale(0.95);
-  filter: contrast(1);
-}
+  .village-button:hover {
+    transition: linear;
+    cursor: pointer;
+    color: black;
+    background-color: ivory;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    filter: contrast(1);
+  }
 
-.village-button:active {
-  font-size: 50%;
-  cursor: pointer;
-}
+  .village-button:active {
+    font-size: 50%;
+    cursor: pointer;
+  }
 
-.places-button {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
-  background-size: cover;
-}
+  .places-button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+    background-size: cover;
+  }
 
-.places-button:hover {
-  background-image: url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
-  filter: brightness(0.8);
-}
+  .places-button:hover {
+    background-image: url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+    filter: brightness(0.8);
+  }
 
-/* .places-button span {
+  /* .places-button span {
   color: white;
   z-index: 2;
 } */
 
-.resources-button {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
-  background-size: cover;
-}
+  .resources-button {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+    background-size: cover;
+  }
 
-.resources-button:hover {
-  background-image: url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
-  filter: brightness(0.8);
-}
+  .resources-button:hover {
+    background-image: url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+    filter: brightness(0.8);
+  }
 
-.community-button {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
-  background-size: cover;
-}
+  .community-button {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+    background-size: cover;
+  }
 
-.community-button:hover {
-  background-image: url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
-  filter: brightness(0.8);
+  .community-button:hover {
+    background-image: url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+    filter: brightness(0.8);
+  }
 }
 
 /* Locations List Cam */
@@ -996,6 +1002,8 @@ blockquote {
   transition: 0.3s;
   width: fit-content;
   align-self: center;
+  width: 80%;
+  height: 100%;
 }
 
 .review-card:hover {
@@ -1003,22 +1011,33 @@ blockquote {
 }
 
 .location-wrapper {
+  width: 100%;
+  height: auto;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: [col] 125px [col] 125px [col] 125px [col] 125px;
+  grid-template-columns: [col] 250px [col] 250px [col] 250px [col] 250px;
   grid-template-rows: [row] auto [row] auto [row];
 
   color: #444;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  /* margin-top: 3em;
+  margin-bottom: 5em; */
+  padding-bottom: 1em;
+  padding-top: 1em;
+  justify-content: center;
+  align-content: center;
 }
 
 .location-box {
-  background-color: #444;
-  color: #fff;
+  /* background-color: #444; */
+  color: #61666b;
   border-radius: 5px;
+  border-style: double;
+  border-color: #c9250c;
+  background-color: #77a5d9;
   padding: 20px;
   font-size: 150%;
+  width: auto;
+  height: auto;
 }
 
 .a {
@@ -1029,6 +1048,7 @@ blockquote {
 .b {
   grid-column: col 3 / span 2;
   grid-row: row;
+  text-align: center;
 }
 .c {
   grid-column: col;
@@ -1042,5 +1062,5 @@ blockquote {
 .e {
   grid-column: col / span 4;
   grid-row: row 3;
-}
+  text-align: center;
 }

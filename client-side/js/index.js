@@ -1,10 +1,11 @@
 import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
+import Card from "./Components/Card.js";
 import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
 import Home from "./Components/Home";
-import Locations from "./Components/Locations";
+import Locations from "./Components/Card";
 import Maps from "./Components/Maps";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
@@ -22,8 +23,6 @@ function buildPage() {
 }
 
 console.log("Client Side is wired up!");
-
-
 
 function clickMaps() {
   pageContent.addEventListener("click", (event) => {
@@ -46,7 +45,6 @@ const chk = document.getElementById("chk");
 chk.addEventListener("change", () => {
   document.body.classList.toggle("dark");
 });
-
 
 //Lyzz BusinessAPI and search bar
 function addBusinessToAPI() {
@@ -82,9 +80,10 @@ function addBusinessToAPI() {
       const addBusinessContentPhoneNumber = event.target.parentElement.querySelector(
         ".add-business-resource__business__content__phone__number"
       ).value;
-      
+
       apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resource",{
+        "http://localhost:8080/api/business-resources/add-resource",
+        {
           name: addName,
           businessDescription: addBusinessDescription,
           businessStreetNumber: addBusinessStreetNumber,
@@ -102,7 +101,6 @@ function addBusinessToAPI() {
     }
   });
 }
-
 
 function search() {
   const searchBar = document.getElementById("searchBar");
@@ -122,24 +120,23 @@ function search() {
   });
 }
 
+function navAccess() {
+  const accessElem = document.querySelector("#access");
+  accessElem.addEventListener("click", () => {
+    apiHelpers.getRequest(
+      "http://localhost:8080/api/business-resources",
+      (businessResources) => {
+        console.log("RESOURCES: ", businessResources);
+        pageContent.innerHTML = BusinessResources(businessResources);
+        search();
+        addBusinessToAPI();
+        pullBusinessCard();
+      }
+    );
+  });
 
-  function navAccess() {
-    const accessElem = document.querySelector("#access");
-    accessElem.addEventListener("click", () => {
-      apiHelpers.getRequest(
-        "http://localhost:8080/api/business-resources",
-        (businessResources) => {
-          console.log("RESOURCES: ", businessResources);
-          pageContent.innerHTML = BusinessResources(businessResources);
-          search();
-          addBusinessToAPI();
-          pullBusinessCard();
-        }
-      );
-    });
-  
   accessBtn.addEventListener("click", () => {
-    const accessBtn = document.querySelector("#accessBtn")
+    const accessBtn = document.querySelector("#accessBtn");
     accessBtn.addEventListener("click", () => {
       pageContent.innerHTML = BusinessResources(businessResources);
     });
@@ -152,16 +149,23 @@ function search() {
   const partnerBtn = document.querySelector("#partnerBtn");
   partnerBtn.addEventListener("click", () => {
     pageContent.innerHTML = BusinessResources(businessResources);
-  }
-  );
-};
+  });
+}
 
 function pullBusinessCard() {
   pageContent.addEventListener("click", () => {
-    if(event.target.classList.contains("indPartner")) {
+    if (event.target.classList.contains("indPartner")) {
       console.log("WERK IT");
+      const businessId = event.target.parentElement.querySelector("#businessId")
+        .value;
+      apiHelpers.getRequest(
+        `http://localhost:8080/api/business-resources/${businessId}`,
+        (card) => {
+          pageContent.innerHTML = Card(card);
+        }
+      );
     }
-  })
+  });
 }
 
 function home() {
@@ -174,7 +178,7 @@ function home() {
   logoElem.addEventListener("click", () => {
     pageContent.innerHTML = Home();
   });
-};
+}
 
 function about() {
   const contactElem = document.querySelector("#about");
@@ -182,14 +186,14 @@ function about() {
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = About();
   });
-};
+}
 
 function contact() {
   const contactElem = document.querySelector("#contact");
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Contact();
   });
-};
+}
 
 function village() {
   const contactElem = document.querySelector("#village");
@@ -200,10 +204,7 @@ function village() {
   community();
 }
 
-
-
 function community() {
-  
   pageContent.addEventListener("click", () => {
     if (event.target.classList.contains("community-button")) {
       apiHelpers.getRequest(
@@ -216,4 +217,3 @@ function community() {
     }
   });
 }
-
