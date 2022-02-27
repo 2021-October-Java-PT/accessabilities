@@ -18,7 +18,7 @@ public class BusinessRestController {
     private BusinessResourceRepository businessRepo;
 
     @GetMapping("/api/business-resources")
-    public Collection<BusinessResource> getBusinessResources() {
+    public Collection<BusinessResource> getBusinessResource() {
         return (Collection<BusinessResource>) businessRepo.findAll();
     }
 
@@ -29,7 +29,7 @@ public class BusinessRestController {
 
 
     @GetMapping("/api/business-resources/{id}")
-    public Optional<BusinessResource> getBusinessResources(@PathVariable Long id) {
+    public Optional<BusinessResource> getBusinessResource(@PathVariable Long id) {
         return businessRepo.findById(id);
     }
 
