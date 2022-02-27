@@ -20,6 +20,7 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
+  clickMaps();
 }
 
 console.log("Client Side is wired up!");
