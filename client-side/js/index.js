@@ -82,8 +82,7 @@ function addBusinessToAPI() {
       ).value;
 
       apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resource",
-        {
+        "http://localhost:8080/api/business-resources/add-resource", {
           name: addName,
           businessDescription: addBusinessDescription,
           businessStreetNumber: addBusinessStreetNumber,
@@ -96,7 +95,7 @@ function addBusinessToAPI() {
           businessContentPhoneNumber: addBusinessContentPhoneNumber,
         },
         (businessResources) =>
-          (app.innerHTML = businessResources(businessResources))
+        (app.innerHTML = businessResources(businessResources))
       );
     }
   });
@@ -110,14 +109,6 @@ function search() {
 
   searchSubmitBtn.addEventListener("click", () => {
     const searchString = searchBar.value;
-
-    // apiHelpers.getRequest(
-    //   `http://localhost:8080/api/business-resources/city/${searchString}`,
-    //   (filteredResources) => {
-    //     pageContent.innerHTML = FilteredResources(filteredResources);
-    //   }
-    // );
-
     apiHelpers.getRequest(
       `http://localhost:8080/api/business-resources/Search/${searchString}`,
       (filteredResources) => {
@@ -125,7 +116,7 @@ function search() {
       }
     );
   });
-  }
+}
 
 function navAccess() {
   const accessElem = document.querySelector("#access");
@@ -169,11 +160,39 @@ function pullBusinessCard() {
         `http://localhost:8080/api/business-resources/${businessId}`,
         (card) => {
           pageContent.innerHTML = Card(card);
+          starRating();
         }
       );
+
     }
   });
 }
+
+function starRating() {
+  const ratingStars = [...document.getElementsByClassName("rating__star")];
+
+function executeRating(stars) {
+  const starClassActive = "rating__star fas fa-star";
+  const starClassInactive = "rating__star far fa-star";
+  const starsLength = stars.length;
+  let i;
+  stars.map((star) => {
+    star.onclick = () => {
+      i = stars.indexOf(star);
+
+      if (star.className === starClassInactive) {
+        for (i; i >= 0; --i) stars[i].className = starClassActive;
+      } else {
+        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+      }
+    };
+  });
+}
+executeRating(ratingStars);
+
+}
+
+
 
 function home() {
   const homeElem = document.querySelector("#home");
@@ -208,19 +227,19 @@ function village() {
     pageContent.innerHTML = Village();
   });
 
-  community();
+  // community();
 }
 
-function community() {
-  pageContent.addEventListener("click", () => {
-    if (event.target.classList.contains("community-button")) {
-      apiHelpers.getRequest(
-        "http://localhost:8080/api/locations",
-        (locations) => {
-          console.log("Locations: ", locations);
-          pageContent.innerHTML = Locations(locations);
-        }
-      );
-    }
-  });
-}
+// function community() {
+//   pageContent.addEventListener("click", () => {
+//     if (event.target.classList.contains("community-button")) {
+//       apiHelpers.getRequest(
+//         "http://localhost:8080/api/locations",
+//         (locations) => {
+//           console.log("Locations: ", locations);
+//           pageContent.innerHTML = Locations(locations);
+//         }
+//       );
+//     }
+// });
+// }
