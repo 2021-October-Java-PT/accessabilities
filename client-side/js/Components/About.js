@@ -1,7 +1,5 @@
-
-
-export default function About(){
-    return`
+export default function About() {
+  return `
     <div class="page__container">
     <div class="aboutDisplay">
     <div class = "bio">
@@ -45,12 +43,13 @@ export default function About(){
         <li>Email: </li>
     </div>
     <div class = "bio">
-    <h2>Dia Scruggs</h2>
-   
+    <h2>Dia Devine Scruggs</h2>
+    <img id="Dia_HeadShoot" src"https://media-exp1.licdn.com/dms/image/C5603AQFDZulzi-nJoQ/profile-displayphoto-shrink_200_200/0/1565072659484?e=1651708800&v=beta&t=SaXhzc1aNXHrdo8-tYq4jp919ozccRPQaQo9XD7Yi_8" alt="Dia Devine Scruggs"/>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <h4>Contact</h4>
-    <li>Personal Site: </li>
-    <li>Email: </li>
+    <li>Personal Site: <a href="DiaS793.github.io"> My Website! </li>
+    <li> Email: 
+    <a href="mailto: diascruggs793@outlook.com"> My email! </li>
 </div>
   
 </div>

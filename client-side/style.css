@@ -393,6 +393,7 @@ input[type="checkbox"] {
     bottom: 3rem;
     font-size: 270%;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -514,9 +515,16 @@ input[type="checkbox"] {
   }
 
   .imageContainer-text h1 {
-    position: absolute;
-    left: 50px;
-    bottom: 4800px;
+    font-size: 600%;
+    left: 200px;
+    bottom: 48px;
+  }
+}
+@media screen and (max-width: 1280px){
+  .imageContainer-text h1 {
+    font-size: 600%;
+    left: 200px;
+    bottom: 48px;
   }
 }
 
@@ -568,7 +576,6 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 914) {
   .imageContainer-text h1 {
-    position: absolute;
     left: 600rem;
     bottom: 0px;
     font-size: 6rem;
@@ -577,7 +584,6 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 883px) {
   .imageContainer-text h1 {
-    position: absolute;
     left: 210px;
     bottom: 3300px;
     font-size: 7rem;
@@ -626,7 +632,6 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 599px) {
   .imageContainer-text h1 {
-    position: absolute;
     left: 97px;
     bottom: 3600px;
     font-size: 6rem;
