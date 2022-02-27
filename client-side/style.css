@@ -723,13 +723,13 @@ body.dark {
 }
 
 /* Lyzz Business Search */
-.container {
+/* .container {
   margin: 15rem auto;
   width: 90%;
 }
 h1 {
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
-}
+} */
 
 .content {
   display: grid;
@@ -1054,7 +1054,18 @@ h1 {
   grid-column: col;
   grid-row: row 2;
 }
+
 .business-description {
+.rating {
+  width: 180px;
+}
+
+.rating__star {
+  cursor: pointer;
+  color: #dabd18b2;
+}
+.d {
+
   grid-column: col 2 / span 3;
   grid-row: row 2;
 }
