@@ -5,7 +5,7 @@ export default function BusinessResources(businessResources) {
  <div class="container">
   <h1>Business Directory<h1>
   <div id="searchWrapper">
-  <input type="search" id="searchBar" placeholder="Search for a business by City" required>
+  <input type="search" id="searchBar" placeholder="Search for a business by City or Accessibility Feature" required>
       <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
   <div id="content" class="content">
@@ -14,6 +14,7 @@ export default function BusinessResources(businessResources) {
       return `
     <li class="partner">
       <p class="indPartner">${resource.name}</p>  
+      <input type="hidden" id="businessId" value="${resource.id}">
     `;
     })
     .join("")}</li>
