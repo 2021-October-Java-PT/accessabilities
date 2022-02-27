@@ -125,7 +125,7 @@ function search() {
       }
     );
   });
-  }
+}
 
 function navAccess() {
   const accessElem = document.querySelector("#access");
@@ -142,21 +142,21 @@ function navAccess() {
     );
   });
 
-  accessBtn.addEventListener("click", () => {
-    const accessBtn = document.querySelector("#accessBtn");
-    accessBtn.addEventListener("click", () => {
-      pageContent.innerHTML = BusinessResources(businessResources);
-    });
-    const btnPartner = document.querySelector("#btnPartner");
-    btnPartner.addEventListener("click", () => {
-      pageContent.innerHTML = BusinessResources(businessResources);
-    });
-  });
+  // accessBtn.addEventListener("click", () => {
+  //   const accessBtn = document.querySelector("#accessBtn");
+  //   accessBtn.addEventListener("click", () => {
+  //     pageContent.innerHTML = BusinessResources(businessResources);
+  //   });
+  //   const btnPartner = document.querySelector("#btnPartner");
+  //   btnPartner.addEventListener("click", () => {
+  //     pageContent.innerHTML = BusinessResources(businessResources);
+  //   });
+  // });
 
-  const partnerBtn = document.querySelector("#partnerBtn");
-  partnerBtn.addEventListener("click", () => {
-    pageContent.innerHTML = BusinessResources(businessResources);
-  });
+  // const partnerBtn = document.querySelector("#partnerBtn");
+  // partnerBtn.addEventListener("click", () => {
+  //   pageContent.innerHTML = BusinessResources(businessResources);
+  // });
 }
 
 function pullBusinessCard() {
@@ -207,20 +207,20 @@ function village() {
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Village();
   });
-
-  community();
+  clickMaps();
+  // community();
 }
 
-function community() {
-  pageContent.addEventListener("click", () => {
-    if (event.target.classList.contains("community-button")) {
-      apiHelpers.getRequest(
-        "http://localhost:8080/api/locations",
-        (locations) => {
-          console.log("Locations: ", locations);
-          pageContent.innerHTML = Locations(locations);
-        }
-      );
-    }
-  });
-}
+// function community() {
+//   pageContent.addEventListener("click", () => {
+//     if (event.target.classList.contains("community-button")) {
+//       apiHelpers.getRequest(
+//         "http://localhost:8080/api/locations",
+//         (locations) => {
+//           console.log("Locations: ", locations);
+//           pageContent.innerHTML = Locations(locations);
+//         }
+//       );
+//     }
+//   });
+// }
