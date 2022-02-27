@@ -134,21 +134,21 @@ function navAccess() {
     );
   });
 
-  accessBtn.addEventListener("click", () => {
-    const accessBtn = document.querySelector("#accessBtn");
-    accessBtn.addEventListener("click", () => {
-      pageContent.innerHTML = BusinessResources(businessResources);
-    });
-    const btnPartner = document.querySelector("#btnPartner");
-    btnPartner.addEventListener("click", () => {
-      pageContent.innerHTML = BusinessResources(businessResources);
-    });
-  });
+  // accessBtn.addEventListener("click", () => {
+  //   const accessBtn = document.querySelector("#accessBtn");
+  //   accessBtn.addEventListener("click", () => {
+  //     pageContent.innerHTML = BusinessResources(businessResources);
+  //   });
+  //   const btnPartner = document.querySelector("#btnPartner");
+  //   btnPartner.addEventListener("click", () => {
+  //     pageContent.innerHTML = BusinessResources(businessResources);
+  //   });
+  // });
 
-  const partnerBtn = document.querySelector("#partnerBtn");
-  partnerBtn.addEventListener("click", () => {
-    pageContent.innerHTML = BusinessResources(businessResources);
-  });
+  // const partnerBtn = document.querySelector("#partnerBtn");
+  // partnerBtn.addEventListener("click", () => {
+  //   pageContent.innerHTML = BusinessResources(businessResources);
+  // });
 }
 
 function pullBusinessCard() {
@@ -228,6 +228,9 @@ function village() {
     pageContent.innerHTML = Village();
   });
 
+  clickMaps();
+
+
   // community();
 }
 
@@ -242,5 +245,7 @@ function village() {
 //         }
 //       );
 //     }
-// });
+
+//   });
 // }
+
