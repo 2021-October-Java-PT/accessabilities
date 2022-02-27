@@ -994,8 +994,7 @@ h1 {
   }
 }
 
-/* Locations List Cam */
-
+* Locations List Cam *
 .review-card {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -1005,11 +1004,9 @@ h1 {
   width: 80%;
   height: 100%;
 }
-
 .review-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 .location-wrapper {
   width: 100%;
   height: auto;
@@ -1017,7 +1014,6 @@ h1 {
   grid-gap: 10px;
   grid-template-columns: [col] 250px [col] 250px [col] 250px [col] 250px;
   grid-template-rows: [row] auto [row] auto [row];
-
   color: #444;
   /* margin-top: 3em;
   margin-bottom: 5em; */
@@ -1026,20 +1022,18 @@ h1 {
   justify-content: center;
   align-content: center;
 }
-
 .business-box {
   /* background-color: #444; */
-  color: #61666b;
+  color: #61666B;
   border-radius: 5px;
   border-style: double;
-  border-color: #c9250c;
-  background-color: #77a5d9;
+  border-color: #C9250C;
+  background-color: #77A5D9;
   padding: 20px;
   font-size: 150%;
   width: auto;
   height: auto;
 }
-
 .business-name {
   grid-column: col / span 2;
   grid-row: row;
@@ -1054,28 +1048,19 @@ h1 {
   grid-column: col;
   grid-row: row 2;
 }
-
-.business-description {
-.rating {
-  width: 180px;
-}
-
 .rating__star {
   cursor: pointer;
   color: #dabd18b2;
 }
-.d {
-
+.business-description {
   grid-column: col 2 / span 3;
   grid-row: row 2;
 }
-
 .business-reviews {
   grid-column: col / span 4;
   grid-row: row 3;
   text-align: center;
 }
-
 .comment-container {
   max-width: 640px;
   margin: 30px auto;
@@ -1083,33 +1068,29 @@ h1 {
   border-radius: 8px;
   padding: 20px;
 }
-
 .comment {
   display: block;
   transition: all 1s;
 }
-
 .commentClicked {
   min-height: 0px;
   border: 1px solid #eee;
   border-radius: 5px;
   padding: 5px 10px;
 }
-
 .container textarea {
   width: 100%;
   border: none;
-  background: #e8e8e8;
+  background: #E8E8E8;
   padding: 5px 10px;
   height: 50%;
   border-radius: 5px 5px 0px 0px;
-  border-bottom: 2px solid #016ba8;
+  border-bottom: 2px solid #016BA8;
   transition: all 0.5s;
   margin-top: 15px;
 }
-
 button.primaryContained {
-  background: #016ba8;
+  background: #016BA8;
   color: #fff;
   padding: 10px 10px;
   border: none;
@@ -1122,7 +1103,19 @@ button.primaryContained {
   font-size: 10px;
   border-radius: 5px;
 }
-
 button.primaryContained:hover {
-  background: #9201a8;
+  background: #9201A8;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
