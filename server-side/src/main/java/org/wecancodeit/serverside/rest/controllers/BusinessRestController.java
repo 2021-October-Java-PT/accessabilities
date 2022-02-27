@@ -26,6 +26,16 @@ public class BusinessRestController {
     public Collection<BusinessResource> getBusinessResourcesByCity(@PathVariable(value = "businessCity") String businessCity) {
         return businessRepo.findByBusinessCityIgnoreCase(businessCity);
     }
+    @GetMapping("/api/business-resources/AccessibilityFeatures/{businessAccessibilityFeatures}")
+    public Collection<BusinessResource> getBusinessResourcesByAccessibilityFeatures(@PathVariable(value = "businessAccessibilityFeatures") String businessAccessibilityFeatures) {
+        return businessRepo.findByBusinessAccessibilityFeaturesContains(businessAccessibilityFeatures);
+    }
+    @GetMapping("/api/business-resources/Search/{nameOrBusinessZipOrBusinessCityOrBusinessAccessibilityFeatures}")
+    public Collection<BusinessResource> getBusinessResourcesBySearchParams(@PathVariable(value = "nameOrBusinessZipOrBusinessCityOrBusinessAccessibilityFeatures") String name,@PathVariable(value = "nameOrBusinessZipOrBusinessCityOrBusinessAccessibilityFeatures") String businessZip,@PathVariable(value = "nameOrBusinessZipOrBusinessCityOrBusinessAccessibilityFeatures") String businessCity, @PathVariable(value = "nameOrBusinessZipOrBusinessCityOrBusinessAccessibilityFeatures") String businessAccessibilityFeatures ) {
+        return businessRepo.findByNameContainsIgnoreCaseOrBusinessZipOrBusinessCityIgnoreCaseOrBusinessAccessibilityFeaturesIgnoreCaseContains(name, businessZip, businessCity, businessAccessibilityFeatures);
+
+    }
+
 
 
     @GetMapping("/api/business-resources/{id}")
