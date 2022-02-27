@@ -113,14 +113,21 @@ function search() {
   searchSubmitBtn.addEventListener("click", () => {
     const searchString = searchBar.value;
 
+    // apiHelpers.getRequest(
+    //   `http://localhost:8080/api/business-resources/city/${searchString}`,
+    //   (filteredResources) => {
+    //     pageContent.innerHTML = FilteredResources(filteredResources);
+    //   }
+    // );
+
     apiHelpers.getRequest(
-      `http://localhost:8080/api/business-resources/city/${searchString}`,
+      `http://localhost:8080/api/business-resources/Search/${searchString}`,
       (filteredResources) => {
         pageContent.innerHTML = FilteredResources(filteredResources);
       }
     );
   });
-}
+  }
 
 
   function navAccess() {
