@@ -1130,7 +1130,7 @@ h1 {
 }
 
 .business-description {
-  grid-column: col;
+  grid-column: col 2 / span 3;
   grid-row: row 2;
 }
 
