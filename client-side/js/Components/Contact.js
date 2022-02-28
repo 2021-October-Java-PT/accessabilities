@@ -52,7 +52,7 @@ export default function Contact(contact){
     <p>How can my business be added to your website?</p>
     </div>
 
-    <div class="container">
+    <div class="cont">
     <span class="big-circle"></span>
     <img src="img/shape.png" class="square" alt="" />
     <div class="form">
