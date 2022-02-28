@@ -2,9 +2,9 @@ import email from '../../assets/images/email.png';
 import location from '../../assets/images/location.png';
 import phone from '../../assets/images/phone.png';
 import shape from '../../assets/images/shape.png';
-export default function Contact(contact){
+export default function Contact(){
     //add responsiveness to mobile,faq animations/content,styling,replace placeholder pics
-    return ` 
+    return` 
     <div class="wrapper">
     <h1>Contact</h1>
     <h2>Maybe your questions already have answers!</h2>
@@ -51,17 +51,17 @@ export default function Contact(contact){
     <p>Email: customerservice@accessaccessability.com</p>
     <p>How can my business be added to your website?</p>
     </div>
-
     <div class="cont">
     <span class="big-circle"></span>
     <img src="img/shape.png" class="square" alt="" />
-    <div class="form">
+    <div class="form-for-contact">
       <div class="contact-info">
         <h3 class="title">Let's get in touch</h3>
         <p class="text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
           dolorum adipisci recusandae praesentium dicta!
         </p>
+
         <div class="info">
           <div class="information">
             <img src="${location}" class="icon" alt="" />
@@ -76,6 +76,7 @@ export default function Contact(contact){
             <p>123-456-789</p>
           </div>
         </div>
+
         <div class="social-media">
           <p>Connect with us :</p>
           <div class="social-icons">
@@ -94,27 +95,29 @@ export default function Contact(contact){
           </div>
         </div>
       </div>
+
       <div class="contact-form">
         <span class="circle one"></span>
         <span class="circle two"></span>
+
         <form action="index.html" autocomplete="off">
           <h3 class="title">Contact us</h3>
-          <div class="input-container">
-            <input type="text" name="name" class="input" />
+          <div class="input-cont">
+            <input type="text" name="name" class="inputs" />
             <label for="">Username</label>
             <span>Username</span>
           </div>
-          <div class="input-container">
+          <div class="input-cont">
             <input type="email" name="email" class="input" />
             <label for="">Email</label>
             <span>Email</span>
           </div>
-          <div class="input-container">
+          <div class="input-cont">
             <input type="tel" name="phone" class="input" />
             <label for="">Phone</label>
             <span>Phone</span>
           </div>
-          <div class="input-container textarea">
+          <div class="input-cont textarea">
             <textarea name="message" class="input"></textarea>
             <label for="">Message</label>
             <span>Message</span>
@@ -124,5 +127,6 @@ export default function Contact(contact){
       </div>
     </div>
   </div>
+
     `;
 }
