@@ -22,9 +22,9 @@ public class ResourceRestController {
         return (Collection<ResourceModel>) resourceRepo.findAll();
     }
 
-    @GetMapping("/api/resources/{Id}")
-    public Optional<ResourceModel> getResource(@PathVariable Long id) {
-        return resourceRepo.findById(id);
+    @GetMapping("/api/resources/{resourceId}")
+    public Optional<ResourceModel> getResource(@PathVariable Long resourceId) {
+        return resourceRepo.findById(resourceId);
     }
 
     @GetMapping("/api/resources/add-resource")
