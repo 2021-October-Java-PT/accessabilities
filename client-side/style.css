@@ -299,12 +299,12 @@ input[type="checkbox"] {
     font-size: 450%;
   }
 
-  .partnerBtn_Text{
+  .partnerBtn_Text {
     padding: 2rem;
     font-size: -10rem;
   }
 }
-@media (max-width: 1582px){
+@media (max-width: 1582px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
@@ -312,7 +312,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 1530px){
+@media (max-width: 1530px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
@@ -320,7 +320,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 1480px){
+@media (max-width: 1480px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
@@ -328,7 +328,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 1477px){
+@media (max-width: 1477px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
@@ -336,7 +336,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 1451px){
+@media (max-width: 1451px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
@@ -379,7 +379,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 1349px){
+@media (max-width: 1349px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
@@ -387,13 +387,12 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 1339px){
+@media (max-width: 1339px) {
   .helpingCaring-Text h1 {
     position: relative;
     bottom: 3rem;
     font-size: 270%;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -478,13 +477,11 @@ input[type="checkbox"] {
 
   .box1 h3 {
     text-align: center;
-    
   }
 
   .box1 img:hover {
     opacity: 50%;
   }
-
 
   .box2 img {
     object-fit: cover;
@@ -492,8 +489,6 @@ input[type="checkbox"] {
     align-items: center;
     margin-left: 5.5rem;
   }
-
-  
 
   .box2 img:hover {
     opacity: 50%;
@@ -520,7 +515,7 @@ input[type="checkbox"] {
     bottom: 48px;
   }
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1280px) {
   .imageContainer-text h1 {
     font-size: 600%;
     left: 200px;
@@ -605,14 +600,12 @@ input[type="checkbox"] {
     width: 500px;
     align-items: center;
   }
-  
 
   .box2 img {
     object-fit: cover;
     width: 500px;
     align-items: center;
   }
-
 
   .box3 img {
     position: relative;
@@ -621,15 +614,45 @@ input[type="checkbox"] {
     width: 500px;
     align-items: center;
   }
- 
 }
 
-@media screen and (max-width: 878px){
-  .imageContainer-text h1{
-    left:262px;
+@media screen and (max-width: 878px) {
+  .imageContainer-text h1 {
+    left: 262px;
     font-size: 6rem;
-    bottom:190rem;
-    
+    bottom: 190rem;
+  }
+  .helpingCaring-Text {
+    bottom: 1rem;
+    font-size: 160%;
+    font-weight: 130;
+    font-family: serif;
+  }
+
+  .box1 img {
+    width: 400px;
+    align-items: center;
+  }
+
+  .box2 img {
+    width: 400px;
+    align-items: center;
+    margin-left: 2rem;
+  }
+
+  .box3 img {
+    top: 14.7px;
+    width: 400px;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 644px) {
+  .imageContainer-text h1 {
+    left: 97px;
+    bottom: 3600px;
+    font-size: 6rem;
   }
   .helpingCaring-Text {
     bottom: 1rem;
@@ -1109,7 +1132,7 @@ h1 {
   align-content: center;
 }
 
-.location-box {
+.business-box {
   /* background-color: #444; */
   color: #61666b;
   border-radius: 5px;
@@ -1122,34 +1145,32 @@ h1 {
   height: auto;
 }
 
-.a {
+.business-name {
   grid-column: col / span 2;
   grid-row: row;
   text-align: center;
 }
-.b {
+.business-location {
   grid-column: col 3 / span 2;
   grid-row: row;
   text-align: center;
 }
-.c {
+.business-rating {
   grid-column: col;
   grid-row: row 2;
-}
-.rating {
-  width: 180px;
 }
 
 .rating__star {
   cursor: pointer;
   color: #dabd18b2;
 }
-.d {
-  grid-column: col 2 / span 3;
+
+.business-description {
+  grid-column: col;
   grid-row: row 2;
 }
 
-.e {
+.business-reviews {
   grid-column: col / span 4;
   grid-row: row 3;
   text-align: center;
