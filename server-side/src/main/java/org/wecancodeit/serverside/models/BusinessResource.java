@@ -11,8 +11,7 @@ public class BusinessResource {
 
     @Id
     @GeneratedValue
-
-    private Long id;
+    private Long resourceId;
     @Lob
     private String name;
     @Lob
@@ -46,8 +45,8 @@ public class BusinessResource {
 
 
 
-    public Long getId() {
-        return id;
+    public Long getResourceId() {
+        return resourceId;
     }
 
     public String getName() {

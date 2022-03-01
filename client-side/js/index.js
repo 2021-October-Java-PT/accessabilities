@@ -7,6 +7,7 @@ import FilteredResources from "./Components/FilteredResources.js";
 import Home from "./Components/Home";
 import Locations from "./Components/Card";
 import Maps from "./Components/Maps";
+import Resources from "./Components/Resources";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
 
@@ -21,6 +22,7 @@ function buildPage() {
   home();
   addBusinessToAPI();
   clickMaps();
+  resources();
 }
 
 console.log("Client Side is wired up!");
@@ -229,23 +231,39 @@ function village() {
   });
 
   clickMaps();
-
-
-  // community();
+  
+  resources();
+  community();
 }
 
-// function community() {
-//   pageContent.addEventListener("click", () => {
-//     if (event.target.classList.contains("community-button")) {
-//       apiHelpers.getRequest(
-//         "http://localhost:8080/api/locations",
-//         (locations) => {
-//           console.log("Locations: ", locations);
-//           pageContent.innerHTML = Locations(locations);
-//         }
-//       );
-//     }
+function community() {
+  pageContent.addEventListener("click", () => {
+    if (event.target.classList.contains("community-button")) {
+      apiHelpers.getRequest(
+        "http://localhost:8080/api/locations",
+        (locations) => {
+          console.log("Locations: ", locations);
+          pageContent.innerHTML = Locations(locations);
+        }
+      );
+    }
 
-//   });
-// }
+  });
+}
+
+function resources() {
+  pageContent.addEventListener("click", () => {
+    if (event.target.classList.contains("resources-button")) {
+      apiHelpers.getRequest(
+        "http://localhost:8080/api/resources",
+        (resources) => {
+          console.log("Resources: ", resources);
+          pageContent.innerHTML = Resources(resources);
+        }
+      );
+    }
+  });
+}
+
+
 
