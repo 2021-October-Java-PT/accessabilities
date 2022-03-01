@@ -53,20 +53,16 @@ export default function Contact(){
     <p>How can my business be added to your website?</p>
         <div class="cont">
         <style>
-        input,
-        input1{
+        input{
             all: unset;
         }
-        body,
-        .body{
+        body{
             all:unset
         }
-        textarea,
-        .textarea{
+        textarea{
             all:unset
         }
-        form,
-        .form{
+        form{
             all:unset
         }
         label{
@@ -120,7 +116,7 @@ export default function Contact(){
             justify-content: center;
           }
         
-          .form {
+          .form-for-contact {
             width: 100%;
             max-width: 820px;
             background-color: #fff;
@@ -394,7 +390,7 @@ export default function Contact(){
           }
         
           @media (max-width: 850px) {
-            .form {
+            .form-for-contact {
               grid-template-columns: 1fr;
             }
         
@@ -470,7 +466,7 @@ export default function Contact(){
               width: 23px;
             }
         
-            .inputs {
+            .input {
               padding: 0.45rem 1.2rem;
             }
         
