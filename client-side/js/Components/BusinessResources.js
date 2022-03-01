@@ -1,14 +1,12 @@
 export default function BusinessResources(businessResources) {
   console.log("BUSINESS RESOURCES.JS FILE");
   return `
-  
- <div class="container">
-  <h1>Business Directory<h1>
+
   <div id="searchWrapper">
   <input type="search" id="searchBar" placeholder="Search by: name, city, zip, or accessibility feature" required>
       <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
-  <div id="content" class="content">
+  <div id="businessContent" class="businessContent2">
   ${businessResources
     .map((resource) => {
       return `
