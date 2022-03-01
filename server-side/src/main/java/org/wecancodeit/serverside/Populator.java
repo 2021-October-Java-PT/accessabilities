@@ -5,8 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.serverside.models.BusinessResource;
 import org.wecancodeit.serverside.models.LocationModel;
+import org.wecancodeit.serverside.models.ResourceModel;
 import org.wecancodeit.serverside.repositories.BusinessResourceRepository;
 import org.wecancodeit.serverside.repositories.LocationRepository;
+import org.wecancodeit.serverside.repositories.ResourceRepository;
 
 import javax.annotation.Resource;
 import java.util.Locale;
@@ -20,6 +22,9 @@ public class Populator implements CommandLineRunner {
 
     @Resource
     private LocationRepository locationRepo;
+
+    @Resource
+    private ResourceRepository resourceRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -93,5 +98,9 @@ public class Populator implements CommandLineRunner {
 
         locationRepo.save(popeyes);
         locationRepo.save(chickFilA);
+
+        ResourceModel jan = new ResourceModel("Job Accommodation Network","JAN provides free consulting services for all employers, regardless of the size of an employer’s workforce. Services include one-on-one consultation about all aspects of job accommodations, including the accommodation process, accommodation ideas, product vendors, referral to other resources, and ADA compliance assistance.", "https://askjan.org/info-by-role.cfm#for-individuals","1-800-526-7234");
+
+        resourceRepo.save(jan);
     }
 }
