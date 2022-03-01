@@ -20,9 +20,10 @@ function buildPage() {
   village();
   navAccess();
   home();
-  addBusinessToAPI();
+ addBusinessToAPI();
   clickMaps();
   resources();
+
 }
 
 console.log("Client Side is wired up!");
@@ -103,6 +104,7 @@ function addBusinessToAPI() {
     }
   });
 }
+
 
 function search() {
   const searchBar = document.getElementById("searchBar");
