@@ -119,10 +119,11 @@ input[type="checkbox"] {
   user-select: none;
 }
 
+
 .imageContainer {
   background-image: url("https://images.unsplash.com/photo-1505876104692-2f34b9d54303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
   max-width: 100%;
-  height: 1200px;
+  height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,11 +133,12 @@ input[type="checkbox"] {
   position: absolute;
   color: white;
   left: 100px;
-  bottom: 1200px;
-  font-size: 800%;
+  bottom: 1000px;
+  font-size: 700%;
   font-weight: 150;
   font-family: serif;
 }
+
 
 /* second page of Home */
 
@@ -1198,6 +1200,7 @@ button.primaryContained:hover {
   gap: 10px;
   align-content: center;
   font-family: sans-serif;
+  /* width: 400%; */
 
   margin-left: 80px;
   margin-right: 20px;
@@ -1220,6 +1223,23 @@ button.primaryContained:hover {
   align-content: center;
   margin-left: 4rem;
 }
+
+
+/* AppSection Media Quries */
+
+ @media only screen and (max-width: 1053px){
+  .app_grid_wrapper {
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    /* gap: 70rem; */
+  }
+
+  .apps{
+    gap:70rem;
+  }
+
+
+} 
 
 /* Map Section */
 .map_wrapper {
