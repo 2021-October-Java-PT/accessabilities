@@ -27,5 +27,6 @@ export default function Card(card) {
           </div>
           </div>
         </div>
+        <input type="hidden" id="businessId">
     `;
 }
