@@ -43,7 +43,7 @@ body.dark {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked + .label .ball {
+.checkbox:checked+.label .ball {
   transform: translateX(24px);
 }
 
@@ -223,6 +223,7 @@ input[type="checkbox"] {
   width: 20rem;
   align-items: center;
 }
+
 .box3 img:hover {
   opacity: 50%;
 }
@@ -270,7 +271,7 @@ input[type="checkbox"] {
   box-shadow: 2px 2px 2px black;
 }
 
-#add-business__submit:active{
+#add-business__submit:active {
   background-color: #292c35;
 }
 
@@ -297,6 +298,7 @@ input[type="checkbox"] {
   .second_page_nested {
     gap: 30px;
   }
+
   .box {
     color: black;
     border-radius: 5px;
@@ -310,6 +312,7 @@ input[type="checkbox"] {
     width: 360px;
     align-items: center;
   }
+
   .box1 img:hover {
     opacity: 50%;
   }
@@ -319,6 +322,7 @@ input[type="checkbox"] {
     width: 360px;
     align-items: center;
   }
+
   .box2 img:hover {
     opacity: 50%;
   }
@@ -330,6 +334,7 @@ input[type="checkbox"] {
     width: 360px;
     align-items: center;
   }
+
   .box3 img:hover {
     opacity: 50%;
   }
@@ -347,6 +352,7 @@ input[type="checkbox"] {
     font-size: -10rem;
   }
 }
+
 @media (max-width: 1582px) {
   .helpingCaring-Text h1 {
     position: relative;
@@ -397,6 +403,7 @@ input[type="checkbox"] {
     width: 330px;
     align-items: center;
   }
+
   .box1 img:hover {
     opacity: 50%;
   }
@@ -406,6 +413,7 @@ input[type="checkbox"] {
     width: 330px;
     align-items: center;
   }
+
   .box2 img:hover {
     opacity: 50%;
   }
@@ -417,6 +425,7 @@ input[type="checkbox"] {
     width: 330px;
     align-items: center;
   }
+
   .box3 img:hover {
     opacity: 50%;
   }
@@ -456,11 +465,11 @@ input[type="checkbox"] {
     transition: 0.3s ease;
   }
 
-  .menu li + li {
+  .menu li+li {
     margin-top: 12px;
   }
 
-  input[type="checkbox"]:checked ~ .menu {
+  input[type="checkbox"]:checked~.menu {
     display: block;
   }
 
@@ -558,6 +567,7 @@ input[type="checkbox"] {
     bottom: 48px;
   }
 }
+
 @media screen and (max-width: 1280px) {
   .imageContainer-text h1 {
     font-size: 600%;
@@ -578,6 +588,7 @@ input[type="checkbox"] {
     padding: 2rem;
     font-size: 1.5rem;
   }
+
   .second_page_nested {
     display: flex;
     flex-direction: column;
@@ -665,6 +676,7 @@ input[type="checkbox"] {
     font-size: 6rem;
     bottom: 190rem;
   }
+
   .helpingCaring-Text {
     bottom: 1rem;
     font-size: 160%;
@@ -749,35 +761,7 @@ h1 {
   text-align: center;
 }
 
-#LyzzPic {
-  max-width: 300px;
-  justify-self: center;
-}
 
-#LandonPic {
-  max-width: 300px;
-  justify-self: center;
-}
-
-#CameronPic {
-  max-width: 300px;
-  justify-self: center;
-}
-
-#MartelPic {
-  max-width: 300px;
-  justify-self: center;
-}
-
-#TreyPic {
-  max-width: 300px;
-  justify-self: center;
-}
-
-#DiaPic {
-  max-width: 300px;
-  justify-self: center;
-}
 
 .contact-image {
   max-width: 300px;
@@ -830,7 +814,7 @@ body.dark {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked + .label .ball {
+.checkbox:checked+.label .ball {
   transform: translateX(24px);
 }
 
@@ -842,7 +826,7 @@ body.dark {
 h1 {
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 15px;
-} 
+}
 
 .businessContent2 {
   display: grid;
@@ -878,196 +862,250 @@ h1 {
 }
 
 
-  .searchWrapper {
-    width: 350px;
-    position: relative;
-    display: flex;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+/* @media only screen and (max-width: 900px) { */
+/* .container {
+    width: 90%;
   }
 
-  .searchBar{
-    width: 150%; 
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    padding: 15px 45px 15px 15px;
-    background-color: #eaeaeb;
-    color: #6c6c6c;
-    border-radius: 6px;
-    border: none;
-    transition: all 0.4s;
-  }
 
-  .search-input:focus {
-    border: none;
-    outline: none;
-    box-shadow: 0 1px 12px #b8c6db;
-    -moz-box-shadow: 0 1px 12px #b8c6db;
-    -webkit-box-shadow: 0 1px 12px #b8c6db;
-  }
 
-  .search-btn {
-    background-color: transparent;
-    font-size: 18px;
-    padding: 6px 9px;
-    margin-left: -45px;
-    border: none;
-    color: #6c6c6c;
-    transition: all 0.4s;
-    z-index: 10;
-  }
+.searchWrapper {
+  width: 350px;
+  position: relative;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
-  .search-btn:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-    color: black;
-  }
+.searchBar {
+  width: 150%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 15px 45px 15px 15px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.4s;
+}
 
-  .search-btn:focus {
-    outline: none;
-    color: black;
-  } 
+.search-input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
 
-  
+.search-btn {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left: -45px;
+  border: none;
+  color: #6c6c6c;
+  transition: all 0.4s;
+  z-index: 10;
+}
 
-  .formContainer {
-    position: relative;
-    margin: 8% auto;
-    min-height: 60%;
-    width: 50%;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
-    background: white;
-    padding: 0px 0px 5px 15px;
-    box-sizing: border-box;
-    border-radius: 8px;
-  }
-  .formHeader {
-    text-align: center;
-  }
-  .formContentContainer {
-    margin-top: 15%;
-  }
-  .formInput {
+
+.search-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+.search-btn:focus {
+  outline: none;
+  color: black;
+}
+
+/* div resource .resource {
+    margin: 20px 0px;
+    padding: 40px 0px 0px;
+    border: 0px none rgb(36, 30, 78);
     display: block;
-    margin: 0px 0px 15px 20px;
-    padding: 4px;
-    width: 80%;
-    height: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+      border-box;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  #resource-detail {
+    position: relative;
+    padding: 3em 0;
+  }
+
+  div {
+    display: block;
+  }
+
+  .resource-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 140px;
+    font-family: "Brandon-Grotesque", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #241e4e;
     box-sizing: border-box;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #aaa;
-    font-size: 12px;
-  }
-  .submitButton {
-    background: dodgerblue;
-    color: white;
-    margin: 10px 20px;
-    width: 80%;
-    height: 8%;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 500;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
   }
 
-  .submit-business-input-container {
-    background-color: black;
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    box-sizing: border-box;
-  }
+  .resources-wrapper {
+    margin: 0 auto;
+  } */
 
-  /* Village Landing */
 
-  blockquote {
-    text-align: center;
-    font-size: 230%;
-    color: rgb(0, 31, 77, 0.5);
-  }
+.formContainer {
+  position: relative;
+  margin: 8% auto;
+  min-height: 60%;
+  width: 50%;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+  background: white;
+  padding: 0px 0px 5px 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
 
-  .village-option-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 5rem, 0px, 5rem;
-  }
+.formHeader {
+  text-align: center;
+}
 
-  .village-button {
-    width: 250px;
-    height: 200px;
-    border-width: 3px;
-    border-radius: 30px;
-    transition-duration: 0.6s;
-    font-size: 150%;
-    font-size: bold;
-    font-weight: bold;
-    margin-top: 4rem;
-    text-decoration-style: solid;
-    z-index: 2;
-    color: white;
+.formContentContainer {
+  margin-top: 15%;
+}
 
-    clip-path: margin-box;
-    margin-right: 50px;
-  }
+.formInput {
+  display: block;
+  margin: 0px 0px 15px 20px;
+  padding: 4px;
+  width: 80%;
+  height: 5%;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaa;
+  font-size: 12px;
+}
 
-  .village-button:hover {
-    transition: linear;
-    cursor: pointer;
-    color: black;
-    background-color: ivory;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    transform: scale(0.95);
-    filter: contrast(1);
-  }
+.submitButton {
+  background: dodgerblue;
+  color: white;
+  margin: 10px 20px;
+  width: 80%;
+  height: 8%;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+}
 
-  .village-button:active {
-    font-size: 50%;
-    cursor: pointer;
-  }
+.submit-business-input-container {
+  background-color: black;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
 
-  .places-button {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
-    background-size: cover;
-  }
+/* Village Landing */
 
-  .places-button:hover {
-    background-image: url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
-    filter: brightness(0.8);
-  }
+blockquote {
+  text-align: center;
+  font-size: 230%;
+  color: rgb(0, 31, 77, 0.5);
+}
 
-  /* .places-button span {
+.village-option-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5rem, 0px, 5rem;
+}
+
+.village-button {
+  width: 250px;
+  height: 200px;
+  border-width: 3px;
+  border-radius: 30px;
+  transition-duration: 0.6s;
+  font-size: 150%;
+  font-size: bold;
+  font-weight: bold;
+  margin-top: 4rem;
+  text-decoration-style: solid;
+  z-index: 2;
+  color: white;
+
+  clip-path: margin-box;
+  margin-right: 50px;
+}
+
+.village-button:hover {
+  transition: linear;
+  cursor: pointer;
+  color: black;
+  background-color: ivory;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  filter: contrast(1);
+}
+
+.village-button:active {
+  font-size: 50%;
+  cursor: pointer;
+}
+
+.places-button {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+  background-size: cover;
+}
+
+.places-button:hover {
+  background-image: url(https://media.istockphoto.com/photos/young-blind-man-with-white-cane-and-guide-dog-sitting-in-park-in-city-picture-id1179580885?k=20&m=1179580885&s=612x612&w=0&h=7KwjDZ51q8IZ8uKTB5jVWvdhLf4EOIHAHvnmOpulfrk=);
+  filter: brightness(0.8);
+}
+
+/* .places-button span {
   color: white;
   z-index: 2;
 } */
 
-  .help-button {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
-    background-size: cover;
-  }
+.help-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+  background-size: cover;
+}
 
-  .help-button:hover {
-    background-image: url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
-    filter: brightness(0.8);
-  }
+.help-button:hover {
+  background-image: url(https://imageio.forbes.com/specials-images/imageserve/509719231/0x0.jpg?format=jpg&width=1200&fit=bounds);
+  filter: brightness(0.8);
+}
 
-  .community-button {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
-    background-size: cover;
-  }
+.community-button {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+  background-size: cover;
+}
 
-  .community-button:hover {
-    background-image: url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
-    filter: brightness(0.8);
-  }
+.community-button:hover {
+  background-image: url(https://mn.gov/deaf-hard-of-hearing/assets/AdobeStock_191329508_tcm1121-401457.jpg);
+  filter: brightness(0.8);
+}
 
 
 /* Locations List Cam */
@@ -1121,11 +1159,13 @@ h1 {
   grid-row: row;
   text-align: center;
 }
+
 .business-location {
   grid-column: col 3 / span 2;
   grid-row: row;
   text-align: center;
 }
+
 .business-rating {
   grid-column: col;
   grid-row: row 2;
@@ -1234,29 +1274,30 @@ button.primaryContained:hover {
   grid-template-columns: 300px 300px 300px;
   gap: 10px;
 }
+
 .map_wrapper iframe {
   width: 30%;
 }
+
 
 
 /* Martel about page */
 
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Clicker+Script&family=Merriweather:wght@300&display=swap');
 
-.about-body {
+
 
 /* Martel resource cards */
+
 
 .grid-body {
   margin: 40px;
   background-color: #eee;
   font-family: "Poppins", sans-serif;
-
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
   width: 100%;
   background: #f2f3f7;
 
@@ -1274,7 +1315,6 @@ button.primaryContained:hover {
   height: 416px;
   padding: 60px 30px;
   margin: 20px;
-  background: #f2f3f7;
   box-shadow: 0.6em 0.6em 1.2em #d2dce9;
   box-shadow: .5em 0.5em 1em #d2dce9;
   border-radius: 20px;
@@ -1288,6 +1328,33 @@ button.primaryContained:hover {
 
 }
 
+/* .about-card1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 330px;
+  height: 416px;
+  padding: 60px 30px;
+  margin: 20px;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+  box-shadow: .5em 0.5em 1em #d2dce9;
+  border-radius: 20px;
+  background-image: url("https://i.ibb.co/vV5By6c/Martel.jpg");
+
+} */
+
+/*.about-card1 .sci{
+  display: flex;
+  justify-content: center;
+  margin-left: 75px;
+  font-size: 30px;
+} */
+
+
+
+
+
 .aboutContainer .about-card .about-content .imgBx {
   width: 180px;
   height: 180px;
@@ -1295,16 +1362,20 @@ button.primaryContained:hover {
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
-}
+
+} 
 
 .aboutContainer .about-card .about-content .imgBx img {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
 }
+
 
 .about-card .about-content .about-content-box .about-h1 {
   font-size: 1.5rem;
@@ -1321,7 +1392,7 @@ object-fit: cover;
 }
 
 .aboutContainer .about-card .about-content .sci {
-  /* margin-top: 20px; */
+  margin-top: 20px;
 }
 
 .aboutContainer .about-card .about-content .sci a {
@@ -1335,20 +1406,17 @@ object-fit: cover;
 .aboutContainer .about-card .about-content .sci a:hover {
   color: #0196e3;
 
-}
+} 
 
 
-  
-}
+ .card-grid {
 
-
-.card-grid {
   display: grid;
   width: 114em;
   grid-gap: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
-  
+
 }
 
 .card-grid-item {
@@ -1358,8 +1426,8 @@ object-fit: cover;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
-  
-  
+
+
 }
 
 .card-grid-item:hover {
@@ -1368,7 +1436,7 @@ object-fit: cover;
 }
 
 .card-img {
-  
+
   display: block;
   width: 100%;
   height: 20rem;
@@ -1432,6 +1500,9 @@ object-fit: cover;
   margin-bottom: 2.5rem;
 }
 
+
+
+
 @media only screen and (max-width: 60em) {
   body {
     padding: 3rem;
@@ -1440,4 +1511,8 @@ object-fit: cover;
   .grid {
     grid-gap: 3rem;
   }
+
 }
+
+}
+
