@@ -1276,6 +1276,15 @@ button.primaryContained:hover {
   width: 30%;
 }
 
+ 
+
+/* Martel about page */
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Clicker+Script&family=Merriweather:wght@300&display=swap');
+
+.about-body {
+
+
 
 
 /* Martel resource cards */
@@ -1285,10 +1294,93 @@ button.primaryContained:hover {
   margin: 40px;
   background-color: #eee;
   font-family: "Poppins", sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
+  width: 100%;
+  background: #f2f3f7;
+
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.aboutContainer .about-card {
+  width: 330px;
+  height: 416px;
+  padding: 60px 30px;
+  margin: 20px;
+  background: #f2f3f7;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+  box-shadow: .5em 0.5em 1em #d2dce9;
+  border-radius: 20px;
+}
+
+.aboutContainer .about-card .about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.aboutContainer .about-card .about-content .imgBx {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.aboutContainer .about-card .about-content .imgBx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.about-card .about-content .about-content-box .about-h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.about-card .about-content .about-content-box .about-h2 {
+  color: #6c758f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.aboutContainer .about-card .about-content .sci {
+  /* margin-top: 20px; */
+}
+
+.aboutContainer .about-card .about-content .sci a {
+  text-decoration: none;
+  color: #6c758f;
+  font-size: 30px;
+  margin: 10px;
+  transition: color 0.4s;
+}
+
+.aboutContainer .about-card .about-content .sci a:hover {
+  color: #0196e3;
+
+}
+
+
   
 }
 
@@ -1392,3 +1484,4 @@ button.primaryContained:hover {
   }
 }
  
+
