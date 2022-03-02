@@ -722,7 +722,7 @@ input[type="checkbox"] {
   justify-self: center;
 }
 
-.headshot {
+.headShot {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -854,6 +854,7 @@ h1 {
   font-family: helvetica;
   font-size: 140%;
   background-color: antiquewhite;
+  cursor: context-menu;
 }
 
 .businessContent {
@@ -864,15 +865,18 @@ h1 {
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 10px;
   width: 20%;
+  
 }
-/* @media only screen and (max-width: 900px) { */
-  /* .container {
-    width: 90%;
-  }
-  .businessContent {
-    display: flex;
-    flex-direction: column;
-  } */
+
+
+.indPartner{
+  position: relative;
+  display: inline-block;
+}
+.indPartner:hover {
+  color: blue;
+}
+
 
   .searchWrapper {
     width: 350px;
@@ -926,44 +930,7 @@ h1 {
     color: black;
   } 
 
-  /* div resource .resource {
-    margin: 20px 0px;
-    padding: 40px 0px 0px;
-    border: 0px none rgb(36, 30, 78);
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 40px;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
-      border-box;
-    transition: all 0.2s ease-in-out 0s;
-  }
-  #resource-detail {
-    position: relative;
-    padding: 3em 0;
-  }
-  div {
-    display: block;
-  }
-  .resource-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 140px;
-    font-family: "Brandon-Grotesque", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #241e4e;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-  }
-  .resources-wrapper {
-    margin: 0 auto;
-  } */
+  
 
   .formContainer {
     position: relative;
