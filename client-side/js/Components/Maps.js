@@ -16,7 +16,7 @@ export default function Maps() {
         </div>
         
         <div class="map3>
-            <h2> Resturants Map </h2>
+            <h2> Restaurants Map </h2>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CmVNvpg25yT-gTY2BMIj1LNw-p_X9JWp&ehbc=2E312F" width="640" height="480"></iframe>
         </div>
     
