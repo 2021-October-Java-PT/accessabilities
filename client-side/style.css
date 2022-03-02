@@ -849,14 +849,15 @@ h1 {
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 10px;
   width: 20%;
-  
+
 }
 
 
-.indPartner{
+.indPartner {
   position: relative;
   display: inline-block;
 }
+
 .indPartner:hover {
   color: blue;
 }
@@ -1357,7 +1358,7 @@ button.primaryContained:hover {
   margin-bottom: 20px;
   overflow: hidden;
 
-} 
+}
 
 .aboutContainer .about-card .about-content .imgBx img {
   position: absolute;
@@ -1400,10 +1401,10 @@ button.primaryContained:hover {
 .aboutContainer .about-card .about-content .sci a:hover {
   color: #0196e3;
 
-} 
+}
 
 
- .card-grid {
+.card-grid {
 
   display: grid;
   width: 114em;
@@ -1497,7 +1498,7 @@ button.primaryContained:hover {
 
 
 
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 90em) {
   body {
     padding: 3rem;
   }
@@ -1507,6 +1508,3 @@ button.primaryContained:hover {
   }
 
 }
-
-
-
