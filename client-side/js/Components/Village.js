@@ -5,7 +5,7 @@ export default function Village() {
       <ul class='village-option-list'>
   
           <li class='village-option-list__places'><button class="places-button village-button"><span>Places</span></button></li>
-          <li class='village-option-list__resources'><button class="village-button resources-button">Resources</button></li>
+          <li class='village-option-list__help'><button class="village-button help-button">Resources</button></li>
           <li class='village-option-list__community'><button class="village-button community-button">Community</button></li>
           </ul>
   
