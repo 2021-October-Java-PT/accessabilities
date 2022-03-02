@@ -98,8 +98,9 @@ function addBusinessToAPI() {
           businessAccessibilityFeatures: addBusinessAccessibilityFeatures,
           businessContentPhoneNumber: addBusinessContentPhoneNumber,
         },
-        (businessResources) =>
-        (app.innerHTML = businessResources(businessResources))
+        (businessResources) => {
+        pageContent.innerHTML = BusinessResources(businessResources);
+        }
       );
     }
   });
@@ -132,7 +133,6 @@ function navAccess() {
         console.log("RESOURCES: ", businessResources);
         pageContent.innerHTML = BusinessResources(businessResources);
         search();
-        addBusinessToAPI();
         pullBusinessCard();
       }
     );
