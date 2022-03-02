@@ -466,7 +466,7 @@ export default function Contact(){
               width: 23px;
             }
         
-            .input {
+            .inputs {
               padding: 0.45rem 1.2rem;
             }
         
@@ -528,23 +528,23 @@ export default function Contact(){
 
                 <form action="index.html" autocomplete="off">
                 <h3 class="title">Contact us</h3>
-                <div class="input-cont">
+                <div class="input-cont focus">
                     <input type="text" name="name" class="input1" />
                     <label for="">Username</label>
                     <span>Username</span>
                 </div>
-                <div class="input-cont">
+                <div class="input-cont focus">
                     <input type="email" name="email" class="input1">
                     </input>
                     <label for="">Email</label>
                     <span>Email</span>
                 </div>
-                <div class="input-cont">
+                <div class="input-cont focus">
                     <input type="tel" name="phone" class="input1" />
                     <label for="">Phone</label>
                     <span>Phone</span>
                 </div>
-                <div class="input-cont textarea">
+                <div class="input-cont textarea focus">
                     <textarea name="message" class="input1"></textarea>
                     <label for="">Message</label>
                     <span>Message</span>
