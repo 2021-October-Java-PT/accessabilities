@@ -869,7 +869,6 @@ h1 {
   /* .container {
     width: 90%;
   }
-
   .businessContent {
     display: flex;
     flex-direction: column;
@@ -939,16 +938,13 @@ h1 {
       border-box;
     transition: all 0.2s ease-in-out 0s;
   }
-
   #resource-detail {
     position: relative;
     padding: 3em 0;
   }
-
   div {
     display: block;
   }
-
   .resource-wrapper {
     position: relative;
     width: 100%;
@@ -965,7 +961,6 @@ h1 {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
   }
-
   .resources-wrapper {
     margin: 0 auto;
   } */
@@ -1276,7 +1271,6 @@ button.primaryContained:hover {
   width: 30%;
 }
 
- 
 
 /* Martel about page */
 
@@ -1284,11 +1278,7 @@ button.primaryContained:hover {
 
 .about-body {
 
-
-
-
 /* Martel resource cards */
-
 
 .grid-body {
   margin: 40px;
@@ -1383,6 +1373,7 @@ object-fit: cover;
 
   
 }
+
 
 .card-grid {
   display: grid;
@@ -1483,5 +1474,3 @@ object-fit: cover;
     grid-gap: 3rem;
   }
 }
- 
-
