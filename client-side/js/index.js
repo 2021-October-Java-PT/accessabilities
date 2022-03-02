@@ -219,7 +219,29 @@ function contact() {
   const contactElem = document.querySelector("#contact");
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Contact();
+    const inputs = document.querySelectorAll(".input1");
+    // focusFunc();
+    // blurFunc();
+    // function focusFunc() {
+    //     console.log('3')
+    //   let parent = this.parentNode;
+    //   parent.classList.add("focus");
+    // }
+    
+    // function blurFunc() {
+    //     console.log('2')
+    //   let parent = this.parentNode;
+    //   if (this.value == "") {
+    //     parent.classList.remove("focus");
+    //   }
+    // }
+    // inputs.forEach((input) => {
+    //     console.log('1')
+    //   input.addEventListener("focus", focusFunc);
+    //   input.addEventListener("blur", blurFunc);
+    // });
   });
+  
 }
 
 function village() {
@@ -234,36 +256,5 @@ function village() {
   // community();
 }
 
-// function community() {
-//   pageContent.addEventListener("click", () => {
-//     if (event.target.classList.contains("community-button")) {
-//       apiHelpers.getRequest(
-//         "http://localhost:8080/api/locations",
-//         (locations) => {
-//           console.log("Locations: ", locations);
-//           pageContent.innerHTML = Locations(locations);
-//         }
-//       );
-//     }
 
-//   });
-// }
 
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
-
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
-
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
