@@ -19,10 +19,8 @@ function buildPage() {
   village();
   navAccess();
   home();
- addBusinessToAPI();
+  addBusinessToAPI();
   
-  
-
 }
 
 console.log("Client Side is wired up!");
@@ -113,6 +111,7 @@ function search() {
 
 function navAccess() {
   const accessElem = document.querySelector("#access");
+  
   accessElem.addEventListener("click", () => {
     apiHelpers.getRequest(
       "http://localhost:8080/api/business-resources",
@@ -121,35 +120,27 @@ function navAccess() {
         pageContent.innerHTML = BusinessResources(businessResources);
         search();
         pullBusinessCard();
+      
       }
     );
   });
-
-  // accessBtn.addEventListener("click", () => {
-  //   const accessBtn = document.querySelector("#accessBtn");
-  //   accessBtn.addEventListener("click", () => {
-  //     pageContent.innerHTML = BusinessResources(businessResources);
-  //   });
-  //   const btnPartner = document.querySelector("#btnPartner");
-  //   btnPartner.addEventListener("click", () => {
-  //     pageContent.innerHTML = BusinessResources(businessResources);
-  //   });
-  // });
-
-  // const partnerBtn = document.querySelector("#partnerBtn");
-  // partnerBtn.addEventListener("click", () => {
-  //   pageContent.innerHTML = BusinessResources(businessResources);
-  // });
 }
+//   function partner () {
+//   const accessElem = document.querySelector("#partnerBtn");
+//   partnerBtn.addEventListener("click", () => {
+//     pageContent.innerHTML = BusinessResources();
+//   }
+//   );
+// }
 
 function pullBusinessCard() {
   pageContent.addEventListener("click", () => {
     if (event.target.classList.contains("indPartner")) {
       console.log("WERK IT");
-      const businessId = event.target.parentElement.querySelector("#businessId")
+      const id = event.target.parentElement.querySelector("#businessId")
         .value;
       apiHelpers.getRequest(
-        `http://localhost:8080/api/business-resources/${businessId}`,
+        `http://localhost:8080/api/business-resources/${id}`,
         (card) => {
           pageContent.innerHTML = Card(card);
           starRating();

@@ -734,7 +734,7 @@ input[type="checkbox"] {
   justify-self: center;
 }
 
-.headshot {
+.headShot {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -838,6 +838,7 @@ h1 {
   font-family: helvetica;
   font-size: 140%;
   background-color: antiquewhite;
+  cursor: context-menu;
 }
 
 .businessContent {
@@ -848,17 +849,25 @@ h1 {
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 10px;
   width: 20%;
+  
 }
+
+
+.indPartner{
+  position: relative;
+  display: inline-block;
+}
+.indPartner:hover {
+  color: blue;
+}
+
 
 /* @media only screen and (max-width: 900px) { */
 /* .container {
     width: 90%;
   }
 
-  .businessContent {
-    display: flex;
-    flex-direction: column;
-  } */
+
 
 .searchWrapper {
   width: 350px;
@@ -900,6 +909,7 @@ h1 {
   transition: all 0.4s;
   z-index: 10;
 }
+
 
 .search-btn:hover {
   transform: scale(1.2);
@@ -954,6 +964,7 @@ h1 {
   .resources-wrapper {
     margin: 0 auto;
   } */
+
 
 .formContainer {
   position: relative;
@@ -1276,12 +1287,7 @@ button.primaryContained:hover {
 
 
 
-
-
-
 /* Martel resource cards */
-
-
 
 
 .grid-body {
@@ -1402,7 +1408,9 @@ button.primaryContained:hover {
 
 } 
 
+
  .card-grid {
+
   display: grid;
   width: 114em;
   grid-gap: 6rem;
@@ -1503,4 +1511,8 @@ button.primaryContained:hover {
   .grid {
     grid-gap: 3rem;
   }
+
 }
+
+}
+

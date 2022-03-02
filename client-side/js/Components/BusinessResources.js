@@ -11,7 +11,7 @@ export default function BusinessResources(businessResources) {
     .map((resource) => {
       return `
     <li class="partner">
-      <p class="indPartner">${resource.name}</p>  
+      <span class="indPartner">${resource.name}</span>  
       <input type="hidden" id="businessId" value="${resource.id}">
     `;
     })
