@@ -2,12 +2,11 @@ import About from "./Components/About";
 import BusinessResource from "./Components/BusinessResource.js";
 import BusinessResources from "./Components/BusinessResources.js";
 import Card from "./Components/Card.js";
+import Community from "./Components/Community";
 import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
+import Help from "./Components/Help"
 import Home from "./Components/Home";
-import Locations from "./Components/Card";
-import Maps from "./Components/Maps";
-import Resources from "./Components/Resources";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
 
@@ -21,25 +20,13 @@ function buildPage() {
   navAccess();
   home();
  addBusinessToAPI();
-  clickMaps();
-  resources();
+  
+  
 
 }
 
 console.log("Client Side is wired up!");
 
-function clickMaps() {
-  pageContent.addEventListener("click", (event) => {
-    console.log("Is this thing on????");
-    if (event.target.classList.contains("places-button")) {
-      pageContent.innerHTML = Maps();
-    }
-
-    if (event.target.classList.contains("returnToTheVillage")) {
-      pageContent.innerHTML = Village();
-    }
-  });
-}
 
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle("js-enabled");
@@ -230,42 +217,44 @@ function village() {
   const contactElem = document.querySelector("#village");
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Village();
+
+    help();
+    
   });
 
-  clickMaps();
   
-  resources();
-  community();
+  
 }
 
-function community() {
-  pageContent.addEventListener("click", () => {
-    if (event.target.classList.contains("community-button")) {
-      apiHelpers.getRequest(
-        "http://localhost:8080/api/locations",
-        (locations) => {
-          console.log("Locations: ", locations);
-          pageContent.innerHTML = Locations(locations);
-        }
-      );
-    }
-
+function help() {
+  const helpElem = document.querySelector(".help-button");
+  helpElem.addEventListener("click", ()=> {
+    
+    pageContent.innerHTML = Help();
   });
 }
 
-function resources() {
-  pageContent.addEventListener("click", () => {
-    if (event.target.classList.contains("resources-button")) {
-      apiHelpers.getRequest(
-        "http://localhost:8080/api/resources",
-        (resources) => {
-          console.log("Resources: ", resources);
-          pageContent.innerHTML = Resources(resources);
-        }
-      );
-    }
-  });
-}
+
+
+// function resources() {
+//   pageContent.addEventListener("click", () => {
+//     pageContent.innerHTML = Resources();
+//   });
+// }
+
+// function resources() {
+//   pageContent.addEventListener("click", () => {
+//     if (event.target.classList.contains("resources-button")) {
+//       apiHelpers.getRequest(
+//         "http://localhost:8080/api/resources",
+//         (resources) => {
+//           console.log("Resources: ", resources);
+//           pageContent.innerHTML = Resources(resources);
+//         }
+//       );
+//     }
+//   });
+// }
 
 
 
