@@ -144,13 +144,6 @@ function navAccess() {
     );
   });
 }
-//   function partner () {
-//   const accessElem = document.querySelector("#partnerBtn");
-//   partnerBtn.addEventListener("click", () => {
-//     pageContent.innerHTML = BusinessResources();
-//   }
-//   );
-// }
 
 function pullBusinessCard() {
   pageContent.addEventListener("click", () => {
@@ -285,25 +278,6 @@ function help() {
   });
 }
 
-// function resources() {
-//   pageContent.addEventListener("click", () => {
-//     pageContent.innerHTML = Resources();
-//   });
-// }
-
-// function resources() {
-//   pageContent.addEventListener("click", () => {
-//     if (event.target.classList.contains("resources-button")) {
-//       apiHelpers.getRequest(
-//         "http://localhost:8080/api/resources",
-//         (resources) => {
-//           console.log("Resources: ", resources);
-//           pageContent.innerHTML = Resources(resources);
-//         }
-//       );
-//     }
-//   });
-// }
 
 const inputs = document.querySelectorAll(".input");
 

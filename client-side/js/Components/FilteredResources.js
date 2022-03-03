@@ -2,14 +2,13 @@ export default function FilteredResources(filteredResources) {
   
   console.log('FIRE');
   return `
-  <h1>Business Directory</h1>
+  <div class="searchTitle">
+  <h1>Search Results</h1>
+  </div>
   <div class="container">
   
-<div class="search-box">
-  <input class="search-input" type="text" placeholder="Search something..">
-  <button class="search-btn"><i class="fas fa-search"></i></button>
-</div>
-  <div id="content" class="content">
+
+  <div id="content" class="content2">
   ${filteredResources.map(resource => {
     return `
     <p class="title"><a href="${resource.businessUrl}">${resource.name}</a></p>

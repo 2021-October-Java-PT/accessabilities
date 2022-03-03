@@ -754,27 +754,45 @@ body.dark {
   transform: translateX(24px);
 }
 
-/* Lyzz Business Search */
-/* .container {
-  margin: 15rem auto;
-  width: 90%;
-} */
-/* h1 {
-  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-} */
-
 .businessContent2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   line-height: 1.55rem;
   color: black;
-  border-radius: 5px;
-  border-style: double;
   font-family: helvetica;
-  font-size: 140%;
-  background-color: antiquewhite;
+  /* font-size: 140%; */
+  background-color: rgba(160, 158, 158, 0.952);
+  box-shadow: 0.6em 0.6em 1.2em #8f959c;
+  box-shadow: 0.5em 0.5em 1em #85898f;
+  border-radius: 20px;
   cursor: context-menu;
+  list-style: none;
+}
+
+.content {
+  background-color: #ccc;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1px;
+  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
+  font-size: 8px;
+  width: 20%;
+}
+.content2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 100px 100px;
+  grid-gap: 2em;
+  line-height: 1.55rem;
+  color: black;
+  border-radius: 5px;
+  font-family: helvetica;
+  font-size: 120%;
+  background-color: white;
+  cursor: context-menu;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+  box-shadow: 0.5em 0.5em 1em #d2dce9;
+  border-radius: 20px;
 }
 
 .businessContent {
@@ -784,14 +802,19 @@ body.dark {
   padding: 1px;
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 10px;
-  width: 20%;
+  width: -5 rem;
+  
 }
-
+.searchTitle{
+  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  padding: 2px;
+}
 .indPartner {
   position: relative;
   display: inline-block;
   height: 25%;
-  margin: 1em;
+  margin: 2em;
   font-weight: bold;
 }
 
@@ -852,45 +875,6 @@ body.dark {
   outline: none;
   color: black;
 }
-
-/* div resource .resource {
-    margin: 20px 0px;
-    padding: 40px 0px 0px;
-    border: 0px none rgb(36, 30, 78);
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 40px;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
-      border-box;
-    transition: all 0.2s ease-in-out 0s;
-  }
-  #resource-detail {
-    position: relative;
-    padding: 3em 0;
-  }
-  div {
-    display: block;
-  }
-  .resource-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 140px;
-    font-family: "Brandon-Grotesque", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #241e4e;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-  }
-  .resources-wrapper {
-    margin: 0 auto;
-  } */
 
 .formContainer {
   position: relative;
@@ -1227,6 +1211,18 @@ button.primaryContained:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
+
+}
+
+ .aboutHeader {
+ font-size: bold;
+ text-align: center;
+ font-size: 75px;
+ font-family:Georgia, 'Times New Roman', Times, serif;
+ margin: 0%;
+ padding: 0%;
+ 
 }
 
 .aboutContainer .about-card {
@@ -1235,7 +1231,7 @@ button.primaryContained:hover {
   padding: 60px 30px;
   margin: 20px;
   box-shadow: 0.6em 0.6em 1.2em #d2dce9;
-  box-shadow: 0.5em 0.5em 1em #d2dce9;
+  box-shadow: -0.5em 0.5em 1em #d2dce9;
   border-radius: 20px;
 }
 
@@ -1246,27 +1242,6 @@ button.primaryContained:hover {
   flex-direction: column;
 }
 
-/* .about-card1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 330px;
-  height: 416px;
-  padding: 60px 30px;
-  margin: 20px;
-  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
-  box-shadow: .5em 0.5em 1em #d2dce9;
-  border-radius: 20px;
-  background-image: url("https://i.ibb.co/vV5By6c/Martel.jpg");
-} */
-
-/*.about-card1 .sci{
-  display: flex;
-  justify-content: center;
-  margin-left: 75px;
-  font-size: 30px;
-} */
 
 .aboutContainer .about-card .about-content .imgBx {
   width: 180px;
@@ -1319,10 +1294,13 @@ button.primaryContained:hover {
 .card-grid {
   display: grid;
   width: 114em;
-  grid-gap: 6rem;
+  grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;;
+  
 }
+
 
 .card-grid-item {
   background-color: #fff;
@@ -1595,6 +1573,7 @@ button.primaryContained:hover {
   padding: 0px;
   box-sizing: border-box;
   width: 100%;
+  
   min-height: 75vh;
   background-color: rgb(214, 197, 197);
 }
@@ -1609,6 +1588,8 @@ button.primaryContained:hover {
 .contact-content-section {
   float: left;
   width: 55%;
+  
+  
 }
 
 .contact-image-section {
@@ -1629,24 +1610,28 @@ button.primaryContained:hover {
 
 .contact-content-section .contact-title {
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 45px;
+  
+  
 }
 
 .contact-content-section .contact-content p {
-  margin-top: 10px;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
+  margin-top: 25px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 2;
+  
 }
 
 .contact-content-section .contact-social{
-  margin: 40px 40px;
+   margin: 40px 160px; 
 }
 
 .contact-content-section .contact-social i {
   color: #a52a2a;
   font-size: 30px;
   padding: 0px 10px;
+  
 }
 
 .contact-content-section .contact-social i:hover{

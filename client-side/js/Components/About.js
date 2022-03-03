@@ -10,7 +10,9 @@ export default function About() {
            <title>AccessABILITIES</title>
         </head>
         <body>
+                
             <div class="about-body">
+                    <h1 class="aboutHeader">Meet Our Team</h1>
                 <div class="aboutContainer">
                     <div class="about-card">
                         <div class="about-content">
