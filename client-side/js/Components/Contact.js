@@ -23,10 +23,8 @@ export default function Contact(){
                             <h1 class="contact-h1">Contact Us</h1>
                         </div>
                         <div class="contact-content">
-                            <p class="contact-p">Contact us at: 555-55-5555<br>Email Us At: www.access.com</p>
-                            <div class="button">
-                                <a href="">Read More</a>
-                            </div>
+                            <p class="contact-p">Contact us at: 1-800-654-2379<br>Email us at: www.access.com</p>
+                            
                         </div>
                         <div class="contact-social">
                             <a onclick="parent.open('https://www.facebook.com/Accessabilities-100646232581045')"><i class="fab fa-facebook-f"></i></a>
