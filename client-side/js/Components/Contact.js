@@ -488,24 +488,22 @@ export default function Contact(){
                 <ul>
         <li>
             <div class = "dropdown">
-            How can I alert the community to my own experience at a location?
+            How do I help the communtiy by adding my business to the website?
                 <div class="dropdown-content">
                     <p class="desc">
-                        Fred the baker baking company is out here making donuts dont you know?
-                        We make all the donuts. We make so many donuts you wouldnt even believe it.
-                        Thats all you need to know isnt it? We make donuts. You buy them. See you here.
+                        At the bottom of the Access tab, visible from every part of the site, there is a
+                        form to fill out. Fill that out and you will then be added.
                     </p>
                 </div>
             </div>
         </li>
         <li>
             <div class = "dropdown">
-            How do I leave a review?
+            I like this site but do you know of any other reasorces available?
                 <div id="myDropdown" class="dropdown-content">
                     <p class="desc">
-                        Fred the baker baking company is out here making donuts dont you know?
-                        We make all the donuts. We make so many donuts you wouldnt even believe it.
-                        Thats all you need to know isnt it? We make donuts. You buy them. See you here.
+                        If you navigate to "The Village" tab and select "community" it will take you
+                        to a list of other great reasources available.
                     </p>
                 </div>
             </div>
@@ -515,9 +513,7 @@ export default function Contact(){
             What can I do if there is not a lot of content for my area?
                 <div id="myDropdown" class="dropdown-content">
                     <p class="desc">
-                        Fred the baker baking company is out here making donuts dont you know?
-                        We make all the donuts. We make so many donuts you wouldnt even believe it.
-                        Thats all you need to know isnt it? We make donuts. You buy them. See you here.
+                        Use the contact form to fill us in on anything you would like to add and we will contact that buisness for you.
                     </p>
                 </div>
             </div>
@@ -526,17 +522,14 @@ export default function Contact(){
                 <div class="social-media">
                 <p>Connect with us :</p>
                 <div class="social-icons">
-                    <a href="#">
+                    <a href="https://www.facebook.com/Accessabilities-100646232581045">
                     <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#">
-                    <i class="$fab fa-twitter"></i>
+                    <a href="https://twitter.com/accessABILITIEZ">
+                    <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/accessabilities4/">
                     <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
                 </div>
