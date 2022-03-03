@@ -61,7 +61,7 @@ public class BusinessResource {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getBusinessStreetNumber() {
         return businessStreetNumber;
     }
