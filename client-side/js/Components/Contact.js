@@ -2,7 +2,7 @@ import email from '../../assets/images/email.png';
 import location from '../../assets/images/location.png';
 import phone from '../../assets/images/phone.png';
 import shape from '../../assets/images/shape.png';
-export default function Contact(){
+export default function Contact(userMessage){
     // function animations(){
     //     console.log("hi")
     //     const inputs = document.querySelectorAll(".input1");

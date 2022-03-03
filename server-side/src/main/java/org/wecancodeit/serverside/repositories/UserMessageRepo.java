@@ -9,4 +9,5 @@ import java.util.Optional;
 
 public interface UserMessageRepo extends CrudRepository<UserMessage,Long> {
 
+    Optional<UserMessage> findByusername(String username);
 }
