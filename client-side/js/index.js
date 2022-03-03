@@ -43,17 +43,12 @@ function clickCommunity() {
   });
 }
 
+const checkbox = document.getElementById('checkbox');
 
-
-
-//Lyzz js to enable hamburger menu
-document.body.classList.toggle("js-enabled");
-
-const chk = document.getElementById("chk");
-
-chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
+checkbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
 });
+
 
 //Lyzz BusinessAPI and search bar
 function addBusinessToAPI() {
