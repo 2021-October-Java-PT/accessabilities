@@ -43,7 +43,7 @@ body.dark {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked+.label .ball {
+.checkbox:checked + .label .ball {
   transform: translateX(24px);
 }
 
@@ -246,7 +246,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   width: 400px;
-  margin-bottom: 7%;
+  margin-bottom: 4em;
   margin-left: 35%;
   align-items: center;
 }
@@ -264,10 +264,11 @@ input[type="checkbox"] {
 #add-business__submit {
   width: 210px;
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: #7a2d20;
   border: none;
   color: white;
   padding: 5px;
+  margin-bottom: 4em;
   box-shadow: 2px 2px 2px black;
 }
 
@@ -465,11 +466,11 @@ input[type="checkbox"] {
     transition: 0.3s ease;
   }
 
-  .menu li+li {
+  .menu li + li {
     margin-top: 12px;
   }
 
-  input[type="checkbox"]:checked~.menu {
+  input[type="checkbox"]:checked ~ .menu {
     display: block;
   }
 
@@ -761,8 +762,6 @@ h1 {
   text-align: center;
 }
 
-
-
 .contact-image {
   max-width: 300px;
   justify-content: center;
@@ -814,7 +813,7 @@ body.dark {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked+.label .ball {
+.checkbox:checked + .label .ball {
   transform: translateX(24px);
 }
 
@@ -849,20 +848,19 @@ h1 {
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 10px;
   width: 20%;
-
 }
-
 
 .indPartner {
   position: relative;
   display: inline-block;
+  height: 25%;
+  margin: 1em;
+  font-weight: bold;
 }
 
 .indPartner:hover {
   color: blue;
 }
-
-
 
 .searchWrapper {
   width: 350px;
@@ -874,19 +872,21 @@ h1 {
   margin: auto;
 }
 
-.searchBar {
-  width: 300%;
+#searchBar {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  padding: 30px 45px 30px 30px;
+  font-size: 14px;
+  /* padding: 30px 45px 30px 30px; */
   background-color: #eaeaeb;
   color: #6c6c6c;
   border-radius: 6px;
-  border: none;
+  border: solid;
   transition: all 0.4s;
+  height: 50px;
+  width: 335px;
+  margin-bottom: 3rem;
 }
 
-.search-input:focus {
+#search-input:focus {
   border: none;
   outline: none;
   box-shadow: 0 1px 12px #b8c6db;
@@ -894,17 +894,16 @@ h1 {
   -webkit-box-shadow: 0 1px 12px #b8c6db;
 }
 
-.search-btn {
+#search-submit-btn {
   background-color: transparent;
   font-size: 18px;
   padding: 6px 9px;
-  margin-left: -45px;
+  margin-left: 5px;
   border: none;
   color: #6c6c6c;
   transition: all 0.4s;
   z-index: 10;
 }
-
 
 .search-btn:hover {
   transform: scale(1.2);
@@ -960,7 +959,6 @@ h1 {
     margin: 0 auto;
   } */
 
-
 .formContainer {
   position: relative;
   margin: 8% auto;
@@ -975,6 +973,7 @@ h1 {
 
 .formHeader {
   text-align: center;
+  background-color: #7a2d20;
 }
 
 .formContentContainer {
@@ -995,7 +994,7 @@ h1 {
 }
 
 .submitButton {
-  background: dodgerblue;
+  background: #7a2d20;
   color: white;
   margin: 10px 20px;
   width: 80%;
@@ -1102,12 +1101,11 @@ blockquote {
   filter: brightness(0.8);
 }
 
-
 /* Locations List Cam */
 
 .review-card {
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* background-color: #fff; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   transition: 0.3s;
   width: fit-content;
   align-self: center;
@@ -1115,9 +1113,9 @@ blockquote {
   height: 100%;
 }
 
-.review-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
+/* .review-card:hover {
+  box-shadow: 0 8px 16px 0 hsl(60, 80%, 15%);
+} */
 
 .location-wrapper {
   width: 100%;
@@ -1125,13 +1123,13 @@ blockquote {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: [col] 250px [col] 250px [col] 250px [col] 250px;
-  grid-template-rows: [row] auto [row] auto [row];
+  grid-template-rows: [row] auto [row] auto [row] auto [row];
 
-  color: #444;
+  color: rgb(26, 24, 24);
   /* margin-top: 3em;
   margin-bottom: 5em; */
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   justify-content: center;
   align-content: center;
 }
@@ -1139,10 +1137,12 @@ blockquote {
 .business-box {
   /* background-color: #444; */
   color: #61666b;
-  border-radius: 5px;
-  border-style: double;
+  border-radius: 3px;
+  border-style: solid;
   border-color: #c9250c;
-  background-color: #77a5d9;
+  border-width: 3px;
+  border-radius: 30px;
+  transition-duration: 0.6s;
   padding: 20px;
   font-size: 150%;
   width: auto;
@@ -1153,28 +1153,40 @@ blockquote {
   grid-column: col / span 2;
   grid-row: row;
   text-align: center;
+  font-size: 185%;
+  font-weight: bold;
 }
-
 .business-location {
   grid-column: col 3 / span 2;
   grid-row: row;
   text-align: center;
+  font-size: 175%;
+  font-weight: bold;
 }
-
 .business-rating {
   grid-column: col;
   grid-row: row 2;
+  font-weight: bold;
+  text-align: center;
 }
 
 .rating__star {
+  margin-top: 0.2rem;
+  margin-right: 0.3em;
   cursor: pointer;
   color: #dabd18b2;
+  height: 80%;
+  justify-content: center;
+  align-content: center;
 }
 
 .business-description {
   grid-column: col 2 / span 3;
   grid-row: row 2;
+  text-align: center;
 }
+
+/* Reviews section */
 
 .business-reviews {
   grid-column: col / span 4;
@@ -1182,10 +1194,16 @@ blockquote {
   text-align: center;
 }
 
+.comments-box {
+  grid-column: col / span 4;
+  grid-row: row 5;
+  text-align: center;
+}
+
 .comment-container {
   max-width: 640px;
   margin: 30px auto;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 8px;
   padding: 20px;
 }
@@ -1202,7 +1220,7 @@ blockquote {
   padding: 5px 10px;
 }
 
-.container textarea {
+#review-title {
   width: 100%;
   border: none;
   background: #e8e8e8;
@@ -1212,6 +1230,22 @@ blockquote {
   border-bottom: 2px solid #016ba8;
   transition: all 0.5s;
   margin-top: 15px;
+}
+
+.container textarea {
+  width: 100%;
+  border: none;
+  /* background: #e8e8e8; */
+  padding: 5px 10px;
+  height: 50%;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 2px solid #016ba8;
+  transition: all 0.5s;
+  margin-top: 15px;
+}
+
+.input {
+  /* background-color: blue; */
 }
 
 button.primaryContained {
@@ -1274,16 +1308,11 @@ button.primaryContained:hover {
   width: 30%;
 }
 
-
-
 /* Martel about page */
 
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Clicker+Script&family=Merriweather:wght@300&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Clicker+Script&family=Merriweather:wght@300&display=swap");
 
 /* Martel resource cards */
-
 
 .grid-body {
   margin: 40px;
@@ -1295,7 +1324,6 @@ button.primaryContained:hover {
   min-height: 100vh;
   width: 100%;
   background: #f2f3f7;
-
 }
 
 .aboutContainer {
@@ -1311,7 +1339,7 @@ button.primaryContained:hover {
   padding: 60px 30px;
   margin: 20px;
   box-shadow: 0.6em 0.6em 1.2em #d2dce9;
-  box-shadow: .5em 0.5em 1em #d2dce9;
+  box-shadow: 0.5em 0.5em 1em #d2dce9;
   border-radius: 20px;
 }
 
@@ -1320,7 +1348,6 @@ button.primaryContained:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 /* .about-card1 {
@@ -1346,10 +1373,6 @@ button.primaryContained:hover {
   font-size: 30px;
 } */
 
-
-
-
-
 .aboutContainer .about-card .about-content .imgBx {
   width: 180px;
   height: 180px;
@@ -1357,7 +1380,6 @@ button.primaryContained:hover {
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
-
 }
 
 .aboutContainer .about-card .about-content .imgBx img {
@@ -1368,9 +1390,7 @@ button.primaryContained:hover {
   height: 100%;
 
   object-fit: cover;
-
 }
-
 
 .about-card .about-content .about-content-box .about-h1 {
   font-size: 1.5rem;
@@ -1383,7 +1403,6 @@ button.primaryContained:hover {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-
 }
 
 .aboutContainer .about-card .about-content .sci {
@@ -1400,18 +1419,14 @@ button.primaryContained:hover {
 
 .aboutContainer .about-card .about-content .sci a:hover {
   color: #0196e3;
-
 }
 
-
 .card-grid {
-
   display: grid;
   width: 114em;
   grid-gap: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
-
 }
 
 .card-grid-item {
@@ -1421,8 +1436,6 @@ button.primaryContained:hover {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
-
-
 }
 
 .card-grid-item:hover {
@@ -1431,7 +1444,6 @@ button.primaryContained:hover {
 }
 
 .card-img {
-
   display: block;
   width: 100%;
   height: 20rem;
@@ -1495,9 +1507,6 @@ button.primaryContained:hover {
   margin-bottom: 2.5rem;
 }
 
-
-
-
 @media only screen and (max-width: 90em) {
   body {
     padding: 3rem;
@@ -1506,5 +1515,8 @@ button.primaryContained:hover {
   .grid {
     grid-gap: 3rem;
   }
+}
 
+.fa {
+  cursor: pointer;
 }
