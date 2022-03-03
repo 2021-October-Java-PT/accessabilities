@@ -20,10 +20,25 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
+  clickCommunity();
   
 }
 
 console.log("Client Side is wired up!");
+
+function clickCommunity() {
+  pageContent.addEventListener("click", (event) => {
+    console.log("Is this thing on????");
+    if (event.target.classList.contains("community-button")) {
+      pageContent.innerHTML = Community();
+    }
+
+    if (event.target.classList.contains("returnToTheVillage")) {
+      pageContent.innerHTML = Village();
+    }
+  });
+}
+
 
 
 //Lyzz js to enable hamburger menu
