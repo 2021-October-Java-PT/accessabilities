@@ -822,27 +822,19 @@ body.dark {
   transform: translateX(24px);
 }
 
-/* Lyzz Business Search */
-/* .container {
-  margin: 15rem auto;
-  width: 90%;
-} */
-/* h1 {
-  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-} */
-
 .businessContent2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   line-height: 1.55rem;
   color: black;
-  border-radius: 5px;
-  border-style: double;
   font-family: helvetica;
-  font-size: 140%;
-  background-color: antiquewhite;
+  /* font-size: 140%; */
+  background-color: rgba(160, 158, 158, 0.952);
+  box-shadow: 0.6em 0.6em 1.2em #8f959c;
+  box-shadow: 0.5em 0.5em 1em #85898f;
+  border-radius: 20px;
   cursor: context-menu;
+  list-style: none;
 }
 
 .content {
@@ -862,11 +854,13 @@ body.dark {
   line-height: 1.55rem;
   color: black;
   border-radius: 5px;
-  border-style: double;
   font-family: helvetica;
   font-size: 120%;
-  background-color: antiquewhite;
+  background-color: white;
   cursor: context-menu;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+  box-shadow: 0.5em 0.5em 1em #d2dce9;
+  border-radius: 20px;
 }
 
 .businessContent {
@@ -876,7 +870,8 @@ body.dark {
   padding: 1px;
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 10px;
-  width: 20%;
+  width: -5 rem;
+  
 }
 .searchTitle{
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
@@ -887,7 +882,7 @@ body.dark {
   position: relative;
   display: inline-block;
   height: 25%;
-  margin: 1em;
+  margin: 2em;
   font-weight: bold;
 }
 
@@ -948,49 +943,6 @@ body.dark {
   outline: none;
   color: black;
 }
-
-/* div resource .resource {
-    margin: 20px 0px;
-    padding: 40px 0px 0px;
-    border: 0px none rgb(36, 30, 78);
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 40px;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
-      border-box;
-    transition: all 0.2s ease-in-out 0s;
-  }
-
-  #resource-detail {
-    position: relative;
-    padding: 3em 0;
-  }
-
-  div {
-    display: block;
-  }
-
-  .resource-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 140px;
-    font-family: "Brandon-Grotesque", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #241e4e;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-  }
-
-  .resources-wrapper {
-    margin: 0 auto;
-  } */
 
 .formContainer {
   position: relative;
