@@ -23,11 +23,17 @@ function buildPage() {
   clickCommunity();
   homeAccess();
   homeVillage();
-  
+
 
 }
 
 console.log("Client Side is wired up!");
+
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+
+});
 
 
 function clickCommunity() {
@@ -43,11 +49,7 @@ function clickCommunity() {
   });
 }
 
-const checkbox = document.getElementById('checkbox');
 
-
-checkbox.addEventListener('change', () => {
-  document.body.classList.toggle('dark');
 
 
 
@@ -87,8 +89,7 @@ function addBusinessToAPI() {
       ).value;
 
       apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resource",
-        {
+        "http://localhost:8080/api/business-resources/add-resource", {
           name: addName,
           businessDescription: addBusinessDescription,
           businessStreetNumber: addBusinessStreetNumber,
@@ -169,13 +170,12 @@ function addComment() {
       console.log(addTitle);
       console.log(addReview);
       apiHelpers.postRequest(
-        "http://localhost:8080/api/reviews/reviewId/add-review",
-        {
+        "http://localhost:8080/api/reviews/reviewId/add-review", {
           reviewTitle: addTitle,
           reviewComment: addReview,
         },
         (businessResources) =>
-          (pageContent.innerHTML = BusinessResources(businessResources))
+        (pageContent.innerHTML = BusinessResources(businessResources))
       );
       const postedCommentHolder = document.querySelector(".try");
       let postTitle = document.createElement("h2");
@@ -214,7 +214,7 @@ function starRating() {
 }
 
 
-function homeAccess(){
+function homeAccess() {
   const homeAccessElem = document.querySelector("#partnerBtn")
   homeAccessElem.addEventListener("click", () => {
     apiHelpers.getRequest(
@@ -275,21 +275,21 @@ function help() {
 }
 
 
-const inputs = document.querySelectorAll(".input");
+// const inputs = document.querySelectorAll(".input");
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
+// function focusFunc() {
+//   let parent = this.parentNode;
+//   parent.classList.add("focus");
+// }
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
+// function blurFunc() {
+//   let parent = this.parentNode;
+//   if (this.value == "") {
+//     parent.classList.remove("focus");
+//   }
+// }
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
+// inputs.forEach((input) => {
+//   input.addEventListener("focus", focusFunc);
+//   input.addEventListener("blur", blurFunc);
+// });
