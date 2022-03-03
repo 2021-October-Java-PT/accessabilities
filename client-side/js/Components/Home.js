@@ -33,14 +33,14 @@ export default function Home() {
                         <img id= "accessBtn" src="https://images.unsplash.com/photo-1570793005299-c091be91bbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzYWJpbGl0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="woman in wheelchair going down the street">
                     
                     <div class="box1-text">
-                        <h3>Access</h3>
+                        <h3 class"box1-h3">Access</h3>
                         <p>Places to go and reviews of our partners!</p>
                     </div>
 
                 </div>
             <div class="box box2"><img id="villageBtn" src="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlzYWJpbGl0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="man in wheelchair gets help with his protestic arm">
                 <section class="box1-text">
-                    <h3>The Village</h3>
+                    <h3 class"box2-h3">The Village</h3>
                     <p>Resources to help you take care of your loved ones.</p>
                 </section>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
             <div class="box box3"><img id="btnPartner"src="https://images.unsplash.com/photo-1569937756447-1d44f657dc69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGRpc2FiaWxpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="woman looks out at sceen with a friend">
 
                 <section class="box1-text">
-                    <h3>Partners</h3>
+                    <h3 class="box3-h3">Partners</h3>
                     <p>Our partners that work to help us help you and your loved ones</p>
                 </section>
             </div>
