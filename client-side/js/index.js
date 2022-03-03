@@ -262,21 +262,7 @@ function about() {
   });
 }
 
-function contact() {
-  const contactElem = document.querySelector("#contact");
-  contactElem.addEventListener("click", () => {
-    apiHelpers.getRequest(
-      "http://localhost:8080/api/user-messages",
-      (messages) => {
-        console.log("Messages: ", messages);
-        pageContent.innerHTML = Contact(messages);
-        
-        addContactSubmitionToAPI();
-        console.log('hello')
-      }
-    );
-  });
-}
+
 
 
 function village() {
@@ -333,6 +319,22 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+function contact() {
+  const contactElem = document.querySelector("#contact");
+  contactElem.addEventListener("click", () => {
+    apiHelpers.getRequest(
+      "http://localhost:8080/api/user-messages",
+      (messages) => {
+        console.log("Messages: ", messages);
+        pageContent.innerHTML = Contact(messages);
+        
+        addContactSubmitionToAPI();
+        console.log('hello')
+      }
+    );
+  });
+}
 
 function addContactSubmitionToAPI() {
   console.log('thou shall pass')
