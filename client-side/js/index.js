@@ -22,7 +22,7 @@ function buildPage() {
   addBusinessToAPI();
   clickCommunity();
   homeAccess();
-  homeVillage();
+  village();
   
 
 }
@@ -50,7 +50,7 @@ checkbox.addEventListener('change', () => {
   document.body.classList.toggle('dark');
 
 
-
+});
 //Lyzz BusinessAPI and search bar
 function addBusinessToAPI() {
   pageContent.addEventListener("click", (event) => {
