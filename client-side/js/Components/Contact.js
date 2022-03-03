@@ -244,6 +244,7 @@ export default function Contact(){
             cursor: pointer;
             transition: 0.3s;
             margin: 2rem;
+            max-width: 33%;
           }
         
           .btn:hover {
@@ -538,27 +539,31 @@ export default function Contact(){
                 <form action="index.html" autocomplete="off">
                 <h3 class="title">Contact us</h3>
                 <div class="input-cont focus">
-                    <input type="text" name="name" class="input1" />
+                    <input id="username" type="text" name="name" class="input1 username" />
                     <label for="">Username</label>
                     <span>Username</span>
                 </div>
                 <div class="input-cont focus">
-                    <input type="email" name="email" class="input1">
+                    <input id="email" type="email" name="email" class="input1 email">
                     </input>
                     <label for="">Email</label>
                     <span>Email</span>
                 </div>
                 <div class="input-cont focus">
-                    <input type="tel" name="phone" class="input1" />
+                    <input id="phone" type="tel" name="phone" class="input1 phone" />
                     <label for="">Phone</label>
                     <span>Phone</span>
                 </div>
-                <div id="textarea" class="input-cont textarea focus">
-                    <textarea name="message" class="input1"></textarea>
+                <div  class="input-cont textarea focus">
+                    <textarea id="textarea" name="message" class="input1 message"></textarea>
                     <label for="">Message</label>
                     <span>Message</span>
                 </div>
-                <input type="submit" value="Send" class="btn" />
+                <div class="submit">
+                <div id="contact_submit" class="btn">
+                  Submit
+                </div>
+                </div>
                 <script src="ContactAnimations.js"></script>
                 </form>
             </div>

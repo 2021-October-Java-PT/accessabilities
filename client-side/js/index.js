@@ -266,6 +266,8 @@ function contact() {
   const contactElem = document.querySelector("#contact");
   contactElem.addEventListener("click", () => {
     pageContent.innerHTML = Contact();
+    addContactSubmitionToAPI();
+    console.log('hello')
   });
 }
 
@@ -323,3 +325,40 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+function addContactSubmitionToAPI() {
+  console.log('thou shall pass')
+  pageContent.addEventListener("click", (event) => {
+    if (event.target.classList.contains("btn")) {
+      console.log("tis i")
+      var addUserComment = document.getElementById(
+        "textarea"
+      ).value;
+      var addUserPhoneNumber = document.getElementById(
+        "phone"
+      ).value;
+      var addUserEmail = document.getElementById(
+        "email"
+      ).value;
+      var addUserName = document.getElementById(
+        "username"
+      ).value;
+      console.log(addUserComment);
+      console.log(addUserPhoneNumber)
+      console.log(addUserEmail);
+      console.log(addUserName);
+      apiHelpers.postRequest(
+        "http://localhost:8080/api/user-messages",
+        {
+         username: addUserName,
+         email: addUserEmail,
+         phone: addUserPhoneNumber,
+         message: addUserComment,
+        },
+        (userMessage) => {
+          pageContent.innerHTML = Contact(userMessage);
+        }
+      );
+    }
+  });
+}
