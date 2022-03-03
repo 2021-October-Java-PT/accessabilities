@@ -5,7 +5,7 @@ import Card from "./Components/Card.js";
 import Community from "./Components/Community";
 import Contact from "./Components/Contact";
 import FilteredResources from "./Components/FilteredResources.js";
-import Help from "./Components/Help"
+import Help from "./Components/Help";
 import Home from "./Components/Home";
 import Village from "./Components/Village";
 import apiHelpers from "./Components/apiHelpers.js";
@@ -20,11 +20,9 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
-  
 }
 
 console.log("Client Side is wired up!");
-
 
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle("js-enabled");
@@ -71,7 +69,8 @@ function addBusinessToAPI() {
       ).value;
 
       apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resource", {
+        "http://localhost:8080/api/business-resources/add-resource",
+        {
           name: addName,
           businessDescription: addBusinessDescription,
           businessStreetNumber: addBusinessStreetNumber,
@@ -84,13 +83,12 @@ function addBusinessToAPI() {
           businessContentPhoneNumber: addBusinessContentPhoneNumber,
         },
         (businessResources) => {
-        pageContent.innerHTML = BusinessResources(businessResources);
+          pageContent.innerHTML = BusinessResources(businessResources);
         }
       );
     }
   });
 }
-
 
 function search() {
   const searchBar = document.getElementById("searchBar");
@@ -111,7 +109,7 @@ function search() {
 
 function navAccess() {
   const accessElem = document.querySelector("#access");
-  
+
   accessElem.addEventListener("click", () => {
     apiHelpers.getRequest(
       "http://localhost:8080/api/business-resources",
@@ -120,7 +118,6 @@ function navAccess() {
         pageContent.innerHTML = BusinessResources(businessResources);
         search();
         pullBusinessCard();
-      
       }
     );
   });
@@ -137,16 +134,47 @@ function pullBusinessCard() {
   pageContent.addEventListener("click", () => {
     if (event.target.classList.contains("indPartner")) {
       console.log("WERK IT");
-      const id = event.target.parentElement.querySelector("#businessId")
-        .value;
+      const id = event.target.parentElement.querySelector("#businessId").value;
       apiHelpers.getRequest(
         `http://localhost:8080/api/business-resources/${id}`,
         (card) => {
           pageContent.innerHTML = Card(card);
           starRating();
+          addComment();
         }
       );
+    }
+  });
+}
 
+function addComment() {
+  pageContent.addEventListener("click", () => {
+    if (event.target.classList.contains("primaryContained")) {
+      console.log("Comment Post Firing");
+      const addTitle = event.target.parentElement.querySelector("#review-title")
+        .value;
+      const addReview = event.target.parentElement.querySelector(".input")
+        .value;
+      console.log(addTitle);
+      console.log(addReview);
+      apiHelpers.postRequest(
+        "http://localhost:8080/api/reviews/reviewId/add-review",
+        {
+          reviewTitle: addTitle,
+          reviewComment: addReview,
+        },
+        (businessResources) =>
+          (pageContent.innerHTML = BusinessResources(businessResources))
+      );
+      const postedCommentHolder = document.querySelector(".try");
+      let postTitle = document.createElement("h2");
+      postTitle.classList.add("addTitle");
+      let postBody = document.createElement("p");
+      z.classList.add("addReview");
+      postTitle.innerText = addTitle;
+      z.innerText = addReview;
+      postedCommentHolder.append(postTitle);
+      postedCommentHolder.append(postBody);
     }
   });
 }
@@ -154,28 +182,25 @@ function pullBusinessCard() {
 function starRating() {
   const ratingStars = [...document.getElementsByClassName("rating__star")];
 
-function executeRating(stars) {
-  const starClassActive = "rating__star fas fa-star";
-  const starClassInactive = "rating__star far fa-star";
-  const starsLength = stars.length;
-  let i;
-  stars.map((star) => {
-    star.onclick = () => {
-      i = stars.indexOf(star);
+  function executeRating(stars) {
+    const starClassActive = "rating__star fas fa-star";
+    const starClassInactive = "rating__star far fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star) => {
+      star.onclick = () => {
+        i = stars.indexOf(star);
 
-      if (star.className === starClassInactive) {
-        for (i; i >= 0; --i) stars[i].className = starClassActive;
-      } else {
-        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-      }
-    };
-  });
+        if (star.className === starClassInactive) {
+          for (i; i >= 0; --i) stars[i].className = starClassActive;
+        } else {
+          for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+        }
+      };
+    });
+  }
+  executeRating(ratingStars);
 }
-executeRating(ratingStars);
-
-}
-
-
 
 function home() {
   const homeElem = document.querySelector("#home");
@@ -210,22 +235,15 @@ function village() {
     pageContent.innerHTML = Village();
 
     help();
-    
   });
-
-  
-  
 }
 
 function help() {
   const helpElem = document.querySelector(".help-button");
-  helpElem.addEventListener("click", ()=> {
-    
+  helpElem.addEventListener("click", () => {
     pageContent.innerHTML = Help();
   });
 }
-
-
 
 // function resources() {
 //   pageContent.addEventListener("click", () => {
@@ -246,8 +264,6 @@ function help() {
 //     }
 //   });
 // }
-
-
 
 const inputs = document.querySelectorAll(".input");
 
