@@ -43,17 +43,13 @@ function clickCommunity() {
   });
 }
 
+const checkbox = document.getElementById('checkbox');
 
 
+checkbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
 
-//Martel's Dark Mode
-document.body.classList.toggle("js-enabled");
 
-const chk = document.getElementById("chk");
-
-chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
-});
 
 //Lyzz BusinessAPI and search bar
 function addBusinessToAPI() {
