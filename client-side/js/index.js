@@ -265,11 +265,19 @@ function about() {
 function contact() {
   const contactElem = document.querySelector("#contact");
   contactElem.addEventListener("click", () => {
-    pageContent.innerHTML = Contact();
-    addContactSubmitionToAPI();
-    console.log('hello')
+    apiHelpers.getRequest(
+      "http://localhost:8080/api/user-messages",
+      (messages) => {
+        console.log("Messages: ", messages);
+        pageContent.innerHTML = Contact(messages);
+        
+        addContactSubmitionToAPI();
+        console.log('hello')
+      }
+    );
   });
 }
+
 
 function village() {
   const contactElem = document.querySelector("#village");
