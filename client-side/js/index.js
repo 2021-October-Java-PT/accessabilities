@@ -20,9 +20,9 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
-
   clickCommunity();
   homeAccess();
+  homeVillage();
   
 
 }
@@ -46,7 +46,7 @@ function clickCommunity() {
 
 
 
-//Lyzz js to enable hamburger menu
+//Martel's Dark Mode
 document.body.classList.toggle("js-enabled");
 
 const chk = document.getElementById("chk");
