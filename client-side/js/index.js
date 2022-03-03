@@ -20,9 +20,31 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
+
+  clickCommunity();
+  homeAccess();
+  
+
 }
 
 console.log("Client Side is wired up!");
+
+
+function clickCommunity() {
+  pageContent.addEventListener("click", (event) => {
+    console.log("Is this thing on????");
+    if (event.target.classList.contains("community-button")) {
+      pageContent.innerHTML = Community();
+    }
+
+    if (event.target.classList.contains("returnToTheVillage")) {
+      pageContent.innerHTML = Village();
+    }
+  });
+}
+
+
+
 
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle("js-enabled");
@@ -201,6 +223,24 @@ function starRating() {
   }
   executeRating(ratingStars);
 }
+
+
+function homeAccess(){
+  const homeAccessElem = document.querySelector("#partnerBtn")
+  homeAccessElem.addEventListener("click", () => {
+    apiHelpers.getRequest(
+      "http://localhost:8080/api/business-resources",
+      (businessResources) => {
+        console.log("RESOURCES: ", businessResources);
+        pageContent.innerHTML = BusinessResources(businessResources);
+        search();
+        addBusinessToAPI();
+        pullBusinessCard();
+      }
+    );
+  })
+}
+
 
 function home() {
   const homeElem = document.querySelector("#home");

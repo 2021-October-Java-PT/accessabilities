@@ -20,6 +20,18 @@ export default function BusinessResources(businessResources) {
 </div>
 
 
+                
+<iframe class=map src="https://www.google.com/maps/d/u/0/embed?mid=1xQAvXEfRFcxwTUEdwNZZzE5EFilIECA1&ehbc=2E312F"></iframe>
+
+<iframe class=map src="https://www.google.com/maps/d/u/0/embed?mid=1CmVNvpg25yT-gTY2BMIj1LNw-p_X9JWp&ehbc=2E312F"></iframe>
+
+<iframe class=map src="https://www.google.com/maps/d/u/0/embed?mid=1IhoQOgmPta6k-qc1GkUek3UphjgyCKa_&ehbc=2E312F" ></iframe>
+
+<iframe class=map src="https://www.google.com/maps/d/u/0/embed?mid=1hUuQOABuMohNFJmr6U10T9Rnfj1Su33j&ehbc=2E312F"></iframe>
+
+
+
+
 <h2 class="formHeader">Sign Up To Be a Partner!</h2>
 <div class="formContainer">
         <div class="submit-business-input-container">
