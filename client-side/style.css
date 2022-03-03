@@ -276,6 +276,7 @@ input[type="checkbox"] {
   background-color: #292c35;
 }
 
+
 /* APPLYING MEDIA QUERIES */
 
 @media (max-width: 1669px) {
@@ -452,7 +453,7 @@ input[type="checkbox"] {
   .menu {
     display: none;
     position: absolute;
-    background-color: #565a5a;
+    background-color: #d0d6d6;
     right: 0;
     left: 0;
     text-align: center;
@@ -519,7 +520,7 @@ input[type="checkbox"] {
   .box img {
     width: 100%;
     height: 100%;
-    margin-left: 2rem;
+    margin-right: 3rem;
   }
 
   .box1 img {
@@ -540,7 +541,7 @@ input[type="checkbox"] {
     object-fit: cover;
     width: 20rem;
     align-items: center;
-    margin-left: 5.5rem;
+    
   }
 
   .box2 img:hover {
@@ -551,7 +552,7 @@ input[type="checkbox"] {
     object-fit: cover;
     width: 20rem;
     align-items: center;
-    margin-left: 9rem;
+    
   }
 
   .box1-h3 {
@@ -562,22 +563,19 @@ input[type="checkbox"] {
     opacity: 50%;
   }
 
-  .imageContainer-text h1 {
-    font-size: 600%;
-    left: 200px;
-    bottom: 48px;
-  }
+ 
 }
 
 @media screen and (max-width: 1280px) {
   .imageContainer-text h1 {
     font-size: 600%;
-    left: 200px;
-    bottom: 48px;
+    left: 280px;
+    bottom: 2820px;
   }
 }
 
-@media screen and (max-width: 900px) {
+
+/* @media screen and (max-width: 900px) {
   .helpingCaring-Text {
     bottom: 1rem;
     font-size: 200%;
@@ -623,14 +621,17 @@ input[type="checkbox"] {
     text-align: justify;
   }
 }
+ 
 
-@media screen and (max-width: 914) {
+
+/* @media screen and (max-width: 900px) {
   .imageContainer-text h1 {
     left: 600rem;
-    bottom: 0px;
+    bottom: 300px;
     font-size: 6rem;
   }
-}
+} */
+
 
 @media screen and (max-width: 883px) {
   .imageContainer-text h1 {
@@ -718,6 +719,50 @@ input[type="checkbox"] {
     bottom: 3600px;
     font-size: 6rem;
   }
+}
+
+
+/* Trey's Form CSS */
+
+.formHeader {
+  text-align: center;
+  background-color: lightblue;
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+}
+
+.addPartnerForm {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 7%;
+  margin-left: 35%;
+  align-items: center;
+}
+
+#businessFormInput {
+  border-radius: 10px;
+  width: 75%;
+  height: 25px;
+  margin: 7px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px black;
+  border: none;
+}
+
+#add-business__submit {
+  width: 210px;
+  border-radius: 10px;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  padding: 5px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#add-business__submit:active {
+  background-color: #292c35;
 }
 
 
@@ -1227,6 +1272,7 @@ button.primaryContained:hover {
   background: #9201a8;
 }
 
+
 /* App Section */
 .app_grid_wrapper {
   display: grid;
@@ -1267,6 +1313,7 @@ button.primaryContained:hover {
 .map_wrapper iframe {
   width: 30%;
 }
+
 
 /* Martel about page */
 
@@ -1478,6 +1525,176 @@ button.primaryContained:hover {
 }
 
 
+/* App Section */
+
+.app {
+  width: 50%;
+  height: 50%;
+  display: block;
+  position: relative;
+  left: 5rem;
+  padding-top: 2rem;
+}
+
+#appC {
+  width: 50.1%;
+  height: 100%;
+  display: block;
+  align-items: center;
+  position: relative;
+  left: 5rem;
+  padding-top: 2rem;
+}
+
+.app_card_wrapper {
+  margin: 20px 0;
+  width: 100%;
+  font-family:  sans-serif;
+}
+
+.app_card_wrapper .app_card_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app_card_wrap .app_card_item {
+  width: 25%;
+  padding: 10px;
+}
+.app_card_wrap .app_card_inner {
+  background: white;
+  border-radius: 20px;
+}
+
+.app_card_inner {
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+  box-shadow: 0.5em 0.5em 1em #d2dce9;
+}
+
+.app_card_wrap .app_card_top {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding: 0;
+}
+
+.app_card_wrap .app_card_bottom {
+  padding: 15px;
+}
+
+ .app_card_category {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.app_card_wrap .app_card_bottom .app_card_info {
+  padding: 13px;
+  margin: 10px 0;
+  
+  
+  
+}
+.app_card_wrap .app_card_bottom .app_card_info p{
+  line-height: 1.3rem;
+  
+} 
+
+.app_card_wrap .app_card_bottom .app_card_info .app_title {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 5px;
+  line-height: 1rem;
+  font-weight: bolder;
+}
+
+
+.app_card_wrap .app_card_bottom .fa-brands {
+  text-align: center;
+}
+
+@media (max-width: 1148px) {
+  .app_card_wrap .app_card_item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app_card_wrap .app_card_item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .app_cards_wrap .app_card_item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 538px) {
+  .app_card_wrap .app_card_item {
+    width: 100%;
+  }
+}
+
+/* Map Section */
+.map {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-left: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1669px) {
+  .map {
+    width: 350px;
+    height: 400px;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 1654px) {
+  .map {
+    width: 350px;
+    height: 400px;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1608px) {
+  .map {
+    width: 350px;
+    height: 400px;
+    margin-right: -0.4rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1522px) {
+  .map {
+    width: 350px;
+    height: 400px;
+    margin-right: -2rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1439px) {
+  .map {
+    width: 350px;
+    height: 400px;
+    margin-right: 3rem;
+    margin-left: 1rem;
+  }
+}
+
+
 .fa {
   cursor: pointer;
 }
@@ -1580,6 +1797,7 @@ button.primaryContained:hover {
   }
   
 }
+
 
 
 
