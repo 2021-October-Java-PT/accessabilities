@@ -21,6 +21,7 @@ function buildPage() {
   home();
   addBusinessToAPI();
   clickCommunity();
+  homeAccess();
   
 }
 
@@ -190,7 +191,21 @@ executeRating(ratingStars);
 
 }
 
-
+function homeAccess(){
+  const homeAccessElem = document.querySelector("#partnerBtn")
+  homeAccessElem.addEventListener("click", () => {
+    apiHelpers.getRequest(
+      "http://localhost:8080/api/business-resources",
+      (businessResources) => {
+        console.log("RESOURCES: ", businessResources);
+        pageContent.innerHTML = BusinessResources(businessResources);
+        search();
+        addBusinessToAPI();
+        pullBusinessCard();
+      }
+    );
+  })
+}
 
 function home() {
   const homeElem = document.querySelector("#home");
