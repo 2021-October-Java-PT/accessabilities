@@ -33,10 +33,16 @@ export default function Contact(){
     //     });
     //}
 
+    function myFunction() {
+        console.log("im here")
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
     //add responsiveness to mobile,faq animations/content,styling,replace placeholder pics
     return` 
     
         <div class="cont">
+       
         <style>
         input{
             all: unset;
@@ -57,27 +63,39 @@ export default function Contact(){
         .dropdown {
             position: relative;
             display: inline-block;
+            border-radius: 5px;
+            padding: 5px;
           }
         
           .dropdown-content{
             display: none;
-            position: sticky;
-            top: 0px;
-            left: 08px;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            right: 0px;
             background-color: #f9f9f9;
             maxwidth:100%;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 3;
+            transition: 0.5s;
+            
+          }
+          .desc{
+              transition: 0.5s;
+              border-radius: 5px;
           }
         
           .dropdown:hover .dropdown-content{
             display: block;
             transition: 0.5s;
+            border-radius: 5px;
+
           }
 
           .dropdown:hover{
             transition: 0.5s;
-              background-color:red;
+            background-color:#1abc9c;
+            
           }
 
           * {
@@ -92,7 +110,11 @@ export default function Contact(){
             font-family: "Poppins", sans-serif;
             max-width:80%;
             align-content:center;
-            
+          }
+          input{
+              display: flex;
+              align-content: center;
+              padding: 3 rem;
           }
     
           .cont{
@@ -172,7 +194,8 @@ export default function Contact(){
         
           .input-cont {
             position: relative;
-            margin: 1rem 0;
+            margin: 1rem 1rem;
+            padding: 1rem;
           }
         
           .input1 {
@@ -227,7 +250,7 @@ export default function Contact(){
             outline: none;
             cursor: pointer;
             transition: 0.3s;
-            margin: 0;
+            margin: 1rem;
           }
         
           .btn:hover {
@@ -416,6 +439,11 @@ export default function Contact(){
             .social-media {
               padding: 1.5rem 0 0 0;
             }
+            .input-cont {
+                position: relative;
+                margin: 2rem 2rem;
+                padding: 1rem;
+              }
           }
         
           @media (max-width: 480px) {
@@ -509,7 +537,7 @@ export default function Contact(){
         <li>
             <div class = "dropdown">
             How do I leave a review?
-                <div class="dropdown-content">
+                <div id="myDropdown" class="dropdown-content">
                     <p class="desc">
                         Fred the baker baking company is out here making donuts dont you know?
                         We make all the donuts. We make so many donuts you wouldnt even believe it.
@@ -521,7 +549,7 @@ export default function Contact(){
         <li>
             <div class = "dropdown">
             What can I do if there is not a lot of content for my area?
-                <div class="dropdown-content">
+                <div id="myDropdown" class="dropdown-content">
                     <p class="desc">
                         Fred the baker baking company is out here making donuts dont you know?
                         We make all the donuts. We make so many donuts you wouldnt even believe it.
