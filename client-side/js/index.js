@@ -181,7 +181,9 @@ function addComment() {
       postTitle.classList.add("addTitle");
       let postBody = document.createElement("p");
       postBody.classList.add("addReview");
+
       postTitle.innerText = addTitle + " says...";
+
       postBody.innerText = addReview;
       postedCommentHolder.append(postTitle);
       postedCommentHolder.append(postBody);

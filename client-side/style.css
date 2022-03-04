@@ -715,7 +715,16 @@ input[type="checkbox"] {
   font-family: "Montserra", sans-serif;
 }
 
+/* .businessContent {
+  background-color: #ccc;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1px;
+  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  width: -5 rem;
 
+} */
 
 
 /* the cam and Lyzz business menu fix block begins  */
@@ -723,8 +732,10 @@ input[type="checkbox"] {
 .businessContent2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   grid-gap: 10px;
   line-height: 1.55rem;
+
   color: black;
   font-family: helvetica;
   font-size: 140%;
@@ -734,6 +745,19 @@ input[type="checkbox"] {
   border-radius: 20px;
   cursor: context-menu;
   list-style: none;
+  /* grid-gap: 1em; */
+  max-width: 150%;
+  text-align: center;
+
+}
+#businessContent-heading{
+  padding: 2px;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.businessContent-heading .bc-h1 {
+  font-family: Helvetica;
+  text-align: center;
 }
 
 .content {
@@ -763,28 +787,24 @@ input[type="checkbox"] {
   border-radius: 20px;
 }
 
-/* .businessContent {
-  background-color: #ccc;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 1px;
-  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  width: -5 rem;
-} */
+
 
 /* it ends */
 
-.searchTitle {
+
+.searchTitle{
+
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 15px;
   padding: 2px;
 }
 
+
 .partner {
   border: green;
 
   font-size: 170%;
+
 }
 .indPartner {
   position: relative;
@@ -797,15 +817,17 @@ input[type="checkbox"] {
   font-size: 14px;
   padding-top: 1em;
   padding-bottom: 1em;
+
   /* border: solid;
   border-color: #7a2d20; */
+
 }
 
 .indPartner:hover {
   color: blue;
 }
 
-.searchWrapper {
+#searchWrapper {
   width: 350px;
   position: relative;
   display: flex;
@@ -827,6 +849,8 @@ input[type="checkbox"] {
   height: 50px;
   width: 335px;
   margin-bottom: 3rem;
+  /* margin-left: 25%; */
+  justify-content: right;
 }
 
 #search-input:focus {
@@ -841,7 +865,7 @@ input[type="checkbox"] {
   background-color: transparent;
   font-size: 18px;
   padding: 6px 9px;
-  margin-left: 5px;
+  margin-right: 5px;
   border: none;
   color: #6c6c6c;
   transition: all 0.4s;
