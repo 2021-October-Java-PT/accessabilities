@@ -1,10 +1,10 @@
 package org.wecancodeit.serverside.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.*;
 
 @Entity
 public class BusinessResource {
@@ -27,8 +27,10 @@ public class BusinessResource {
     @Lob
     private String businessAccessibilityFeatures;
     private String businessContentPhoneNumber;
+    @ManyToMany
+    private Set<ReviewModel> reviews;
 
-    public BusinessResource(String name, String businessDescription,String businessStreetNumber, String businessStreetName, String businessCity, String businessState, String businessZip, String businessUrl, String businessAccessibilityFeatures, String businessContentPhoneNumber) {
+    public BusinessResource(String name, String businessDescription,String businessStreetNumber, String businessStreetName, String businessCity, String businessState, String businessZip, String businessUrl, String businessAccessibilityFeatures, String businessContentPhoneNumber, ReviewModel... reviews) {
         this.name = name;
         this.businessDescription = businessDescription;
         this.businessStreetNumber = businessStreetNumber;
@@ -39,6 +41,7 @@ public class BusinessResource {
         this.businessUrl = businessUrl;
         this.businessAccessibilityFeatures = businessAccessibilityFeatures;
         this.businessContentPhoneNumber = businessContentPhoneNumber;
+        this.reviews = new HashSet<>();
     }
 
     public BusinessResource() {}
@@ -124,5 +127,11 @@ public class BusinessResource {
 
     public void setBusinessContentPhoneNumber(String businessContentPhoneNumber) {
         this.businessContentPhoneNumber = businessContentPhoneNumber;
+    }
+
+
+
+    public Collection<ReviewModel> getReviews() {
+        return reviews;
     }
 }

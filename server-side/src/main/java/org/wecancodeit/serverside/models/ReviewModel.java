@@ -1,6 +1,10 @@
 package org.wecancodeit.serverside.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
 public class ReviewModel {
@@ -11,21 +15,22 @@ public class ReviewModel {
     private String reviewTitle;
     @Lob
     private String reviewComment;
-    private int reviewRating;
-    @ManyToOne
-    private UserModel userModel;
+    @ManyToMany(mappedBy = "reviews")
+    @JsonIgnore
+    private Collection<BusinessResource> businessResources;
 
 
-
-    public ReviewModel(String reviewTitle, String reviewComment, int reviewRating){
+    public ReviewModel(String reviewTitle, String reviewComment) {
         this.reviewTitle = reviewTitle;
         this.reviewComment = reviewComment;
-        this.reviewRating = reviewRating;
+        businessResources = new ArrayList<>();
     }
 
-    public ReviewModel(){
+    protected ReviewModel(){
 
     }
+
+
 
     public Long getReviewId(){
         return reviewId;
@@ -39,7 +44,22 @@ public class ReviewModel {
         return reviewComment;
     }
 
-    public int getReviewRating() {
-        return reviewRating;
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+
+        ReviewModel reviewModel = (ReviewModel) o;
+
+        if (reviewId != null ? !reviewModel.equals(reviewModel.reviewId) : reviewModel.reviewId != null) return false;
+        return reviewTitle != null ? reviewTitle.equals(reviewModel.reviewTitle) : reviewModel.reviewTitle == null;
     }
+
+    @Override
+    public int hashCode() {
+        int result = reviewId != null ? reviewId.hashCode() :0;
+        result = 31 * result + (reviewTitle != null ? reviewTitle.hashCode() : 0);
+        return result;
+    }
+
 }
