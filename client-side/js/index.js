@@ -181,9 +181,9 @@ function addComment() {
       let postTitle = document.createElement("h2");
       postTitle.classList.add("addTitle");
       let postBody = document.createElement("p");
-      z.classList.add("addReview");
+      postBody.classList.add("addReview");
       postTitle.innerText = addTitle;
-      z.innerText = addReview;
+      postBody.innerText = addReview;
       postedCommentHolder.append(postTitle);
       postedCommentHolder.append(postBody);
     }
