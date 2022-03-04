@@ -1,21 +1,26 @@
 export default function BusinessResources(businessResources) {
   console.log("BUSINESS RESOURCES.JS FILE");
   return `
-
+  <div id="businessContent-heading">
+  <h1 class="bc-h1">Business Directory</h1>
+  <h2 class="bc-h2">Know before you go! Browse or search our vetted location directory for accessibility features that you may need and take the worry out of your trip!</h2>
+  </div>
   <div id="searchWrapper">
   <input type="search" id="searchBar" placeholder="Search by: name, city, zip, or accessibility feature" required>
       <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>
   </div>
-  <div id="businessContent" class="businessContent2">
+  
+  
+ 
   ${businessResources
     .map((resource) => {
       return `
-    <li class="partner">
-      <span class="indPartner">${resource.name}</span>  
+      <div id="businessContent" class="businessContent2">
+      <span class="partner indPartner">${resource.name}</span>  
       <input type="hidden" id="businessId" value="${resource.id}">
     `;
     })
-    .join("")}</li>
+    .join("")}</div>
 </div>
 </div>
 
