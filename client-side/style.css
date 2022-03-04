@@ -40,7 +40,9 @@ body.dark .nav-links a {
   color: orange;
 }
 
-
+body.dark .navBar {
+  background-color: #111;
+}
 
 
 body {
@@ -96,7 +98,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(255, 255, 255); 
   color: black;
   margin: 0px;
   padding: 0px;
@@ -107,7 +109,7 @@ body {
   width: 1903px;
   height: 90px;
   margin-bottom: 0px;
-  color: #fff;
+  /* color: #fff; */
   position: fixed;
   width: 100%;
   top: 0.5px;
@@ -650,54 +652,6 @@ input[type="checkbox"] {
     color: #111;
   }
 }
-
-
-  
-
-/* Trey's Form CSS */
-
-.formHeader {
-  text-align: center;
-  background-color: lightblue;
-  padding: 20px;
-  color: white;
-  border-radius: 20px;
-}
-
-.addPartnerForm {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin-bottom: 4em;
-  margin-left: 35%;
-  align-items: center;
-}
-
-#businessFormInput {
-  border-radius: 10px;
-  width: 75%;
-  height: 25px;
-  margin: 7px;
-  padding: 10px;
-  box-shadow: 2px 2px 2px black;
-  border: none;
-}
-
-#add-business__submit {
-  width: 210px;
-  border-radius: 10px;
-  background-color: #7a2d20;
-  border: none;
-  color: white;
-  padding: 5px;
-  margin-bottom: 4em;
-  box-shadow: 2px 2px 2px black;
-}
-
-#add-business__submit:active {
-  background-color: #292c35;
-}
-
 
 
 /* Trey's Form CSS */
@@ -1508,12 +1462,13 @@ button.primaryContained:hover {
 
 /* Map Section */
 .map {
-  width: 400px;
+  width: 370px;
   height: 400px;
   position: relative;
   margin-left: 3rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  
 }
 
 @media (max-width: 1669px) {
