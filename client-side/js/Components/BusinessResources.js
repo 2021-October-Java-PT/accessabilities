@@ -1,7 +1,10 @@
 export default function BusinessResources(businessResources) {
   console.log("BUSINESS RESOURCES.JS FILE");
   return `
-
+  <div id="businessContent-heading">
+  <h1 class="bc-h1">Business Directory</h1>
+  <h2 class="bc-h2">Know before you go! Browse or search our vetted location directory for accessibility features that you may need and take the worry out of your trip!</h2>
+  </div>
   <div id="searchWrapper">
   <input type="search" id="searchBar" placeholder="Search by: name, city, zip, or accessibility feature" required>
       <button type="button" id="search-submit-btn" class="search-submit-btn">SUBMIT</button>

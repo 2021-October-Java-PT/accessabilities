@@ -15,7 +15,7 @@ export default function About() {
                     <div class="about-card">
                         <div class="about-content">
                             <div class="imgBx">
-                                <img src="https://media-exp1.licdn.com/dms/image/D4E35AQFIqfSUU3f08Q/profile-framedphoto-shrink_800_800/0/1646005587840?e=1646337600&v=beta&t=Knq-fncvmItgVJWZ60Y7PTIKNGCc2rKoA0uW8BErdHk"/>
+                                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQF8UFnXJnnm-A/profile-displayphoto-shrink_200_200/0/1646005586639?e=1651708800&v=beta&t=jNByuI6mfAyTfo7jdS8PlCFZuNgX7C00TE7sYjXGkQw"/>
                             </div>
                             <div class="about-content-box">
                                 <h1 class="about-h1">Elizabeth Hans<h1>

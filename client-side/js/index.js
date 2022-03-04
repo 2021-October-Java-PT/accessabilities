@@ -20,9 +20,9 @@ function buildPage() {
   navAccess();
   home();
   addBusinessToAPI();
-
   clickCommunity();
   homeAccess();
+  village();
   
 
 }
@@ -43,18 +43,14 @@ function clickCommunity() {
   });
 }
 
+const checkbox = document.getElementById('checkbox');
 
 
+checkbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
 
-//Lyzz js to enable hamburger menu
-document.body.classList.toggle("js-enabled");
 
-const chk = document.getElementById("chk");
-
-chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
 });
-
 //Lyzz BusinessAPI and search bar
 function addBusinessToAPI() {
   pageContent.addEventListener("click", (event) => {
@@ -144,13 +140,6 @@ function navAccess() {
     );
   });
 }
-//   function partner () {
-//   const accessElem = document.querySelector("#partnerBtn");
-//   partnerBtn.addEventListener("click", () => {
-//     pageContent.innerHTML = BusinessResources();
-//   }
-//   );
-// }
 
 function pullBusinessCard() {
   pageContent.addEventListener("click", () => {
@@ -188,13 +177,13 @@ function addComment() {
         (businessResources) =>
           (pageContent.innerHTML = BusinessResources(businessResources))
       );
-      const postedCommentHolder = document.querySelector(".try");
+      const postedCommentHolder = document.querySelector(".comments-box");
       let postTitle = document.createElement("h2");
       postTitle.classList.add("addTitle");
       let postBody = document.createElement("p");
-      z.classList.add("addReview");
-      postTitle.innerText = addTitle;
-      z.innerText = addReview;
+      postBody.classList.add("addReview");
+      postTitle.innerText = addTitle + " says...";
+      postBody.innerText = addReview;
       postedCommentHolder.append(postTitle);
       postedCommentHolder.append(postBody);
     }
@@ -245,12 +234,12 @@ function homeAccess(){
 function home() {
   const homeElem = document.querySelector("#home");
   homeElem.addEventListener("click", () => {
-    pageContent.innerHTML = Home();
+    location.reload();
   });
 
   const logoElem = document.querySelector("#logoHome");
   logoElem.addEventListener("click", () => {
-    pageContent.innerHTML = Home();
+    location.reload();
   });
 }
 
@@ -285,25 +274,6 @@ function help() {
   });
 }
 
-// function resources() {
-//   pageContent.addEventListener("click", () => {
-//     pageContent.innerHTML = Resources();
-//   });
-// }
-
-// function resources() {
-//   pageContent.addEventListener("click", () => {
-//     if (event.target.classList.contains("resources-button")) {
-//       apiHelpers.getRequest(
-//         "http://localhost:8080/api/resources",
-//         (resources) => {
-//           console.log("Resources: ", resources);
-//           pageContent.innerHTML = Resources(resources);
-//         }
-//       );
-//     }
-//   });
-// }
 
 const inputs = document.querySelectorAll(".input");
 
