@@ -256,7 +256,9 @@ input[type="checkbox"] {
 
 
 
+
 /* HOME APPLYING MEDIA QUERIES */
+
 
 @media (max-width: 1669px) {
   .logo img {
@@ -466,6 +468,7 @@ input[type="checkbox"] {
     padding: 0rem;
     gap: 1rem;
     align-items: center;
+
   }
   .imageContainer-text h1 {
     left: 440px;
@@ -481,6 +484,7 @@ input[type="checkbox"] {
 
   .partnerBtn_Text {
     font-size: 1.5rem;
+
   }
 
   .box {
@@ -511,10 +515,12 @@ input[type="checkbox"] {
   .second_page_nested {  
    margin-left: 13rem;
   }
+
   
   .helpingCaring-Text  {
     bottom: -3rem;
     left: -4rem;
+
   }
 
   .partnerBtn_Text {
@@ -560,9 +566,10 @@ input[type="checkbox"] {
     bottom: 2400px;
     font-size: 490%;
   }
-}
+
 
 @media (max-width: 922px) {
+
   .imageContainer-text h1 {
     left: 345px;
     bottom: 2400px;
@@ -653,7 +660,6 @@ input[type="checkbox"] {
   }
 }
 
-
 /* Trey's Form CSS */
 
 .formHeader {
@@ -721,15 +727,18 @@ input[type="checkbox"] {
 } */
 
 
+/* the cam and Lyzz business menu fix block begins  */
+
 .businessContent2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
+  grid-gap: 10px;
+  line-height: 1.55rem;
 
-  /* line-height: 1.55rem; */
   color: black;
   font-family: helvetica;
-  /* font-size: 140%; */
+  font-size: 140%;
   background-color: rgba(160, 158, 158, 0.952);
   box-shadow: 0.6em 0.6em 1.2em #8f959c;
   box-shadow: 0.5em 0.5em 1em #85898f;
@@ -760,6 +769,7 @@ input[type="checkbox"] {
   font-size: 8px;
   width: 20%;
 }
+
 .content2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -778,15 +788,23 @@ input[type="checkbox"] {
 }
 
 
+
+/* it ends */
+
+
 .searchTitle{
+
   font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
   font-size: 15px;
   padding: 2px;
 }
+
+
 .partner {
   border: green;
-  background-color: #016ba8;
-  font-size: 150%;
+
+  font-size: 170%;
+
 }
 .indPartner {
   position: relative;
@@ -799,8 +817,10 @@ input[type="checkbox"] {
   font-size: 14px;
   padding-top: 1em;
   padding-bottom: 1em;
-  border: solid;
-  border-color: #7a2d20;
+
+  /* border: solid;
+  border-color: #7a2d20; */
+
 }
 
 .indPartner:hover {
@@ -1168,7 +1188,13 @@ button.primaryContained:hover {
   background: #9201a8;
 }
 
+.addTitle {
+  margin: 1em;
+}
 
+.addReview {
+  border-bottom: solid;
+}
 
 
 
@@ -1197,17 +1223,15 @@ button.primaryContained:hover {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
-
 }
 
- .aboutHeader {
- font-size: bold;
- text-align: center;
- font-size: 75px;
- font-family:Georgia, 'Times New Roman', Times, serif;
- margin: 0%;
- padding: 0%;
- 
+.aboutHeader {
+  font-size: bold;
+  text-align: center;
+  font-size: 75px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0%;
+  padding: 0%;
 }
 
 .aboutContainer .about-card {
@@ -1282,10 +1306,8 @@ button.primaryContained:hover {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: start;
-  box-shadow: 0.6em 0.6em 1.2em #d2dce9;;
-  
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
 }
-
 
 .card-grid-item {
   background-color: #fff;
@@ -1376,7 +1398,6 @@ button.primaryContained:hover {
   }
 }
 
-
 /* App Section */
 
 .app {
@@ -1401,7 +1422,7 @@ button.primaryContained:hover {
 .app_card_wrapper {
   margin: 20px 0;
   width: 100%;
-  font-family:  sans-serif;
+  font-family: sans-serif;
 }
 
 .app_card_wrapper .app_card_wrap {
@@ -1434,7 +1455,7 @@ button.primaryContained:hover {
   padding: 15px;
 }
 
- .app_card_category {
+.app_card_category {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
@@ -1445,14 +1466,10 @@ button.primaryContained:hover {
 .app_card_wrap .app_card_bottom .app_card_info {
   padding: 13px;
   margin: 10px 0;
-  
-  
-  
 }
-.app_card_wrap .app_card_bottom .app_card_info p{
+.app_card_wrap .app_card_bottom .app_card_info p {
   line-height: 1.3rem;
-  
-} 
+}
 
 .app_card_wrap .app_card_bottom .app_card_info .app_title {
   color: black;
@@ -1461,7 +1478,6 @@ button.primaryContained:hover {
   line-height: 1rem;
   font-weight: bolder;
 }
-
 
 .app_card_wrap .app_card_bottom .fa-brands {
   text-align: center;
@@ -1547,12 +1563,9 @@ button.primaryContained:hover {
   }
 }
 
-
 .fa {
   cursor: pointer;
 }
-
-
 
 /* Martel Contact Page */
 .contact-section {
@@ -1560,7 +1573,7 @@ button.primaryContained:hover {
   padding: 0px;
   box-sizing: border-box;
   width: 100%;
-  
+
   min-height: 75vh;
   background-color: rgb(214, 197, 197);
 }
@@ -1575,8 +1588,6 @@ button.primaryContained:hover {
 .contact-content-section {
   float: left;
   width: 55%;
-  
-  
 }
 
 .contact-image-section {
@@ -1598,30 +1609,26 @@ button.primaryContained:hover {
 .contact-content-section .contact-title {
   text-transform: uppercase;
   font-size: 45px;
-  
-  
 }
 
 .contact-content-section .contact-content p {
   margin-top: 25px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 2;
-  
 }
 
-.contact-content-section .contact-social{
-   margin: 40px 160px; 
+.contact-content-section .contact-social {
+  margin: 40px 160px;
 }
 
 .contact-content-section .contact-social i {
   color: #a52a2a;
   font-size: 30px;
   padding: 0px 10px;
-  
 }
 
-.contact-content-section .contact-social i:hover{
+.contact-content-section .contact-social i:hover {
   color: #3d3d3d;
 }
 
@@ -1641,7 +1648,6 @@ button.primaryContained:hover {
   .contact-image-section {
     float: none;
     width: 100%;
-  
   }
 
   .contact-image-section .contact-img {
@@ -1655,4 +1661,47 @@ button.primaryContained:hover {
     text-align: center;
     font-size: 19px;
   }
+
 }
+
+/*messing around*/
+
+/* .businessContent {
+  background-color: #ccc;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1px;
+  font-family: Brandon-Grotesque, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  width: -5 rem;
+
+} */
+
+.businessContent2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* line-height: 1.55rem; */
+  color: black;
+  font-family: helvetica;
+  /* font-size: 140%; */
+  background-color: rgba(160, 158, 158, 0.952);
+  box-shadow: 0.6em 0.6em 1.2em #8f959c;
+  box-shadow: 0.5em 0.5em 1em #85898f;
+  border-radius: 20px;
+  cursor: context-menu;
+  list-style: none;
+  /* grid-gap: 1em; */
+  max-width: 150%;
+  text-align: center;
+}
+#businessContent-heading {
+  padding: 2px;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.businessContent-heading .bc-h1 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
