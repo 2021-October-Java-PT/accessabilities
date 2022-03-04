@@ -1508,12 +1508,13 @@ button.primaryContained:hover {
 
 /* Map Section */
 .map {
-  width: 400px;
+  width: 370px;
   height: 400px;
   position: relative;
   margin-left: 3rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  
 }
 
 @media (max-width: 1669px) {
