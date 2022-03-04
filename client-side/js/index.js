@@ -234,12 +234,12 @@ function homeAccess(){
 function home() {
   const homeElem = document.querySelector("#home");
   homeElem.addEventListener("click", () => {
-    pageContent.innerHTML = Home();
+    location.reload();
   });
 
   const logoElem = document.querySelector("#logoHome");
   logoElem.addEventListener("click", () => {
-    pageContent.innerHTML = Home();
+    location.reload();
   });
 }
 

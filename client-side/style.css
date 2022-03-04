@@ -43,6 +43,12 @@ body.dark .nav-links a {
 body.dark .navBar {
   background-color: #111;
 }
+body.dark .apps_summaryContainer{
+  background-color: #292c35;
+}
+body.dark .app_card_summary_category{
+  color: #fff;
+}
 
 
 body {
@@ -1385,7 +1391,6 @@ button.primaryContained:hover {
   padding: 10px;
 }
 .app_card_wrap .app_card_inner {
-  
   border-radius: 20px;
 }
 
@@ -1433,32 +1438,138 @@ button.primaryContained:hover {
   font-weight: bolder;
 }
 
+.app_card_summary_wrapper {
+  width: 100%;
+}
 
-.app_card_wrap .app_card_bottom .fa-brands {
+.app_card_summary_wrap{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.app_card_summary_wrap .app_card_summary_item{
+  width: 105%;
+  padding:10px;
+}
+
+.app_card_summary_wrap .app_card_summary_inner{
+  border-radius: 20px;
+}
+
+.app_card_summary_inner{
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+  box-shadow: 0.5em 0.5em 1em #d2dce9;
+  margin-left: 10rem;
+  margin-right: 6rem;
+}
+
+.app_card_summary_wrap .app_card_summary_bottom{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 0;
+  padding: 15px;
+  font-family: sans-serif;
+}
+.app_card_summary_category {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 200%;
+  font-weight: bolder;
+ 
+ 
+}
+
+.app_cards_summary_wrap .app_card_summary_bottom .app_card_summary_info {
+  padding: 15px;
+  margin: 10px 0;
+  margin-left:40rem;
+}
+.app_cards_summary_wrap .app_card_summary_bottom  {
   text-align: center;
 }
+
+.app_card_summary_info{
+  margin-left: 7rem;
+  margin-right: 8rem;
+  padding: 2rem;
+  
+}
+
 
 @media (max-width: 1148px) {
   .app_card_wrap .app_card_item {
     width: 50%;
   }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 50%;
+  }
 }
+
+@media (max-width: 1145px) {
+  .app_card_wrap .app_card_item {
+    width: 50%;
+  }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1049px) {
+  .app_card_wrap .app_card_item {
+    width: 50%;
+  }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 90%;
+  }
+}
+
 
 @media (max-width: 1024px) {
   .app_card_wrap .app_card_item {
     width: 50%;
   }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 1000%;
+  }
 }
+
+@media (max-width: 990px) {
+  .app_card_wrap .app_card_item {
+    width: 50%;
+  }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 1000%;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .app_cards_wrap .app_card_item {
     width: 50%;
+  }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 50%;
+  }
+}
+
+@media (max-width: 746px) {
+  .app_card_wrap .app_card_item {
+    width: 50%;
+  }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 1000%;
   }
 }
 
 @media (max-width: 538px) {
   .app_card_wrap .app_card_item {
     width: 100%;
+  }
+  .app_card_summary_wrap .app_card_summary_item{
+    width: 50%;
   }
 }
 
