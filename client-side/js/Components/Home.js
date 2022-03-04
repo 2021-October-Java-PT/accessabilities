@@ -18,7 +18,7 @@ export default function Home() {
         <div class="imageContainer">
         </div>
         </head>
-        <div class="wrapper">
+        <div class="homeWrapper">
             <div class="second_page_nested">
 
                 <div class="helpingCaring-Text">
