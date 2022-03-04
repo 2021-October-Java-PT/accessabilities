@@ -23,12 +23,9 @@ function buildPage() {
 
   clickCommunity();
   homeAccess();
-  
-
 }
 
 console.log("Client Side is wired up!");
-
 
 function clickCommunity() {
   pageContent.addEventListener("click", (event) => {
@@ -42,9 +39,6 @@ function clickCommunity() {
     }
   });
 }
-
-
-
 
 //Lyzz js to enable hamburger menu
 document.body.classList.toggle("js-enabled");
@@ -181,13 +175,13 @@ function addComment() {
         (businessResources) =>
           (pageContent.innerHTML = BusinessResources(businessResources))
       );
-      const postedCommentHolder = document.querySelector(".try");
+      const postedCommentHolder = document.querySelector(".comments-box");
       let postTitle = document.createElement("h2");
       postTitle.classList.add("addTitle");
       let postBody = document.createElement("p");
-      z.classList.add("addReview");
-      postTitle.innerText = addTitle;
-      z.innerText = addReview;
+      postBody.classList.add("addReview");
+      postTitle.innerText = addTitle + " says...";
+      postBody.innerText = addReview;
       postedCommentHolder.append(postTitle);
       postedCommentHolder.append(postBody);
     }
@@ -217,9 +211,8 @@ function starRating() {
   executeRating(ratingStars);
 }
 
-
-function homeAccess(){
-  const homeAccessElem = document.querySelector("#partnerBtn")
+function homeAccess() {
+  const homeAccessElem = document.querySelector("#partnerBtn");
   homeAccessElem.addEventListener("click", () => {
     apiHelpers.getRequest(
       "http://localhost:8080/api/business-resources",
@@ -231,9 +224,8 @@ function homeAccess(){
         pullBusinessCard();
       }
     );
-  })
+  });
 }
-
 
 function home() {
   const homeElem = document.querySelector("#home");
@@ -277,7 +269,6 @@ function help() {
     pageContent.innerHTML = Help();
   });
 }
-
 
 const inputs = document.querySelectorAll(".input");
 
