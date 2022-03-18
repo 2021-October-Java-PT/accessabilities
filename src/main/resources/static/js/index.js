@@ -87,7 +87,7 @@ function addBusinessToAPI() {
       ).value;
 
       apiHelpers.postRequest(
-        "http://localhost:8080/api/business-resources/add-resource",
+        "http://accessabilities-demo.herokuapp.com/api/business-resources/add-resource",
         {
           name: addName,
           businessDescription: addBusinessDescription,
@@ -117,7 +117,7 @@ function search() {
   searchSubmitBtn.addEventListener("click", () => {
     const searchString = searchBar.value;
     apiHelpers.getRequest(
-      `http://localhost:8080/api/business-resources/Search/${searchString}`,
+      `http://accessabilities-demo.herokuapp.com/api/business-resources/Search/${searchString}`,
       (filteredResources) => {
         pageContent.innerHTML = FilteredResources(filteredResources);
       }
@@ -130,7 +130,7 @@ function navAccess() {
 
   accessElem.addEventListener("click", () => {
     apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
+      "http://accessabilities-demo.herokuapp.com/api/business-resources",
       (businessResources) => {
         console.log("RESOURCES: ", businessResources);
         pageContent.innerHTML = BusinessResources(businessResources);
@@ -147,7 +147,7 @@ function pullBusinessCard() {
       console.log("WERK IT");
       const id = event.target.parentElement.querySelector("#businessId").value;
       apiHelpers.getRequest(
-        `http://localhost:8080/api/business-resources/${id}`,
+        `http://accessabilities-demo.herokuapp.com/api/business-resources/${id}`,
         (card) => {
           pageContent.innerHTML = Card(card);
           starRating();
@@ -169,7 +169,7 @@ function addComment() {
       console.log(addTitle);
       console.log(addReview);
       apiHelpers.postRequest(
-        "http://localhost:8080/api/reviews/reviewId/add-review",
+        "http://accessabilities-demo.herokuapp.com/api/reviews/reviewId/add-review",
         {
           reviewTitle: addTitle,
           reviewComment: addReview,
@@ -218,7 +218,7 @@ function homeAccess(){
   const homeAccessElem = document.querySelector("#partnerBtn")
   homeAccessElem.addEventListener("click", () => {
     apiHelpers.getRequest(
-      "http://localhost:8080/api/business-resources",
+      "http://accessabilities-demo.herokuapp.com/api/business-resources",
       (businessResources) => {
         console.log("RESOURCES: ", businessResources);
         pageContent.innerHTML = BusinessResources(businessResources);
