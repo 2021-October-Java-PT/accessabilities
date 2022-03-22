@@ -15,7 +15,7 @@ export default function About() {
                     <div class="about-card">
                         <div class="about-content">
                             <div class="imgBx">
-                                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQF8UFnXJnnm-A/profile-displayphoto-shrink_200_200/0/1646005586639?e=1651708800&v=beta&t=jNByuI6mfAyTfo7jdS8PlCFZuNgX7C00TE7sYjXGkQw"/>
+                                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEFZH2Sgsx5Zg/profile-displayphoto-shrink_400_400/0/1647311728390?e=1653523200&v=beta&t=jvIg8rVkwX-SBlTUMlGE8d4g9Tnc7xvDixcLMqwYfVk"/>
                             </div>
                             <div class="about-content-box">
                                 <h1 class="about-h1">Elizabeth Hans<h1>
@@ -45,7 +45,7 @@ export default function About() {
                     <div class="about-card">
                         <div class="about-content">
                             <div class="imgBx">
-                                <img src="https://media-exp1.licdn.com/dms/image/D4D03AQGC_Pupy5Outg/profile-displayphoto-shrink_800_800/0/1641313147062?e=1651708800&v=beta&t=AdWyPuTdZtrvN3lOvbErcuXy0fNg8jcOze_jtW-ajWM"/>
+                                <img src="https://media-exp1.licdn.com/dms/image/D4E35AQFHvhq3o_Xs_Q/profile-framedphoto-shrink_400_400/0/1647535873770?e=1648000800&v=beta&t=7Xi9v4AG_xh3miPtQVidO-yUJKUioxjHmVPj6oQzs7c"/>
                             </div>
                             <div class="about-content-box">
                                 <h1 class="about-h1">Cameron Stephens<h1>
